@@ -15,15 +15,19 @@ return new class extends Migration
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
             $table->string('brand')->unique();
-            $table->string('car_name');
+            $table->string('car_name')->nullable();
             $table->integer('liter_baggage')->nullable();
             $table->boolean('4on4')->nullable();
             $table->boolean('crusie_control')->nullable();
-            $table->boolean('reverse_camera')->nullable();
-            $table->boolean('autonomous_braking')->nullable();
+            $table->integer('number_of_seats')->nullable();
             $table->tinyInteger('type_of_car')->unsigned();
+            $table->boolean('autonomous_braking')->nullable();
+            $table->integer('car_pollution')->nullable();
             $table->tinyInteger('price')->unsigned();
+            $table->boolean('reverse_camera')->nullable();
             $table->tinyInteger('model_of_car')->unsigned();
+            $table->string('picture_1')->nullable();
+            $table->string('picture_2')->nullable();
             $table->rememberToken();
             $table->timestamps();
             

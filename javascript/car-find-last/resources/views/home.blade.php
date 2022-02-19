@@ -71,32 +71,30 @@
                         <div class="tab-content text-center" id="myTabContent">
                             <div class="tab-pane fade show active" id="question1" role="tabpanel"
                                 aria-labelledby="question1-tab">
+                                <h5 class="card-title mt-3">ליטר בגאז</h5>
                                 <div class="d-flex justify-content-center">
-                                    <div class="card" style="width: 18rem;">
+                                    <div class="card mr-3" style="width: 18rem;">
 
-                                        <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="card-body fw-bold">
+                                            
+                                            <p class="card-text mt-2">0-200</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
+                                    <div class="card mr-3" style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                          
+                                            <p class="card-text mt-2">200-400</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                     <div class="card" style="width: 18rem;">
 
-                                        <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="width: 18rem;">
-
-                                        <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="card-body fw-bold">
+                                           
+                                            <p class="card-text mt-2">400+</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                   
@@ -106,138 +104,210 @@
 
                             </div>
                             <div class="tab-pane fade" id="question2" role="tabpanel" aria-labelledby="question2-tab">
+                                <h5 class="card-title mt-3">רכב 4 על 4</h5>
                                 <div class="d-flex justify-content-center">
-                                    <div class="card" style="width: 18rem;">
+                                   
+                                    <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body">
-                                            <h5 class="card-title">?סוג מודל</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                           
+                                            <p class="card-text fw-bold">כן</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                     <div class="card" style="width: 18rem;">
 
-                                        <div class="card-body">
-                                            <h5 class="card-title">?סוג מודל</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="card-body fw-bold">
+                                            
+                                            <p class="card-text">לא</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
-                                    <div class="card" style="width: 18rem;">
-
-                                        <div class="card-body">
-                                            <h5 class="card-title">?סוג מודל</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
+                                
                                 </div>
                                 
                             </div>
                             <div class="tab-pane fade" id="question3" role="tabpanel" aria-labelledby="question3-tab">
+                                <h5 class="card-title mt-3">? רכב עם בקרת שיוט</h5>
                                 <div class="d-flex justify-content-center">
+                                    <div class="card mr-3" style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                           
+                                            <p class="card-text">כן</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
                                     <div class="card" style="width: 18rem;">
 
-                                        <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="card-body fw-bold">
+                                            
+                                            <p class="card-text">לא</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="question4" role="tabpanel" aria-labelledby="question4-tab">
+                                <h5 class="card-title mt-3">? מקומות ישיבה</h5>
                                 <div class="d-flex justify-content-center">
+                                    <div class="card mr-3" style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                         
+                                            <p class="card-text">2 מקומות ישיבה</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
                                     <div class="card" style="width: 18rem;">
 
-                                        <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="card-body fw-bold">
+                                          
+                                            <p class="card-text">מעל 2 מקומות ישיבה ברכב</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="question5" role="tabpanel" aria-labelledby="question5-tab">
+                                <h5 class="card-title mt-3">? סוג מכונית </h5>
                                 <div class="d-flex justify-content-center">
+                                    <div class="card mr-3" style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                            
+                                            <p class="card-text fw-bold">ספורט</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
+                                    <div class="card mr-3" style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                    
+                                            <p class="card-text fw-bold">משפחתי</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
                                     <div class="card" style="width: 18rem;">
 
-                                        <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="card-body fw-bold">
+                                       
+                                            <p class="card-text fw-bold">מנהלים</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="question6" role="tabpanel" aria-labelledby="question6-tab">
+                                <h5 class="card-title mt-3">מערכת בלימה אוטונומית קיימת ברכב</h5>
                                 <div class="d-flex justify-content-center">
+                                    <div class="card mr-3" style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                           
+                                            <p class="card-text">כן</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
                                     <div class="card" style="width: 18rem;">
 
-                                        <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="card-body fw-bold">
+                                           
+                                            <p class="card-text">לא</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="question7" role="tabpanel" aria-labelledby="question7-tab">
+                                <h5 class="card-title mt-3">? דרגת זיהום אוויר ברכב</h5>
                                 <div class="d-flex justify-content-center">
                                     <div class="card" style="width: 18rem;">
 
                                         <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
+                                           
                                             <p class="card-text">Some quick example text to build on the card title and
                                                 make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                                <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="question8" role="tabpanel" aria-labelledby="question8-tab">
+                                <h5 class="card-title mt-3">? מחיר</h5>
                                 <div class="d-flex justify-content-center">
-                                    <div class="card" style="width: 18rem;">
+                                    <div class="card  mr-3" style="width: 18rem;">
 
-                                        <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="card-body  fw-bold">
+                                         
+                                            <p class="card-text">עד 50</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
+                                    <div class="card  mr-3" style="width: 18rem;">
+
+                                        <div class="card-body  fw-bold  ">
+                                         
+                                            <p class="card-text">עד 70</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
+                                    <div class="card " style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                         
+                                            <p class="card-text">110+</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="question9" role="tabpanel" aria-labelledby="question9-tab">
+                                <h5 class="card-title mt-3">? מצלמת רוורס</h5>
                                 <div class="d-flex justify-content-center">
-                                    <div class="card d-flex justify-content-center" style="width: 18rem;">
+                                    <div class="card d-flex justify-content-center  mr-3" style="width: 18rem;">
 
-                                        <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="card-body  fw-bold">
+                                            
+                                            <p class="card-text ">כן</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
+                                    <div class="card d-flex justify-content-center  mr-3" style="width: 18rem;">
+
+                                        <div class="card-body  fw-bold">
+                                            
+                                            <p class="card-text">לא</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="question10" role="tabpanel" aria-labelledby="question10-tab">
+                                <h5 class="card-title mt-3">? מודל רכב</h5>
                                 <div class="d-flex justify-content-center">
                                     <div class="card" style="width: 18rem;">
 
-                                        <div class="card-body">
-                                            <h5 class="card-title">ליטר בגאז</h5>
-                                            <p class="card-text">Some quick example text to build on the card title
-                                                and
-                                                make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <div class="card-body fw-bold">
+                                            
+                                            <p class="card-text">לא חשמלית</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                            
+                                            <p class="card-text">חשמלית</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                            
+                                            <p class="card-text">היברדית</p>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                 </div>
