@@ -222,12 +222,27 @@
                             <div class="tab-pane fade" id="question7" role="tabpanel" aria-labelledby="question7-tab">
                                 <h5 class="card-title mt-3">? דרגת זיהום אוויר ברכב</h5>
                                 <div class="d-flex justify-content-center">
+                                    <div class="card mr-3" style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                           
+                                            <p class="card-text">0-7</p>
+                                                <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
+                                    <div class="card mr-3" style="width: 18rem;">
+
+                                        <div class="card-body fw-bold">
+                                           
+                                            <p class="card-text">7-12</p>
+                                                <a href="#" class="btn btn-primary">בחירה</a>
+                                        </div>
+                                    </div>
                                     <div class="card" style="width: 18rem;">
 
-                                        <div class="card-body">
+                                        <div class="card-body fw-bold">
                                            
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the card's content.</p>
+                                            <p class="card-text">12+</p>
                                                 <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
@@ -286,7 +301,7 @@
                             <div class="tab-pane fade" id="question10" role="tabpanel" aria-labelledby="question10-tab">
                                 <h5 class="card-title mt-3">? מודל רכב</h5>
                                 <div class="d-flex justify-content-center">
-                                    <div class="card" style="width: 18rem;">
+                                    <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
                                             
@@ -294,7 +309,7 @@
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
-                                    <div class="card" style="width: 18rem;">
+                                    <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
                                             

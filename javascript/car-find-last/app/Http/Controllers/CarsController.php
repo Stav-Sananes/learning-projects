@@ -50,6 +50,7 @@ class CarsController extends Controller
             'picture_1' => 'required',
             'picture_2' => 'required',
         ]);
+        
         \App\Models\Cars::Create([
             'car_name' => $request->input('car_name'),
             'liter_baggage' => $request->input('liter_baggage'),
@@ -62,6 +63,7 @@ class CarsController extends Controller
             'model_of_car' => $request->input('model_of_car'),
             'type_of_car' => $request->input('type_of_car'),
         ]);
+    
         return view('cars.show', compact('cars'));
     }
 

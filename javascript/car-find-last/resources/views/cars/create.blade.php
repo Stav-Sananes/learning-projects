@@ -37,7 +37,7 @@
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom01">בקרת שיוט</label>
-                  
+
                     <select class="form-control text-center" name="crusie_control" id="crusie_control">
                         <option value="0">לא</option>
                         <option value="1">כן</option>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom02">מצלמת רוורס</label>
-                 
+
                     <select class="form-control text-center" name="reverse_camera" id="reverse_camera">
                         <option value="0">לא</option>
                         <option value="1">כן</option>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom02">מערכת בלימה אוטונומית</label>
-                    
+
                     <select class="form-control text-center" name="autonomous_braking" id="autonomous_braking">
                         <option value="0">לא</option>
                         <option value="1">כן</option>
@@ -63,7 +63,7 @@
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom01">סוג הרכב</label>
-                   
+
                     <select class="form-control text-center" name="type_of_car" id="type_of_car">
                         <option value="0">מנהלים</option>
                         <option value="1">משפחתי</option>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="form-group col-md-4 mb-3 ">
                     <label for="validationCustom02">מודל הרכב</label>
-                    
+
                     <select class="form-control text-center" name="model_of_car" id="model_of_car">
                         <option value="0">חשמלית</option>
                         <option value="1">היברדית</option>
@@ -84,7 +84,7 @@
                     </select>
 
                 </div>
-               
+
             </div>
         </div>
         <div class="form-group text-center">
@@ -93,9 +93,7 @@
                 <label class="form-check-label" for="invalidCheck">
                     חתימה ואישור הקמת רכב.
                 </label>
-                <div class="invalid-feedback">
-                    אנא אשרו יצירת רכב.
-                </div>
+
             </div>
         </div>
         <div class="text-center">
