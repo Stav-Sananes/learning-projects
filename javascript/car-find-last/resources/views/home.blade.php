@@ -1,0 +1,255 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="container" style="max-width: 1460px;">
+        <div class="row justify-content-center">
+            <div class="col-md">
+                <div class="card">
+                    <div class="card-header text-center fw-bolder">{{ __('טבלת השאלות') }}</div>
+
+                    <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+
+                            </div>
+                        @endif
+
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="question1-tab" data-bs-toggle="tab"
+                                    data-bs-target="#question1" type="button" role="tab" aria-controls="question1"
+                                    aria-selected="true">שאלה מספר 1</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="question2-tab" data-bs-toggle="tab"
+                                    data-bs-target="#question2" type="button" role="tab" aria-controls="question2"
+                                    aria-selected="false">שאלה מספר 2</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="question3-tab" data-bs-toggle="tab"
+                                    data-bs-target="#question3" type="button" role="tab" aria-controls="question3"
+                                    aria-selected="false">שאלה מספר 3</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="question4-tab" data-bs-toggle="tab"
+                                    data-bs-target="#question4" type="button" role="tab" aria-controls="question4"
+                                    aria-selected="false">שאלה מספר 4</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="question5-tab" data-bs-toggle="tab"
+                                    data-bs-target="#question5" type="button" role="tab" aria-controls="question5"
+                                    aria-selected="false">שאלה מספר 5</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="question6-tab" data-bs-toggle="tab"
+                                    data-bs-target="#question6" type="button" role="tab" aria-controls="question6"
+                                    aria-selected="false">שאלה מספר 6</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="question7-tab" data-bs-toggle="tab"
+                                    data-bs-target="#question7" type="button" role="tab" aria-controls="question7"
+                                    aria-selected="false">שאלה מספר 7</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="question8-tab" data-bs-toggle="tab"
+                                    data-bs-target="#question8" type="button" role="tab" aria-controls="question8"
+                                    aria-selected="false">שאלה מספר 8</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="question9-tab" data-bs-toggle="tab"
+                                    data-bs-target="#question9" type="button" role="tab" aria-controls="question9"
+                                    aria-selected="false">שאלה מספר 9</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="question10-tab" data-bs-toggle="tab"
+                                    data-bs-target="#question10" type="button" role="tab" aria-controls="question10"
+                                    aria-selected="false">שאלה מספר 10</button>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content text-center" id="myTabContent">
+                            <div class="tab-pane fade show active" id="question1" role="tabpanel"
+                                aria-labelledby="question1-tab">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+
+
+
+                            </div>
+                            <div class="tab-pane fade" id="question2" role="tabpanel" aria-labelledby="question2-tab">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">?סוג מודל</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">?סוג מודל</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">?סוג מודל</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="tab-pane fade" id="question3" role="tabpanel" aria-labelledby="question3-tab">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="question4" role="tabpanel" aria-labelledby="question4-tab">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="question5" role="tabpanel" aria-labelledby="question5-tab">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="question6" role="tabpanel" aria-labelledby="question6-tab">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="question7" role="tabpanel" aria-labelledby="question7-tab">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="question8" role="tabpanel" aria-labelledby="question8-tab">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="question9" role="tabpanel" aria-labelledby="question9-tab">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card d-flex justify-content-center" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="question10" role="tabpanel" aria-labelledby="question10-tab">
+                                <div class="d-flex justify-content-center">
+                                    <div class="card" style="width: 18rem;">
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">ליטר בגאז</h5>
+                                            <p class="card-text">Some quick example text to build on the card title
+                                                and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <button type="button" class="btn btn-primary">סיום</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+@endsection
