@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Cars;
+use Illuminate\Support\Facades\Storage;
 class CarsController extends Controller
 {
     /**
@@ -13,7 +14,9 @@ class CarsController extends Controller
      */
     public function index()
     {
-        //
+        $cars = Cars::all();
+
+        return view('cars.index', compact('cars'));
     }
 
     /**
@@ -36,19 +39,20 @@ class CarsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'car_name' => 'required',
-            'liter_baggage' => 'required',
-            'number_of_seats' => 'required',
-            'type_of_car' => 'required',
-            'car_pollution' => 'required',
-            '4on4' => 'required',
-            'reverse_camera' => 'required',
-            'crusie_control' => 'required',
-            'autonomous_braking' => 'required',
-            'price' => 'required',
-            'model_of_car' => 'required',
-            'picture_1' => 'required',
-            'picture_2' => 'required',
+            'brand' => 'required|string',
+            'car_name' => 'required|string',
+            'liter_baggage' => 'required|integer',
+            'number_of_seats' => 'required|integer',
+            
+            'car_pollution' => 'required|integer',
+            '4on4' => 'required|integer',
+            'reverse_camera' => 'required|integer',
+            'crusie_control' => 'required|integer',
+            'autonomous_braking' => 'required|integer',
+            'price' => 'required|integer',
+            'model_of_car' => 'required|integer',
+            'picture_1' => 'nullable|string',
+            'picture_2' => 'nullable|string',
         ]);
         
         \App\Models\Cars::Create([
@@ -99,20 +103,30 @@ class CarsController extends Controller
     public function update(Request $request, \App\Models\Cars $cars)
     {    
          $request->validate([
-        'car_name' => 'required',
-        'liter_baggage' => 'required',
-        'number_of_seats' => 'required',
-        'car_name' => 'required',
-        'car_pollution' => 'required',
-        '4on4' => 'required',
-        'reverse_camera' => 'required',
-        'crusie_control' => 'required',
-        'autonomous_braking' => 'required',
-        'price' => 'required',
-        'model_of_car' => 'required',
-        'picture_1' => 'required',
-        'picture_2' => 'required',
+        'brand' => 'required|string',
+        'car_name' => 'required|string',
+        'liter_baggage' => 'required|integer',
+        'number_of_seats' => 'required|integer',
+        
+        'car_pollution' => 'required|integer',
+        '4on4' => 'required|integer',
+        'reverse_camera' => 'required|integer',
+        'crusie_control' => 'required|integer',
+        'autonomous_braking' => 'required|integer',
+        'price' => 'required|integer',
+        'model_of_car' => 'required|integer',
+        'picture_1' => 'required|string',
+        'picture_2' => 'required|string',
     ]);
+    
+    if ($request->hasFile('avatar')) {
+        $avatar = $request->file('avatar');
+        $filepath = 'profile_pictures/';
+        $file = Storage::disk('local')->put($filepath, $avatar);
+        $cars->update([
+            'avatar' => $file
+        ]);
+    }
           $cars->update($request->all());
         return redirect()->route('cars.index');
     

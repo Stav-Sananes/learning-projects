@@ -1,6 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+
+    <div class="container mb-3 text-center">
+        <div class="row ">
+            <div class="col-4">
+                <a type="button" class="btn btn-primary" href="{{ url('cars/index') }}">מעבר לטבלת הרכבים</a>
+            </div>
+            <div class="col-4">
+                <a type="button" class="btn btn-success" href="{{ url('cars/create') }}">להוספת רכב</a>
+            </div>
+            <div class="col-4">
+                <a type="button" class="btn btn-danger "  href="{{ url('cars/show') }}">מחיקה רכבים</a>
+            </div>
+        </div>
+    </div>
     <div class="container" style="max-width: 1460px;">
         <div class="row justify-content-center">
             <div class="col-md">
@@ -76,7 +90,7 @@
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                            
+
                                             <p class="card-text mt-2">0-200</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -84,7 +98,7 @@
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                          
+
                                             <p class="card-text mt-2">200-400</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -92,12 +106,12 @@
                                     <div class="card" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                           
+
                                             <p class="card-text mt-2">400+</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
-                                  
+
                                 </div>
 
 
@@ -106,11 +120,11 @@
                             <div class="tab-pane fade" id="question2" role="tabpanel" aria-labelledby="question2-tab">
                                 <h5 class="card-title mt-3">רכב 4 על 4</h5>
                                 <div class="d-flex justify-content-center">
-                                   
+
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body">
-                                           
+
                                             <p class="card-text fw-bold">כן</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -118,14 +132,14 @@
                                     <div class="card" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                            
+
                                             <p class="card-text">לא</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
-                                
+
                                 </div>
-                                
+
                             </div>
                             <div class="tab-pane fade" id="question3" role="tabpanel" aria-labelledby="question3-tab">
                                 <h5 class="card-title mt-3">? רכב עם בקרת שיוט</h5>
@@ -133,7 +147,7 @@
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                           
+
                                             <p class="card-text">כן</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -141,7 +155,7 @@
                                     <div class="card" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                            
+
                                             <p class="card-text">לא</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -154,7 +168,7 @@
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                         
+
                                             <p class="card-text">2 מקומות ישיבה</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -162,7 +176,7 @@
                                     <div class="card" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                          
+
                                             <p class="card-text">מעל 2 מקומות ישיבה ברכב</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -175,7 +189,7 @@
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                            
+
                                             <p class="card-text fw-bold">ספורט</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -183,7 +197,7 @@
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                    
+
                                             <p class="card-text fw-bold">משפחתי</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -191,7 +205,7 @@
                                     <div class="card" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                       
+
                                             <p class="card-text fw-bold">מנהלים</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -204,7 +218,7 @@
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                           
+
                                             <p class="card-text">כן</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -212,7 +226,7 @@
                                     <div class="card" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                           
+
                                             <p class="card-text">לא</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -225,25 +239,25 @@
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                           
+
                                             <p class="card-text">0-7</p>
-                                                <a href="#" class="btn btn-primary">בחירה</a>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                           
+
                                             <p class="card-text">7-12</p>
-                                                <a href="#" class="btn btn-primary">בחירה</a>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                     <div class="card" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                           
+
                                             <p class="card-text">12+</p>
-                                                <a href="#" class="btn btn-primary">בחירה</a>
+                                            <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
                                     </div>
                                 </div>
@@ -254,7 +268,7 @@
                                     <div class="card  mr-3" style="width: 18rem;">
 
                                         <div class="card-body  fw-bold">
-                                         
+
                                             <p class="card-text">עד 50</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -262,7 +276,7 @@
                                     <div class="card  mr-3" style="width: 18rem;">
 
                                         <div class="card-body  fw-bold  ">
-                                         
+
                                             <p class="card-text">עד 70</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -270,7 +284,7 @@
                                     <div class="card " style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                         
+
                                             <p class="card-text">110+</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -283,7 +297,7 @@
                                     <div class="card d-flex justify-content-center  mr-3" style="width: 18rem;">
 
                                         <div class="card-body  fw-bold">
-                                            
+
                                             <p class="card-text ">כן</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -291,7 +305,7 @@
                                     <div class="card d-flex justify-content-center  mr-3" style="width: 18rem;">
 
                                         <div class="card-body  fw-bold">
-                                            
+
                                             <p class="card-text">לא</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -304,7 +318,7 @@
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                            
+
                                             <p class="card-text">לא חשמלית</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -312,7 +326,7 @@
                                     <div class="card mr-3" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                            
+
                                             <p class="card-text">חשמלית</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -320,7 +334,7 @@
                                     <div class="card" style="width: 18rem;">
 
                                         <div class="card-body fw-bold">
-                                            
+
                                             <p class="card-text">היברדית</p>
                                             <a href="#" class="btn btn-primary">בחירה</a>
                                         </div>
@@ -335,6 +349,8 @@
                 </div>
 
             </div>
+
         </div>
+    </div>
     </div>
 @endsection

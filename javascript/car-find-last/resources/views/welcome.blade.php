@@ -408,6 +408,7 @@
 </head>
 
 <body class="antialiased">
+    
     <div
         class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
 
@@ -417,19 +418,21 @@
             <hr class="my-2 mb-4">
             <p>על מנת להמשיך בתהליך עלייך להירשם ואם הינך רשום כבר אנא היכנס למערכת על מנת להמשיך</p>
             <div class="text-center mt-5">
+
                 @if (Route::has('login'))
 
                     @auth
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
 
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-success btn-lg" href="{{ url('/home') }}"
-                                role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-success btn-lg"
+                                href="{{ url('/home') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
-                            </a>             
+                            </a>
                         </div>
                         <div class="text-center">
-                        <a href="{{ url('/home') }}" type="button" class="btn btn-primary btn-lg" href="#"
-                            role="button">התחל</a>
+                            <a href="{{ url('/home') }}" type="button" class="btn btn-primary btn-lg" href="#"
+                                role="button">התחל</a>
                         </div>
                     @else
                         <a href="{{ route('login') }}" class="ml-4 text-sm btn btn-info btn-lg">לחץ כאן
@@ -441,8 +444,12 @@
                     @endauth
                 @endif
             </div>
+            <footer class="text-center mt-5" style="color: white;">&copy; Copyright 2022 Stav Sananes</footer>
         </div>
+       
+
     </div>
+    
 </body>
 
 </html>
