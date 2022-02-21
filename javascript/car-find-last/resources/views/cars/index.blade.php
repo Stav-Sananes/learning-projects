@@ -19,12 +19,12 @@
     <div class="card-header">
         <div class="d-flex justify-content-between">
             <span>
-                בנקים
+                רכבים
             </span>
-            <a href="{{ route('banks.create') }}" class="btn btn-primary">הוספת בנק </a>
+            <a href="{{ route('cars.create') }}" class="btn btn-primary">הוספת רכב </a>
         </div>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="חיפוש בנק" aria-label="Search">
+            <input class="form-control mr-sm-2" type="search" placeholder="חיפוש רכב" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חפש</button>
         </form>
     </div>
@@ -57,7 +57,7 @@
                 @foreach ($cars as $car)
                     <td>
                         <a href="{{ route('cars.show', ['cars' => $car->id]) }}">
-                            {{ $bank->id }}
+                            {{ $car->id }}
                         </a>
                         <tr>
                             <th scope="row">{{$cars->id}}</th>
@@ -67,7 +67,7 @@
                             <td>{{$cars->number_of_seats}}</td>
                           
                             <td>{{$cars->car_pollution}}</td>
-                            <td>{{$cars->4on4}}</td>
+                            <td>{{$cars->four_on_four}}</td>
                             <td>{{$cars->crusie_control}}</td>
                             <td>{{$cars->reverse_camera}}</td>
                             <td>{{$cars->autonomous_braking}}</td>

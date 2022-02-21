@@ -28,7 +28,7 @@
         </div>
         <div class="col-md-4 mb-3">
             <label for="validationCustom02">4 On 4 ?</label>
-            <input type="text" class="form-control" id="validationCustom02" value="{{ $cars->4on4 }}" name="4on4" required> 
+            <input type="text" class="form-control" id="validationCustom02" value="{{ $cars->four_on_four }}" name="four_on_four" required> 
         </div>
     </div>
     <div class="form-row">

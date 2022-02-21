@@ -13,7 +13,7 @@
         <div class="container">
             <div class="d-flex flex-row h-100 justify-content-lg-between w-100 p-1">
                 <a href="{{route('cars.index')}}" class="btn btn-success">חזרה לתפריט הראשי</a>
-                <a  href="{{route('cars.edit',['cars'=>$cars->id])}}" class="btn btn-warning">ערוך נתוני בנק</a>
+               {{--  <a  href="{{route('cars.edit',['cars'=>$cars->id])}}" class="btn btn-warning">ערוך נתוני רכב</a> --}}
             </div>
             <table class="table">
                 <thead class="thead-light">
@@ -42,7 +42,7 @@
                         <td>{{$cars->number_of_seats}}</td>
                       
                         <td>{{$cars->car_pollution}}</td>
-                        <td>{{$cars->4on4}}</td>
+                        <td>{{$cars->four_on_four}}</td>
                         <td>{{$cars->crusie_control}}</td>
                         <td>{{$cars->reverse_camera}}</td>
                         <td>{{$cars->autonomous_braking}}</td>

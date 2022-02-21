@@ -17,7 +17,7 @@ class Cars extends Model
         'car_name',
         'liter_baggage',
         'car_pollution',
-        '4on4',
+        'four_on_four',
         'crusie_control',
         'reverse_camera',
         'autonomous_braking',

@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom02">4 On 4 ?</label>
-                    <select class="form-control text-center" name="4on4" id="4on4">
+                    <select class="form-control text-center" name="four_on_four" id="four_on_four">
                         <option value="0">לא</option>
                         <option value="1">כן</option>
                     </select>

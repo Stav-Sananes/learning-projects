@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+    @if (\Auth::User()->is_admin)
     <div class="container mb-3 text-center">
         <div class="row ">
             <div class="col-4">
@@ -15,6 +15,8 @@
             </div>
         </div>
     </div>
+    @endif
+
     <div class="container" style="max-width: 1460px;">
         <div class="row justify-content-center">
             <div class="col-md">

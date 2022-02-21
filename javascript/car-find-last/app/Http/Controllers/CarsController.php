@@ -38,14 +38,15 @@ class CarsController extends Controller
      */
     public function store(Request $request)
     {
+        
         $request->validate([
             'brand' => 'required|string',
             'car_name' => 'required|string',
             'liter_baggage' => 'required|integer',
             'number_of_seats' => 'required|integer',
-            
+            'type_of_car' => 'required|integer',
             'car_pollution' => 'required|integer',
-            '4on4' => 'required|integer',
+            'four_on_four' => 'required|integer',
             'reverse_camera' => 'required|integer',
             'crusie_control' => 'required|integer',
             'autonomous_braking' => 'required|integer',
@@ -54,13 +55,15 @@ class CarsController extends Controller
             'picture_1' => 'nullable|string',
             'picture_2' => 'nullable|string',
         ]);
-        
+       
         \App\Models\Cars::Create([
             'car_name' => $request->input('car_name'),
+            'brand' => $request->input('brand'),
             'liter_baggage' => $request->input('liter_baggage'),
             'number_of_seats' => $request->input('number_of_seats'),
             'car_pollution' => $request->input('car_pollution'),
-            '4on4' => $request->input('4on4'),
+            'autonomous_braking' => $request->input('autonomous_braking'),
+            'four_on_four' => $request->input('four_on_four'),
             'reverse_camera' => $request->input('reverse_camera'),
             'crusie_control' => $request->input('crusie_control'),
             'price' => $request->input('price'),
@@ -68,7 +71,7 @@ class CarsController extends Controller
             'type_of_car' => $request->input('type_of_car'),
         ]);
     
-        return view('cars.show', compact('cars'));
+        return view('cars.show');
     }
 
     /**
@@ -102,23 +105,24 @@ class CarsController extends Controller
      */
     public function update(Request $request, \App\Models\Cars $cars)
     {    
-         $request->validate([
-        'brand' => 'required|string',
-        'car_name' => 'required|string',
-        'liter_baggage' => 'required|integer',
-        'number_of_seats' => 'required|integer',
-        
-        'car_pollution' => 'required|integer',
-        '4on4' => 'required|integer',
-        'reverse_camera' => 'required|integer',
-        'crusie_control' => 'required|integer',
-        'autonomous_braking' => 'required|integer',
-        'price' => 'required|integer',
-        'model_of_car' => 'required|integer',
-        'picture_1' => 'required|string',
-        'picture_2' => 'required|string',
-    ]);
-    
+        $request->validate([
+            'brand' => 'required|string',
+            'car_name' => 'required|string',
+            'liter_baggage' => 'required|integer',
+            'number_of_seats' => 'required|integer',
+            'type_of_car' => 'required|integer',
+            'car_pollution' => 'required|integer',
+            'four_on_four' => 'required|integer',
+            'reverse_camera' => 'required|integer',
+            'crusie_control' => 'required|integer',
+            'autonomous_braking' => 'required|integer',
+            'price' => 'required|integer',
+            'model_of_car' => 'required|integer',
+            'picture_1' => 'nullable|string',
+            'picture_2' => 'nullable|string',
+        ]);
+        $cars->update($request->all());
+
     if ($request->hasFile('avatar')) {
         $avatar = $request->file('avatar');
         $filepath = 'profile_pictures/';
