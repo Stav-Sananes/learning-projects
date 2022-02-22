@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('script')
+
     <script>
         function myForm() {
             var inputs = document.getElementsByClassName("cb"); // TagName("input");
@@ -14,6 +15,7 @@
         }
     </script>
 @endsection
+@if (\Auth::User()->is_admin)
 @section('content')
 <div class="card  mt-2">
     <div class="card-header">
@@ -56,24 +58,24 @@
             <tbody>
                 @foreach ($cars as $car)
                     <td>
-                        <a href="{{ route('cars.show', ['cars' => $car->id]) }}">
+                        <a href="{{ route('cars.show', ['car'=>$car->id]) }}">
                             {{ $car->id }}
                         </a>
                         <tr>
-                            <th scope="row">{{$cars->id}}</th>
-                            <td>{{$cars->brand}}</td>
-                            <td>{{$cars->car_name}}</td>
-                            <td>{{$cars->liter_baggage}}</td>
-                            <td>{{$cars->number_of_seats}}</td>
+                            <th scope="row">{{$car->id}}</th>
+                            <td>{{$car->brand}}</td>
+                            <td>{{$car->car_name}}</td>
+                            <td>{{$car->liter_baggage}}</td>
+                            <td>{{$car->number_of_seats}}</td>
                           
-                            <td>{{$cars->car_pollution}}</td>
-                            <td>{{$cars->four_on_four}}</td>
-                            <td>{{$cars->crusie_control}}</td>
-                            <td>{{$cars->reverse_camera}}</td>
-                            <td>{{$cars->autonomous_braking}}</td>
-                            <td>{{$cars->type_of_car}}</td>
-                            <td>{{$cars->price}}</td>
-                            <td>{{$cars->model_of_car}}</td>
+                            <td>{{$car->car_pollution}}</td>
+                            <td>{{$car->four_on_four}}</td>
+                            <td>{{$car->crusie_control}}</td>
+                            <td>{{$car->reverse_camera}}</td>
+                            <td>{{$car->autonomous_braking}}</td>
+                            <td>{{$car->type_of_car}}</td>
+                            <td>{{$car->price}}</td>
+                            <td>{{$car->model_of_car}}</td>
                         </tr>
     
                     <td>
@@ -93,3 +95,6 @@
     </div>
 </div>
 @endsection
+@else
+<h1 class="text-center"> You need to be an admin to watch this content</h1>
+@endif

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+@if (\Auth::User()->is_admin)
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">מידע כללי</a>
@@ -59,3 +60,6 @@
    
 </div>
 @endsection
+@else
+<h1 class="text-center"> You need to be an admin to watch this content</h1>
+@endif

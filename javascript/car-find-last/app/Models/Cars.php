@@ -20,6 +20,7 @@ class Cars extends Model
         'four_on_four',
         'crusie_control',
         'reverse_camera',
+        'number_of_seats',
         'autonomous_braking',
         'type_of_car',
         'price',

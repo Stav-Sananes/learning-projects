@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+@if (\Auth::User()->is_admin)
     <form class="needs-validation" action="{{ route('cars.store') }}" method="POST">
         @csrf
         <div class="card-body text-center">
@@ -102,3 +103,6 @@
         </div>
     </form>
 @endsection
+@else
+<h1 class="text-center"> You need to be an admin to watch this content</h1>
+@endif

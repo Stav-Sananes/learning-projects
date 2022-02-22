@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+@if (\Auth::User()->is_admin)
 <form class="needs-validation"  action="{{route('cars.update',$cars->id) }}" method ="POST" >
     {{ csrf_field() }}
     {{ method_field('PATCH') }}
@@ -74,3 +75,6 @@
     <button class="btn btn-primary" type="submit">שליחת טופס</button>
 </form>
 @endsection
+@else
+<h1 class="text-center"> You need to be an admin to watch this content</h1>
+@endif

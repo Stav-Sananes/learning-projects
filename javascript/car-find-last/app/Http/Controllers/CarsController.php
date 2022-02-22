@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Cars;
 use Illuminate\Support\Facades\Storage;
 class CarsController extends Controller
 {
@@ -14,7 +13,8 @@ class CarsController extends Controller
      */
     public function index()
     {
-        $cars = Cars::all();
+        $cars = \App\Models\Cars::all();  
+       
 
         return view('cars.index', compact('cars'));
     }
@@ -71,7 +71,7 @@ class CarsController extends Controller
             'type_of_car' => $request->input('type_of_car'),
         ]);
     
-        return view('cars.show');
+        return back();
     }
 
     /**
@@ -82,6 +82,7 @@ class CarsController extends Controller
      */
     public function show($id)
     {
+        
         $car = \App\Models\Cars::findOrFail($id);
         return view('cars.show', compact('car'));
     }
@@ -150,4 +151,10 @@ class CarsController extends Controller
         return redirect()->route('cars.index')
         ->with('success', 'car deleted successfully');
     }
+    /* public function FindCars(){
+        $findCars = \App\Models\Cars::when($from_date,function ($query) use ($from_date)
+        {
+            return $query->whereDate('created_at', '>=',$from_date);
+        })
+    } */
 }
