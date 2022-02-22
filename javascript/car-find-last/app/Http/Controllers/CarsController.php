@@ -82,7 +82,8 @@ class CarsController extends Controller
      */
     public function show($id)
     {
-        return view('cars.show', compact('cars'));
+        $car = \App\Models\Cars::findOrFail($id);
+        return view('cars.show', compact('car'));
     }
 
     /**
@@ -93,7 +94,8 @@ class CarsController extends Controller
      */
     public function edit($id)
     {
-        return view('cars.edit', compact('cars'));
+        $car = \App\Models\Cars::findOrFail($id);
+        return view('cars.edit', compact('car'));
     }
 
     /**
