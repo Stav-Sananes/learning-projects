@@ -106,7 +106,7 @@ class CarsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, \App\Models\Cars $cars)
+    public function update(Request $request, \App\Models\Cars $car)
     {    
         $request->validate([
             'brand' => 'required|string',
@@ -124,17 +124,17 @@ class CarsController extends Controller
             'picture_1' => 'nullable|string',
             'picture_2' => 'nullable|string',
         ]);
-        $cars->update($request->all());
+        $car->update($request->all());
 
     if ($request->hasFile('avatar')) {
         $avatar = $request->file('avatar');
         $filepath = 'profile_pictures/';
         $file = Storage::disk('local')->put($filepath, $avatar);
-        $cars->update([
+        $car->update([
             'avatar' => $file
         ]);
     }
-          $cars->update($request->all());
+          $car->update($request->all());
         return redirect()->route('cars.index');
     
 }
@@ -145,11 +145,12 @@ class CarsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(\App\Models\Cars $cars)
+    public function destroy(\App\Models\Cars $car)
     {
-        $cars->delete();
+        $car->delete();
         return redirect()->route('cars.index')
         ->with('success', 'car deleted successfully');
+       
     }
     /* public function FindCars(){
         $findCars = \App\Models\Cars::when($from_date,function ($query) use ($from_date)

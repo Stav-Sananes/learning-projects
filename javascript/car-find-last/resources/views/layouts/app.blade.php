@@ -82,7 +82,7 @@
             </div>
         </nav>
 
-        <main class="py-4" style="margin:0%;height:100vh">
+        <main class="py-4" style="margin:0%;height:100vh;">
             @yield('content')
         </main>
     </div>

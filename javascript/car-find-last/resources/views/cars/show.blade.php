@@ -1,20 +1,19 @@
 @extends('layouts.app')
 @section('content')
 @if (\Auth::User()->is_admin)
-<ul class="nav nav-tabs" id="myTab" role="tablist">
+<ul class="nav nav-tabs d-flex justify-content-center mb-5" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">מידע כללי</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">מידע סניפים</a>
     </li>
 </ul>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div class="container">
             <div class="d-flex flex-row h-100 justify-content-lg-between w-100 p-1">
-                <a href="{{route('cars.index')}}" class="btn btn-success">חזרה לתפריט הראשי</a>
-               {{--  <a  href="{{route('cars.edit',['cars'=>$cars->id])}}" class="btn btn-warning">ערוך נתוני רכב</a> --}}
+                <a href="{{route('cars.index')}}" class="btn btn-success">חזרה לפרטי הרכב</a>
+                <a  href="{{route('cars.create')}}" class="btn btn-primary">ליצירת רכב חדש</a> 
+               <a  href="{{route('cars.edit',['car'=>$car->id])}}" class="btn btn-warning">ערוך נתוני רכב</a> 
+              
             </div>
             <table class="table">
                 <thead class="thead-light">
@@ -36,20 +35,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">{{$cars->id}}</th>
-                        <td>{{$cars->brand}}</td>
-                        <td>{{$cars->car_name}}</td>
-                        <td>{{$cars->liter_baggage}}</td>
-                        <td>{{$cars->number_of_seats}}</td>
+                        <th scope="row">{{$car->id}}</th>
+                        <td>{{$car->brand}}</td>
+                        <td>{{$car->car_name}}</td>
+                        <td>{{$car->liter_baggage}}</td>
+                        <td>{{$car->number_of_seats}}</td>
                       
-                        <td>{{$cars->car_pollution}}</td>
-                        <td>{{$cars->four_on_four}}</td>
-                        <td>{{$cars->crusie_control}}</td>
-                        <td>{{$cars->reverse_camera}}</td>
-                        <td>{{$cars->autonomous_braking}}</td>
-                        <td>{{$cars->type_of_car}}</td>
-                        <td>{{$cars->price}}</td>
-                        <td>{{$cars->model_of_car}}</td>
+                        <td>{{$car->car_pollution}}</td>
+                        <td>{{$car->four_on_four}}</td>
+                        <td>{{$car->crusie_control}}</td>
+                        <td>{{$car->reverse_camera}}</td>
+                        <td>{{$car->autonomous_braking}}</td>
+                        <td>{{$car->type_of_car}}</td>
+                        <td>{{$car->price}}</td>
+                        <td>{{$car->model_of_car}}</td>
                     </tr>
 
                 </tbody>

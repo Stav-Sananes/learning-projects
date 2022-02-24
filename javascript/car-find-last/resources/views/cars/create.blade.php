@@ -101,6 +101,9 @@
             <button data-toggle="tooltip" data-placement="top" title="אישור יצירת רכב" class="btn btn-primary"
                 type="submit">הקמת רכב</button>
         </div>
+        <div class="text-center mt-3">
+            <a type="button" class="btn btn-info " href="{{ route('cars.index',['id'=>1]) }}">מעבר לטבלת הרכבים</a>
+        </div>
     </form>
 @endsection
 @else

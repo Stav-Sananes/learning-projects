@@ -5,12 +5,13 @@
         <div class="container mb-3 text-center">
             <div class="row ">
                 <div class="col-6">
-                    <a type="button" class="btn btn-primary" href="{{ route('cars.index',['id'=>1]) }}">מעבר לטבלת הרכבים</a>
+                    <a type="button" class="btn btn-primary" href="{{ route('cars.index', ['id' => 1]) }}">מעבר לטבלת
+                        הרכבים</a>
                 </div>
                 <div class="col-6">
                     <a type="button" class="btn btn-success" href="{{ route('cars.create') }}">להוספת רכב</a>
                 </div>
-              
+
             </div>
         </div>
     @endif
@@ -93,11 +94,12 @@
                                             <div class="card-body fw-bold ">
 
                                                 <p class="card-text mt-2">0-200</p>
-                                                <label class="btn btn-success active">
-                                                    <input type="radio" name="liter_baggage" id="option1" autocomplete="off"
-                                                        value="0"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option0"
+                                                    autocomplete="off" value="0" checked>
+                                                <label class="btn btn-outline-success" for="option0">בחירה</label>
 
+                                              
+                                                
                                             </div>
                                         </div>
                                         <div class="card mr-3" style="width: 18rem;">
@@ -105,21 +107,21 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text mt-2">200-400</p>
-                                                <label class="btn btn-danger active">
-                                                    <input type="radio" name="liter_baggage" id="option1" autocomplete="off"
-                                                        value="1"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option1"
+                                                    autocomplete="off" value="1" checked>
+                                                <label class="btn btn-outline-danger" for="option1">בחירה</label>
                                             </div>
+
                                         </div>
+
                                         <div class="card" style="width: 18rem;">
 
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text mt-2">400+</p>
-                                                <label class="btn btn-info active">
-                                                    <input type="radio" name="liter_baggage" id="option1" autocomplete="off"
-                                                        value="2"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option2"
+                                                autocomplete="off" value="2" checked>
+                                            <label class="btn btn-outline-info" for="option2">בחירה</label>
                                             </div>
                                         </div>
 
@@ -138,21 +140,21 @@
 
                                                 <p class="card-text fw-bold">כן</p>
 
-                                                <label class="btn btn-success active">
-                                                    <input type="radio" name="four_on_four" id="option1" autocomplete="off"
-                                                        value="1"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option3"
+                                                autocomplete="off" value="1" checked>
+                                            <label class="btn btn-outline-success" for="option3">בחירה</label>
+
                                             </div>
+
                                         </div>
                                         <div class="card" style="width: 18rem;">
 
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">לא</p>
-                                                <label class="btn btn-danger active">
-                                                    <input type="radio" name="four_on_four" id="option1" autocomplete="off"
-                                                        value="0"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option4"
+                                                autocomplete="off" value="0" checked>
+                                            <label class="btn btn-outline-danger" for="option4">בחירה</label>
                                             </div>
                                         </div>
 
@@ -167,10 +169,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">כן</p>
-                                                <label class="btn btn-success active">
-                                                    <input type="radio" name="crusie_control" id="option1"
-                                                        autocomplete="off" value="1"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option5"
+                                                autocomplete="off" value="1" checked>
+                                            <label class="btn btn-outline-success" for="option5">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card" style="width: 18rem;">
@@ -178,10 +179,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">לא</p>
-                                                <label class="btn btn-danger active">
-                                                    <input type="radio" name="crusie_control" id="option1"
-                                                        autocomplete="off" value="0"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option6"
+                                                    autocomplete="off" value="0" checked>
+                                                <label class="btn btn-outline-danger" for="option6">בחירה</label>
                                             </div>
                                         </div>
                                     </div>
@@ -194,10 +194,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">2 מקומות ישיבה</p>
-                                                <label class="btn btn-success active">
-                                                    <input type="radio" name="number_of_seats" id="option1"
-                                                        autocomplete="off" value="0"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option7"
+                                                autocomplete="off" value="0" checked>
+                                            <label class="btn btn-outline-success" for="option7">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card" style="width: 18rem;">
@@ -205,10 +204,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">מעל 2 מקומות ישיבה ברכב</p>
-                                                <label class="btn btn-danger active">
-                                                    <input type="radio" name="number_of_seats" id="option1"
-                                                        autocomplete="off" value="1"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option8"
+                                                autocomplete="off" value="0" checked>
+                                            <label class="btn btn-outline-danger" for="option8">בחירה</label>
                                             </div>
                                         </div>
                                     </div>
@@ -221,10 +219,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text fw-bold">ספורט</p>
-                                                <label class="btn btn-success active">
-                                                    <input type="radio" name="type_of_car" id="option1" autocomplete="off"
-                                                        value="0"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option9"
+                                                autocomplete="off" value="0" checked>
+                                            <label class="btn btn-outline-success" for="option9">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card mr-3" style="width: 18rem;">
@@ -232,10 +229,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text fw-bold">משפחתי</p>
-                                                <label class="btn btn-danger active">
-                                                    <input type="radio" name="type_of_car" id="option1" autocomplete="off"
-                                                        value="1"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option10"
+                                                autocomplete="off" value="1" checked>
+                                            <label class="btn btn-outline-danger" for="option10">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card" style="width: 18rem;">
@@ -243,10 +239,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text fw-bold">מנהלים</p>
-                                                <label class="btn btn-info active">
-                                                    <input type="radio" name="type_of_car" id="option1" autocomplete="off"
-                                                        value="2"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option11"
+                                                autocomplete="off" value="2" checked>
+                                            <label class="btn btn-outline-info" for="option11">בחירה</label>
                                             </div>
                                         </div>
                                     </div>
@@ -259,10 +254,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">כן</p>
-                                                <label class="btn btn-success active">
-                                                    <input type="radio" name="autonomous_braking" id="option1"
-                                                        autocomplete="off" value="0"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option12"
+                                                autocomplete="off" value="0" checked>
+                                            <label class="btn btn-outline-success" for="option12">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card" style="width: 18rem;">
@@ -270,10 +264,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">לא</p>
-                                                <label class="btn btn-danger active">
-                                                    <input type="radio" name="autonomous_braking" id="option1"
-                                                        autocomplete="off" value="1"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option13"
+                                                    autocomplete="off" value="1" checked>
+                                                <label class="btn btn-outline-danger" for="option13">בחירה</label>
                                             </div>
                                         </div>
                                     </div>
@@ -286,10 +279,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">0-7</p>
-                                                <label class="btn btn-success active">
-                                                    <input type="radio" name="car_pollution" id="option1" autocomplete="off"
-                                                        value="0"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option14"
+                                                    autocomplete="off" value="0" checked>
+                                                <label class="btn btn-outline-success" for="option14">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card mr-3" style="width: 18rem;">
@@ -297,10 +289,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">7-12</p>
-                                                <label class="btn btn-danger active">
-                                                    <input type="radio" name="car_pollution" id="option1" autocomplete="off"
-                                                        value="1"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option15"
+                                                autocomplete="off" value="1" checked>
+                                            <label class="btn btn-outline-danger" for="option15">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card" style="width: 18rem;">
@@ -308,10 +299,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">12+</p>
-                                                <label class="btn btn-info active">
-                                                    <input type="radio" name="car_pollution" id="option1" autocomplete="off"
-                                                        value="2"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option16"
+                                                autocomplete="off" value="2" checked>
+                                            <label class="btn btn-outline-info" for="option16">בחירה</label>
                                             </div>
                                         </div>
                                     </div>
@@ -324,10 +314,9 @@
                                             <div class="card-body  fw-bold">
 
                                                 <p class="card-text">עד 50</p>
-                                                <label class="btn btn-success active">
-                                                    <input type="radio" name="price" id="option1" autocomplete="off"
-                                                        value="0"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option17"
+                                                autocomplete="off" value="0" checked>
+                                            <label class="btn btn-outline-success" for="option17">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card  mr-3" style="width: 18rem;">
@@ -335,10 +324,9 @@
                                             <div class="card-body  fw-bold  ">
 
                                                 <p class="card-text">עד 70</p>
-                                                <label class="btn btn-danger active">
-                                                    <input type="radio" name="price" id="option1" autocomplete="off"
-                                                        value="1"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option18"
+                                                autocomplete="off" value="1" checked>
+                                            <label class="btn btn-outline-danger" for="option18">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card " style="width: 18rem;">
@@ -346,10 +334,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">110+</p>
-                                                <label class="btn btn-info active">
-                                                    <input type="radio" name="price" id="option1" autocomplete="off"
-                                                        value="2"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option19"
+                                                autocomplete="off" value="0" checked>
+                                            <label class="btn btn-outline-info" for="option19">בחירה</label>
                                             </div>
                                         </div>
                                     </div>
@@ -362,10 +349,9 @@
                                             <div class="card-body  fw-bold">
 
                                                 <p class="card-text ">כן</p>
-                                                <label class="btn btn-success active">
-                                                    <input type="radio" name="reverse_camera" id="option1"
-                                                        autocomplete="off" value="0"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option20"
+                                                autocomplete="off" value="0" checked>
+                                            <label class="btn btn-outline-success" for="option20">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card d-flex justify-content-center  mr-3" style="width: 18rem;">
@@ -373,10 +359,9 @@
                                             <div class="card-body  fw-bold">
 
                                                 <p class="card-text">לא</p>
-                                                <label class="btn btn-danger active">
-                                                    <input type="radio" name="reverse_camera" id="option1"
-                                                        autocomplete="off" value="1"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option21"
+                                                autocomplete="off" value="1" checked>
+                                            <label class="btn btn-outline-danger" for="option21">בחירה</label>
                                             </div>
                                         </div>
                                     </div>
@@ -390,10 +375,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">לא חשמלית</p>
-                                                <label class="btn btn-success active">
-                                                    <input type="radio" name="four_on_four" id="model_of_car"
-                                                        autocomplete="off" value="0"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option22"
+                                                    autocomplete="off" value="0" checked>
+                                                <label class="btn btn-outline-success" for="option22">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card mr-3" style="width: 18rem;">
@@ -401,10 +385,9 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">חשמלית</p>
-                                                <label class="btn btn-danger active">
-                                                    <input type="radio" name="four_on_four" id="model_of_car"
-                                                        autocomplete="off" value="1"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option23"
+                                                autocomplete="off" value="1" checked>
+                                            <label class="btn btn-outline-danger" for="option23">בחירה</label>
                                             </div>
                                         </div>
                                         <div class="card" style="width: 18rem;">
@@ -412,16 +395,19 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">היברדית</p>
-                                                <label class="btn btn-info active">
-                                                    <input type="radio" name="four_on_four" id="model_of_car"
-                                                        autocomplete="off" value="2"> בחירה
-                                                </label>
+                                                <input type="radio" class="btn-check" name="options" id="option24"
+                                                autocomplete="off" value="2" checked>
+                                            <label class="btn btn-outline-info" for="option24">בחירה</label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="text-center mt-4">
+                                <button type="button" id="changetabbutton" class="btn btn-primary ">לשלב הבא</button>
+                            </div>
                         </div>
+
                     </div>
                     <div class="text-center mt-5">
                         <button type="button" type="submit" class="btn btn-primary">סיום</button>
@@ -450,4 +436,11 @@
         });
     </script>
 @endsection
+<style>
+    [type='radio'] {
+        display: none;
+    }
+
+</style>
+
 @endsection

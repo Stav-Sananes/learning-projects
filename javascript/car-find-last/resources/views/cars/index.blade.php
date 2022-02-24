@@ -20,10 +20,11 @@
 <div class="card  mt-2">
     <div class="card-header">
         <div class="d-flex justify-content-between">
-            <span>
+            <h4>
                 רכבים
-            </span>
+            </h4>
             <a href="{{ route('cars.create') }}" class="btn btn-primary">הוספת רכב </a>
+            <a  href="/home" class="btn btn-info">חזרה למסך השאלות</a> 
         </div>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="חיפוש רכב" aria-label="Search">
@@ -58,9 +59,7 @@
             <tbody>
                 @foreach ($cars as $car)
                     <td>
-                        <a href="{{ route('cars.show', ['car'=>$car->id]) }}">
-                            {{ $car->id }}
-                        </a>
+                      
                         <tr>
                             <th scope="row">{{$car->id}}</th>
                             <td>{{$car->brand}}</td>
@@ -79,15 +78,16 @@
                         </tr>
     
                     <td>
-
                         <form action="{{ route('cars.destroy', $car) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-xs btn-danger" onclick="return confirm('Are you sure?')"
+                            <div class="d-flex justify-content-center">
+                            <button class="btn btn-xs btn-danger " onclick="return confirm('Are you sure?')"
                                 type="submit">מחיקה</button>
+                            </div>
                         </form>
                     </td>
-                    <td><input type="checkbox" class="cb" value=""></input></td>
+                    
                     </tr>
                 @endforeach
             </tbody>
