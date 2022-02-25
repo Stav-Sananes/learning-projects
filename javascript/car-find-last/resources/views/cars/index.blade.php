@@ -59,7 +59,9 @@
             <tbody>
                 @foreach ($cars as $car)
                     <td>
-                      
+                        <a href="{{ route('cars.show', ['car'=>$car->id]) }}" class="btn btn-dark">
+                            ערוך נתוני רכב
+                        </a>
                         <tr>
                             <th scope="row">{{$car->id}}</th>
                             <td>{{$car->brand}}</td>

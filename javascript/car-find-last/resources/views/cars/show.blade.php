@@ -18,6 +18,7 @@
             <table class="table">
                 <thead class="thead-light">
                     <tr>
+                        
                         <th scope="col">#</th>
                         <th scope="col">שם חברת הרכב</th>
                         <th scope="col">שם הרכב</th>

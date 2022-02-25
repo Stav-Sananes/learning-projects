@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
-@if (\Auth::User()->is_admin)
-    <form class="needs-validation" action="{{ route('cars.store') }}" method="POST">
-        @csrf
-        <div class="card-body text-center">
+    @if (\Auth::User()->is_admin)
+        <form class="needs-validation" action="{{ route('cars.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="  card-body text-center">
             <div class="form-row ">
                 <div class="col-md-4 mb-3">
                     <label for="validationCustom01">שם חברת הרכב?</label>
@@ -87,25 +87,53 @@
                 </div>
 
             </div>
-        </div>
-        <div class="form-group text-center">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                    חתימה ואישור הקמת רכב.
-                </label>
-
             </div>
-        </div>
-        <div class="text-center">
-            <button data-toggle="tooltip" data-placement="top" title="אישור יצירת רכב" class="btn btn-primary"
-                type="submit">הקמת רכב</button>
-        </div>
-        <div class="text-center mt-3">
-            <a type="button" class="btn btn-info " href="{{ route('cars.index',['id'=>1]) }}">מעבר לטבלת הרכבים</a>
-        </div>
-    </form>
-@endsection
+            <div class="text-center">
+                <input id="picture_1" type="file" name="picture_1" />
+                <label for="picture_1" class="custom-file-upload">
+                    <a class="btn btn-info">תמונת רכב ראשונה</a>
+                </label>
+            
+                <input id="picture_2" type="file" name="picture_2" />
+                <label for="picture_2" class="custom-file-upload">
+                    <a class="btn btn-danger">תמונת רכב שנייה</a>
+                </label>
+            </div>
+            <input id="file-upload" type="file" />
+            <div class="form-group text-center">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        חתימה ואישור הקמת רכב.
+                    </label>
+
+                </div>
+            </div>
+            <div class="text-center">
+                <button data-toggle="tooltip" data-placement="top" title="אישור יצירת רכב" class="btn btn-primary"
+                    type="submit">הקמת רכב</button>
+            </div>
+            <div class="text-center mt-3">
+                <a type="button" class="btn btn-success " href="{{ route('cars.index', ['id' => 1]) }}">מעבר לטבלת
+                    הרכבים</a>
+            </div>
+        </form>
+       
+        <style>
+            input[type="file"] {
+                display: none;
+            }
+
+            .custom-file-upload {
+                border: 1px solid #ccc;
+                display: inline-block;
+                padding: 6px 12px;
+                cursor: pointer;
+            }
+
+        </style>
+        
+    @endsection
 @else
-<h1 class="text-center"> You need to be an admin to watch this content</h1>
+    <h1 class="text-center"> You need to be an admin to watch this content</h1>
 @endif

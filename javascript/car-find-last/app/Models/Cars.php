@@ -28,14 +28,15 @@ class Cars extends Model
         'picture_1',
         'picture_2',
     ];
-    public function getAvatarUrlAttribute()
-    {
-        return $this->avatar && Storage::disk('local')->exists($this->avatar) ? route('avatar-customer', ['id' => $this->id])/*Storage::url($this->avatar)*/ : null;
+    
+    public function setAvatarAttribute($value) {
+        $file = Storage::disk('local')->put('cars/', $value);
+        $this->attributes['picture_1'] = $file;
     }
     /* public function responseAvatar() {
         ob_get_clean();
         return $this->avatar && Storage::disk('local')->exists($this->avatar) ? Storage::disk('local')->response($this->avatar) : abort(404);
     } */
-
+    
     
 }

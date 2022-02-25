@@ -36,7 +36,7 @@ class CarsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, \App\Models\Cars $car)
     {
         
         $request->validate([
@@ -52,9 +52,10 @@ class CarsController extends Controller
             'autonomous_braking' => 'required|integer',
             'price' => 'required|integer',
             'model_of_car' => 'required|integer',
-            'picture_1' => 'nullable|string',
-            'picture_2' => 'nullable|string',
+            'picture_1' => 'nullable',
+            'picture_2' => 'nullable',
         ]);
+      
        
         \App\Models\Cars::Create([
             'car_name' => $request->input('car_name'),
@@ -70,9 +71,32 @@ class CarsController extends Controller
             'model_of_car' => $request->input('model_of_car'),
             'type_of_car' => $request->input('type_of_car'),
         ]);
+        
+        if ($request->hasFile('picture_1')) {
+      
+            $picture_1 = $request->file('picture_1');
+            $filepath = 'cars/';
+            $file = Storage::disk('local')->put($filepath, $picture_1);
+            $car->update([
+                'picture_1' => $file
+            ]);
+          
+        }
+      
+        if ($request->hasFile('picture_2')) {
+          
+            $picture_2 = $request->file('picture_2');
+            $filepath = 'cars/';
+            $file = Storage::disk('local')->put($filepath, $picture_2);
+            $car->update([
+                'picture_2' => $file
+            ]);
+        }    
+       
     
         return back();
     }
+
 
     /**
      * Display the specified resource.
@@ -121,19 +145,34 @@ class CarsController extends Controller
             'autonomous_braking' => 'required|integer',
             'price' => 'required|integer',
             'model_of_car' => 'required|integer',
-            'picture_1' => 'nullable|string',
-            'picture_2' => 'nullable|string',
+            'picture_1' => 'nullable',
+            'picture_2' => 'nullable',
         ]);
-        $car->update($request->all());
+      
 
-    if ($request->hasFile('avatar')) {
-        $avatar = $request->file('avatar');
-        $filepath = 'profile_pictures/';
-        $file = Storage::disk('local')->put($filepath, $avatar);
+    if ($request->hasFile('picture_1')) {
+      
+        $picture_1 = $request->file('picture_1');
+        $filepath = 'cars/';
+        $file = Storage::disk('local')->put($filepath, $picture_1);
         $car->update([
-            'avatar' => $file
+            'picture_1' => $file
         ]);
+      
     }
+  
+    if ($request->hasFile('picture_2')) {
+      
+        $picture_2 = $request->file('picture_2');
+        $filepath = 'cars/';
+        $file = Storage::disk('local')->put($filepath, $picture_2);
+        $car->update([
+            'picture_2' => $file
+        ]);
+      
+    }
+   
+   
           $car->update($request->all());
         return redirect()->route('cars.index');
     
