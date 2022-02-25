@@ -15,7 +15,7 @@
             </div>
         </div>
     @endif
-    <form>
+    <form class="needs-validation"  method="GET">
         <div class="container" style="max-width: 1460px;">
             <div class="row justify-content-center">
                 <div class="col-md">

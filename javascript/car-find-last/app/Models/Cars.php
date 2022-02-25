@@ -37,6 +37,7 @@ class Cars extends Model
         ob_get_clean();
         return $this->avatar && Storage::disk('local')->exists($this->avatar) ? Storage::disk('local')->response($this->avatar) : abort(404);
     } */
-    
+  
+ 
     
 }

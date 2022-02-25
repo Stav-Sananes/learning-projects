@@ -432,7 +432,10 @@
                         </div>
                         <div class="text-center">
                             <a href="{{ url('/home') }}" type="button" class="btn btn-primary btn-lg" href="#"
-                                role="button">התחל</a>
+                                role="button">התחלת עשר שאלות</a>
+                      
+                            <a href="{{ url('/fivequestions') }}" type="button" class="btn btn-success btn-lg" href="#"
+                                role="button">התחלת חמש שאלות</a>
                         </div>
                     @else
                         <a href="{{ route('login') }}" class="ml-4 text-sm btn btn-info btn-lg">לחץ כאן

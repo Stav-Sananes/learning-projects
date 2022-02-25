@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 class CarsController extends Controller
 {
@@ -191,10 +192,11 @@ class CarsController extends Controller
         ->with('success', 'car deleted successfully');
        
     }
-    /* public function FindCars(){
+     /* public function FindCars()
+     {
         $findCars = \App\Models\Cars::when($from_date,function ($query) use ($from_date)
         {
             return $query->whereDate('created_at', '>=',$from_date);
         })
-    } */
+    }  */
 }
