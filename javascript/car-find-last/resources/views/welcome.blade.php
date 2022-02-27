@@ -429,6 +429,11 @@
                                 aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
+                          
+                        </div>
+                        <div class="hidden fixed top-0 right-5  px-6 py-4 sm:block" style="margin-left:-30%">
+                            <a href="{{ url('/bikes') }}" type="button" class="btn btn-primary btn-lg" href="#"
+                            role="button">מעבר לחיפוש האופנועים שלנו</a>
                         </div>
                         <div class="text-center">
                             <a href="{{ url('/home') }}" type="button" class="btn btn-primary btn-lg" href="#"

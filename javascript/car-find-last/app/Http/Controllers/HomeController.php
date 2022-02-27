@@ -33,4 +33,8 @@ class HomeController extends Controller
     {
         return view('fifteenquestions');
     }
+    public function bike()
+    {
+        return view('bikes');
+    }
 }
