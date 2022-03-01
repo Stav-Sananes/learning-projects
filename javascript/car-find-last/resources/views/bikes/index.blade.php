@@ -23,11 +23,11 @@
             <h4>
                 רכבים
             </h4>
-            <a href="{{ route('cars.create') }}" class="btn btn-primary">הוספת רכב </a>
-            <a  href="/home" class="btn btn-info">חזרה למסך השאלות</a> 
+            <a href="{{ route('bikes.create') }}" class="btn btn-primary">הוספת אופנוע </a>
+            <a  href="{{ route('bikes') }}" class="btn btn-info">חזרה למסך השאלות</a> 
         </div>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="חיפוש רכב" aria-label="Search">
+            <input class="form-control mr-sm-2" type="search" placeholder="חיפוש אופנוע" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חפש</button>
         </form>
     </div>
@@ -38,18 +38,18 @@
                 <tr>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">שם חברת הרכב</th>
-                        <th scope="col">שם הרכב</th>
-                        <th scope="col">ליטר בגאז</th> 
-                        <th scope="col">מקומות ישיבה</th>     
-                        <th scope="col">דרגת זיהום אוויר</th>
-                        <th scope="col">4 On 4</th>
-                        <th scope="col">בקרת שיוט</th>
-                        <th scope="col">מצלמת רוורס</th> 
-                        <th scope="col">מערכת בלימה אוטונומית</th>
-                        <th scope="col">סוג רכב</th>    
-                        <th scope="col">מחיר</th>  
-                        <th scope="col">מודל המכונית</th>  
+                        <th scope="col">שם חברת האופנוע</th>
+                        <th scope="col">שם האופנוע</th>
+                        <th scope="col">צילנדרים</th>  
+                        <th scope="col">סוג הנעה</th> 
+                        <th scope="col">מחיר</th>     
+                        <th scope="col">סוג הפצה באופנוע</th>
+                        <th scope="col">סוג מנוע</th>
+                        <th scope="col">קיבולת דלק</th>
+                        <th scope="col">מהלך מנוע</th> 
+                        <th scope="col">מודל האופנוע</th>
+                        <th scope="col">שסתומים בכול צילנדר</th>    
+                        <th scope="col">מערכת קירור</th>  
                     </tr>
                     <td>
                         <input id="CheckAll" type="checkbox" name="CheckAll" onchange="myForm()">
@@ -59,8 +59,8 @@
             <tbody>
                 @foreach ($bikes as $bike)
                     <td>
-                        <a href="{{ route('bike.show', ['bike'=>$bike->id]) }}" class="btn btn-dark">
-                            ערוך נתוני רכב
+                        <a href="{{ route('bikes.show', ['bike'=>$bike->id]) }}" class="btn btn-dark">
+                            ערוך נתוני אופנוע
                         </a>
                         <tr>
                             <th scope="row">{{$bike->id}}</th>
@@ -80,7 +80,7 @@
                         </tr>
     
                     <td>
-                        <form action="{{ route('bike.destroy', $bike) }}" method="POST">
+                        <form action="{{ route('bikes.destroy', $bike) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <div class="d-flex justify-content-center">

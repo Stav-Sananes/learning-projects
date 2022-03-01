@@ -87,15 +87,15 @@
                             <div class="tab-content text-center" id="myTabContent">
                                 <div class="tab-pane fade show active" id="question1" role="tabpanel"
                                     aria-labelledby="question1-tab">
-                                    <h5 class="card-title mt-3">ליטר בגאז</h5>
+                                    <h5 class="card-title mt-3">מערכת קירור</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card mr-3 " style="width: 18rem;">
 
                                             <div class="card-body fw-bold ">
 
-                                                <p class="card-text mt-2">0-200</p>
-                                                <input type="radio" class="btn-check" name="liter_baggage" id="option0"
-                                                    autocomplete="off" value="0" >
+                                                <p class="card-text mt-2">נוזלית</p>
+                                                <input type="radio" class="btn-check" name="cooling_system" id="option0"
+                                                    autocomplete="off" value="2" >
                                                 <label class="btn btn-outline-success" for="option0">בחירה</label>
 
 
@@ -106,9 +106,9 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text mt-2">200-400</p>
-                                                <input type="radio" class="btn-check" name="liter_baggage" id="option1"
-                                                    autocomplete="off" value="1" >
+                                                <p class="card-text mt-2">מערכת קירור אוויר ושמן</p>
+                                                <input type="radio" class="btn-check" name="cooling_system" id="option1"
+                                                    autocomplete="off" value="0" >
                                                 <label class="btn btn-outline-danger" for="option1">בחירה</label>
                                             </div>
 
@@ -118,9 +118,9 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text mt-2">400+</p>
-                                                <input type="radio" class="btn-check" name="liter_baggage" id="option2"
-                                                    autocomplete="off" value="2" >
+                                                <p class="card-text mt-2">מערכת קירור אוויר</p>
+                                                <input type="radio" class="btn-check" name="cooling_system" id="option2"
+                                                    autocomplete="off" value="1" >
                                                 <label class="btn btn-outline-info" for="option2">בחירה</label>
                                             </div>
                                         </div>

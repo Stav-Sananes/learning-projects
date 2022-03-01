@@ -16,14 +16,14 @@ return new class extends Migration
             $table->id();
             $table->string('brand')->nullable();
             $table->string('bike_name')->nullable();
+            $table->string('model_of_bike')->nullable();
+            $table->string('engine_type')->nullable();
             $table->integer('cylinders')->nullable();        
             $table->integer('starter')->nullable();        
             $table->integer('price')->unsigned();
             $table->integer('transmission_type')->nullable();
-            $table->integer('engine_type')->nullable();
             $table->tinyInteger('fuel_captacity')->unsigned();
             $table->tinyInteger('engine_stroke')->nullable();
-            $table->tinyInteger('model_of_bike')->unsigned();
             $table->tinyInteger('valves_per_cylinder')->nullable();
             $table->tinyInteger('cooling_system')->nullable();
             $table->string('picture_1')->nullable();

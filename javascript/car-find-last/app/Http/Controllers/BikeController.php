@@ -40,25 +40,26 @@ class BikeController extends Controller
      */
     public function store(Request $request, \App\Models\Bike $bike)
     {
+        
         $request->validate([
             'brand' => 'required|string',
             'bike_name' => 'required|string',
+            'model_of_bike' => 'required|string',
             'cooling_system' => 'required|integer',
+            'engine_type' => 'required|string',
             'cylinders' => 'required|integer',
             'starter' => 'required|integer',
             'valves_per_cylinder' => 'required|integer',
             'transmission_type' => 'required|integer',
-            'engine_type' => 'required|integer',
             'fuel_captacity' => 'required|integer',
             'engine_stroke' => 'required|integer',
             'price' => 'required|integer',
-            'model_of_bike' => 'required|integer',
             'picture_1' => 'nullable',
             'picture_2' => 'nullable',
         ]);
       
        
-        \App\Models\Cars::Create([
+        \App\Models\Bike::Create([
             'brand' => $request->input('brand'),
             'bike_name' => $request->input('bike_name'),
             'cooling_system' => $request->input('cooling_system'),
