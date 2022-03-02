@@ -239,4 +239,5 @@ class CarsController extends Controller
         ->orderBy('price','desc');
     
     }
+
 }

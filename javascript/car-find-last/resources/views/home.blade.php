@@ -412,6 +412,9 @@
                     <div class="text-center mt-5">
                         <button type="button" type="submit" class="btn btn-primary"> סיום ומעבר לקבלת התשובות</button>
                     </div>
+                    <div class="text-center mt-3">
+                        <a type="button" class="btn btn-danger" href="{{ route('bikes') }}">לשאלות האופנועים</a>
+                    </div>
 
                 </div>
 
