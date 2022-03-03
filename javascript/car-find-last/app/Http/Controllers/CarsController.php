@@ -237,7 +237,8 @@ class CarsController extends Controller
             return $query->where('model_of_car' , $model_of_car);
         })
         ->orderBy('price','desc');
-    
+        return view('cars.finish')
+        ->with('cars',$findCars);
     }
 
 }

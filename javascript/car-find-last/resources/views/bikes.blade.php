@@ -131,7 +131,7 @@
 
                                 </div>
                                 <div class="tab-pane fade" id="question2" role="tabpanel" aria-labelledby="question2-tab">
-                                    <h5 class="card-title mt-3">רכב 4 על 4</h5>
+                                    <h5 class="card-title mt-3">סוג אופנוע</h5>
                                     <div class="d-flex justify-content-center">
 
                                         <div class="card mr-3" style="width: 18rem;">
@@ -162,7 +162,7 @@
 
                                 </div>
                                 <div class="tab-pane fade" id="question3" role="tabpanel" aria-labelledby="question3-tab">
-                                    <h5 class="card-title mt-3">? רכב עם בקרת שיוט</h5>
+                                    <h5 class="card-title mt-3">סוג מנוע</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card mr-3" style="width: 18rem;">
 
@@ -178,7 +178,7 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">לא</p>
+                                                <p class="card-text">צילנדרים</p>
                                                 <input type="radio" class="btn-check" name="cruise_control" id="option6"
                                                     autocomplete="off" value="0" >
                                                 <label class="btn btn-outline-danger" for="option6">בחירה</label>
@@ -187,7 +187,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="question4" role="tabpanel" aria-labelledby="question4-tab">
-                                    <h5 class="card-title mt-3">? מקומות ישיבה</h5>
+                                    <h5 class="card-title mt-3">סטרטר מותאם אישית</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card mr-3" style="width: 18rem;">
 
@@ -203,7 +203,7 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">מעל 2 מקומות ישיבה ברכב</p>
+                                                <p class="card-text">מספר הפצה באופנוע</p>
                                                 <input type="radio" class="btn-check" name="number_of_seats" id="option8"
                                                     autocomplete="off" value="0" >
                                                 <label class="btn btn-outline-danger" for="option8">בחירה</label>
@@ -272,13 +272,13 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="question7" role="tabpanel" aria-labelledby="question7-tab">
-                                    <h5 class="card-title mt-3">? דרגת זיהום אוויר ברכב</h5>
+                                    <h5 class="card-title mt-3">? דרגת זיהום אוויר באופנוע</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card mr-3" style="width: 18rem;">
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">0-7</p>
+                                                <p class="card-text">משנה</p>
                                                 <input type="radio" class="btn-check" name="car_pollution" id="option14"
                                                     autocomplete="off" value="0" >
                                                 <label class="btn btn-outline-success" for="option14">בחירה</label>
@@ -288,7 +288,7 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">7-12</p>
+                                                <p class="card-text">לא משנה</p>
                                                 <input type="radio" class="btn-check" name="car_pollution" id="option15"
                                                     autocomplete="off" value="1" >
                                                 <label class="btn btn-outline-danger" for="option15">בחירה</label>
@@ -313,7 +313,7 @@
 
                                             <div class="card-body  fw-bold">
 
-                                                <p class="card-text">עד 50</p>
+                                                <p class="card-text">עד 10</p>
                                                 <input type="radio" class="btn-check" name="price" id="option17"
                                                     autocomplete="off" value="0" >
                                                 <label class="btn btn-outline-success" for="option17">בחירה</label>
@@ -323,7 +323,7 @@
 
                                             <div class="card-body  fw-bold  ">
 
-                                                <p class="card-text">עד 70</p>
+                                                <p class="card-text">עד 30</p>
                                                 <input type="radio" class="btn-check" name="price" id="option18"
                                                     autocomplete="off" value="1" >
                                                 <label class="btn btn-outline-danger" for="option18">בחירה</label>
@@ -333,7 +333,7 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">110+</p>
+                                                <p class="card-text">30+</p>
                                                 <input type="radio" class="btn-check" name="price" id="option19"
                                                     autocomplete="off" value="0" >
                                                 <label class="btn btn-outline-info" for="option19">בחירה</label>
