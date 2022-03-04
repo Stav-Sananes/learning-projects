@@ -5,11 +5,11 @@
         <div class="container mb-3 text-center">
             <div class="row ">
                 <div class="col-6">
-                    <a type="button" class="btn btn-primary" href="{{ route('cars.index', ['id' => 1]) }}">מעבר לטבלת
+                    <a type="button" class="btn btn-outline-primary" href="{{ route('cars.index', ['id' => 1]) }}">מעבר לטבלת
                         הרכבים</a>
                 </div>
                 <div class="col-6">
-                    <a type="button" class="btn btn-success" href="{{ route('cars.create') }}">להוספת רכב</a>
+                    <a type="button" class="btn btn-outline-success" href="{{ route('cars.create') }}">להוספת רכב</a>
                 </div>
 
             </div>
@@ -19,7 +19,33 @@
         <div class="container" style="max-width: 1460px;">
             <div class="row justify-content-center">
                 <div class="col-md">
+                    <div class="d-flex justify-content-center mb-4">
+                        <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" 
+                            data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">למידע על תהליך מציאת
+                            הרכבים</button>
+
+                        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop"
+                            aria-labelledby="offcanvasTopLabel">
+                            <div class="offcanvas-header">
+                                <div>
+                                    <h2 id="offcanvasTopLabel">Car-Find</h2>
+                                </div>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body text-center fw-bolder">
+                                כאן תעברו עשרה שאלות שבהם תצטרכו לענות על מנת למצוא את הרכב שאתם הכי רוצים גם כשאין לכם
+                                באמת
+                                ידע ברכבים
+                            </div>
+                            <div class="offcanvas-body text-center mt-3 fw-bolder">
+                                <p>אם במקרה והגעתם לכאן בטעות ואתם מחפשים לעבור לשאלות האופנועים לחצו כאן</p>
+                                <a type="button" class="btn btn-danger" href="{{ route('bikes') }}">לשאלות האופנועים</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card">
+                        
                         <div class="card-header text-center fw-bolder">{{ __('טבלת השאלות') }}</div>
 
                         <div class="card-body">
@@ -413,7 +439,7 @@
                         <button type="button" type="submit" class="btn btn-primary"> סיום ומעבר לקבלת התשובות</button>
                     </div>
                     <div class="text-center mt-3">
-                        <a type="button" class="btn btn-danger" href="{{ route('bikes') }}">לשאלות האופנועים</a>
+                        <a type="button" class="btn btn-warning" href="{{ route('bikes') }}">לשאלות האופנועים</a>
                     </div>
 
                 </div>
