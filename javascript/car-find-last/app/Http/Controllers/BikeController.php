@@ -186,50 +186,52 @@ class BikeController extends Controller
     }
     public function FindBikes(Request $request)
     {
-       $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
-       $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
-       $cruise_control = $request->input('cruise_control') ?  $request->input('cruise_control') : null;
-       $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
-       $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
-       $autonomous_braking = $request->input('autonomous_braking') ?  $request->input('autonomous_braking') : null;
-       $car_pollution = $request->input('car_pollution') ?  $request->input('car_pollution') : null;
+       $brand = $request->input('brand') ?  $request->input('brand') : null;
+       $model_of_bike = $request->input('model_of_bike') ?  $request->input('model_of_bike') : null;
+       $engine_type = $request->input('engine_type') ?  $request->input('engine_type') : null;
+       $cylinders = $request->input('cylinders') ?  $request->input('cylinders') : null;
+       $starter = $request->input('starter') ?  $request->input('starter') : null;
+       $transmission_type = $request->input('transmission_type') ?  $request->input('transmission_type') : null;
+       $fuel_captacity = $request->input('fuel_captacity') ?  $request->input('fuel_captacity') : null;
        $price = $request->input('price') ?  $request->input('price') : null;
-       $reverse_camera = $request->input('reverse_camera') ?  $request->input('reverse_camera') : null;
-       $model_of_car = $request->input('model_of_car') ?  $request->input('model_of_car') : null;
+       $engine_stroke = $request->input('engine_stroke') ?  $request->input('engine_stroke') : null;
+       $cooling_system = $request->input('cooling_system') ?  $request->input('cooling_system') : null;
        
-       $findCars = \App\Models\Cars::
-       when($liter_baggage,function ($query) use ($liter_baggage){
-           return $query->where('liter_baggage', $liter_baggage);
+       $findBikes = \App\Models\Bike::
+       when($brand,function ($query) use ($brand){
+           return $query->where('brand', $brand);
        })
-       ->when($four_on_four,function ($query) use ($four_on_four) {
-           return $query->where('four_on_four',  $four_on_four);
+       ->when($model_of_bike,function ($query) use ($model_of_bike) {
+           return $query->where('model_of_bike',  $model_of_bike);
        })
-       ->when($cruise_control,function ($query) use ($cruise_control) {
-           return $query->where('cruise_control', $cruise_control);
+       ->when($engine_type,function ($query) use ($engine_type) {
+           return $query->where('engine_type', $engine_type);
        })
-       ->when($number_of_seats,function ($query) use ($number_of_seats) {
-           return $query->where('number_of_seats', $number_of_seats);
+       ->when($cylinders,function ($query) use ($cylinders) {
+           return $query->where('cylinders', $cylinders);
        })
-       ->when($type_of_car,function ($query) use ($type_of_car) {
-           return $query->where('type_of_car', $type_of_car);
+       ->when($starter,function ($query) use ($starter) {
+           return $query->where('starter', $starter);
        })
-       ->when($autonomous_braking,function ($query) use ($autonomous_braking) {
-           return $query->where('autonomous_braking', $autonomous_braking);
+       ->when($transmission_type,function ($query) use ($transmission_type) {
+           return $query->where('transmission_type', $transmission_type);
        })
-       ->when($car_pollution,function ($query) use ($car_pollution){
-           return $query->where('car_pollution', $car_pollution);
+       ->when($fuel_captacity,function ($query) use ($fuel_captacity){
+           return $query->where('fuel_captacity', $fuel_captacity);
        })
        ->when($price,function ($query) use ($price){
            return $query->where('price',$price);
        })
-       ->when($reverse_camera,function ($query) use ($reverse_camera){
-           return $query->where('reverse_camera',$reverse_camera);
+       ->when($engine_stroke,function ($query) use ($engine_stroke){
+           return $query->where('engine_stroke',$engine_stroke);
        })
-       ->when($model_of_car,function ($query) use ($model_of_car){
-           return $query->where('model_of_car' , $model_of_car);
+       ->when($cooling_system,function ($query) use ($cooling_system){
+           return $query->where('cooling_system' , $cooling_system);
        })
-       ->orderBy('price','desc');
-       return view('cars.finish')
-       ->with('cars',$findCars);
+       ->orderBy('price','desc')
+       ->limit(3)
+        ->get();
+       return view('bikes.finish')
+       ->with('bikes',$findBikes);
    }
 }

@@ -28,6 +28,6 @@ Route::get('/bike', [App\Http\Controllers\HomeController::class, 'bike'])->name(
 Route::get('/fivequestions', [App\Http\Controllers\HomeController::class, 'fivequestions']);
 Route::get('/fifteenquestions', [App\Http\Controllers\HomeController::class, 'fifteenquestions']);
 Route::get('/finish', [App\Http\Controllers\CarsController::class, 'FindCars'])->name('finish');
-Route::get('/bikesfinish', [App\Http\Controllers\CarsController::class, 'FindBikes'])->name('bikesfinish');
+Route::get('/bikesfinish', [App\Http\Controllers\BikeController::class, 'FindBikes'])->name('bikesfinish');
 Route::resource('cars', \App\Http\Controllers\CarsController::class);
 Route::resource('bikes', \App\Http\Controllers\BikeController::class);
