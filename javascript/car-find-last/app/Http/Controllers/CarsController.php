@@ -236,7 +236,9 @@ class CarsController extends Controller
         ->when($model_of_car,function ($query) use ($model_of_car){
             return $query->where('model_of_car' , $model_of_car);
         })
-        ->orderBy('price','desc');
+        ->orderBy('price','desc')
+            ->limit(3)
+            ->get();
         return view('cars.finish')
         ->with('cars',$findCars);
     }
