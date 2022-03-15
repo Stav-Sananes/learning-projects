@@ -15,7 +15,7 @@
             </div>
         </div>
     @endif
-    <form class="needs-validation" action="{{ route('finish') }}" method="GET">
+    <form class="needs-validation" action="{{ route('finish') }}" method="GET" dir="rtl">
         <div class="container" style="max-width: 1460px;">
             <div class="row justify-content-center">
                 <div class="col-md">
@@ -209,7 +209,7 @@
                                 <div class="tab-pane fade" id="question4" role="tabpanel" aria-labelledby="question4-tab">
                                     <h5 class="card-title mt-3">סטרטר מותאם אישית</h5>
                                     <div class="d-flex justify-content-center">
-                                        <div class="card mr-3" style="width: 18rem;">
+                                        <div class="card ml-3" style="width: 18rem;">
 
                                             <div class="card-body fw-bold">
 
@@ -273,7 +273,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="card mr-3" style="width: 18rem;">
+                                        <div class="card ml-3 mr-3" style="width: 18rem;">
 
                                             <div class="card-body fw-bold">
 
@@ -327,7 +327,7 @@
                                 <div class="tab-pane fade" id="question8" role="tabpanel" aria-labelledby="question8-tab">
                                     <h5 class="card-title mt-3">? מחיר</h5>
                                     <div class="d-flex justify-content-center">
-                                        <div class="card  mr-3" style="width: 18rem;">
+                                        <div class="card ml-3 mr-3" style="width: 18rem;">
 
                                             <div class="card-body  fw-bold">
 

@@ -31,3 +31,8 @@ Route::get('/finish', [App\Http\Controllers\CarsController::class, 'FindCars'])-
 Route::get('/bikesfinish', [App\Http\Controllers\BikeController::class, 'FindBikes'])->name('bikesfinish');
 Route::resource('cars', \App\Http\Controllers\CarsController::class);
 Route::resource('bikes', \App\Http\Controllers\BikeController::class);
+
+
+Route::get('auth/google', [\App\Http\Controllers\Auth\GoogleLoginController::class, 'redirect']);
+Route::get('auth/google/callback', [\App\Http\Controllers\Auth\GoogleLoginController::class, 'callback']);
+
