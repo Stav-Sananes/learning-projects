@@ -58,7 +58,7 @@ class GoogleLoginController extends Controller
 
                     'email' => $user->email,
 
-              'google_id'=> $user->id
+                 'google_id'=> $user->google_id
 
                 ]);
 
