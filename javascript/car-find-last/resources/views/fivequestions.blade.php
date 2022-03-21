@@ -15,7 +15,7 @@
             </div>
         </div>
     @endif
-    <form class="needs-validation"  method="GET">
+    <form class="needs-validation"  method="GET" dir="rtl">
         <div class="container" style="max-width: 1460px;">
             <div class="row justify-content-center">
                 <div class="col-md">
@@ -65,26 +65,26 @@
                                     aria-labelledby="question1-tab">
                                     <h5 class="card-title mt-3">ליטר בגאז</h5>
                                     <div class="d-flex justify-content-center">
-                                        <div class="card mr-3 " style="width: 18rem;">
+                                        <div class="card mr-3" style="width: 18rem;">
 
                                             <div class="card-body fw-bold ">
 
                                                 <p class="card-text mt-2">0-200</p>
-                                                <input type="radio" class="btn-check" name="options" id="option0"
-                                                    autocomplete="off" value="0" checked>
+                                                <input type="radio" class="btn-check" name="liter_baggage" id="option0"
+                                                    autocomplete="off" value="0">
                                                 <label class="btn btn-outline-success" for="option0">בחירה</label>
 
 
 
                                             </div>
                                         </div>
-                                        <div class="card mr-3" style="width: 18rem;">
+                                        <div class="card ml-3 mr-3" style="width: 18rem;">
 
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text mt-2">200-400</p>
-                                                <input type="radio" class="btn-check" name="options" id="option1"
-                                                    autocomplete="off" value="1" checked>
+                                                <input type="radio" class="btn-check" name="liter_baggage" id="option1"
+                                                    autocomplete="off" value="1">
                                                 <label class="btn btn-outline-danger" for="option1">בחירה</label>
                                             </div>
 
@@ -95,8 +95,8 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text mt-2">400+</p>
-                                                <input type="radio" class="btn-check" name="options" id="option2"
-                                                    autocomplete="off" value="2" checked>
+                                                <input type="radio" class="btn-check" name="liter_baggage" id="option2"
+                                                    autocomplete="off" value="2">
                                                 <label class="btn btn-outline-info" for="option2">בחירה</label>
                                             </div>
                                         </div>
@@ -110,14 +110,14 @@
                                     <h5 class="card-title mt-3">רכב 4 על 4</h5>
                                     <div class="d-flex justify-content-center">
 
-                                        <div class="card mr-3" style="width: 18rem;">
+                                        <div class="card ml-3" style="width: 18rem;">
 
                                             <div class="card-body">
 
                                                 <p class="card-text fw-bold">כן</p>
 
-                                                <input type="radio" class="btn-check" name="options" id="option3"
-                                                    autocomplete="off" value="1" checked>
+                                                <input type="radio" class="btn-check" name="four_on_four" id="option3"
+                                                    autocomplete="off" value="1">
                                                 <label class="btn btn-outline-success" for="option3">בחירה</label>
 
                                             </div>
@@ -128,8 +128,8 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">לא</p>
-                                                <input type="radio" class="btn-check" name="options" id="option4"
-                                                    autocomplete="off" value="0" checked>
+                                                <input type="radio" class="btn-check" name="four_on_four" id="option4"
+                                                    autocomplete="off" value="0">
                                                 <label class="btn btn-outline-danger" for="option4">בחירה</label>
                                             </div>
                                         </div>
@@ -140,13 +140,13 @@
                                 <div class="tab-pane fade" id="question3" role="tabpanel" aria-labelledby="question3-tab">
                                     <h5 class="card-title mt-3">? רכב עם בקרת שיוט</h5>
                                     <div class="d-flex justify-content-center">
-                                        <div class="card mr-3" style="width: 18rem;">
+                                        <div class="card ml-3" style="width: 18rem;">
 
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">כן</p>
-                                                <input type="radio" class="btn-check" name="options" id="option5"
-                                                    autocomplete="off" value="1" checked>
+                                                <input type="radio" class="btn-check" name="cruise_control"
+                                                    id="option5" autocomplete="off" value="1">
                                                 <label class="btn btn-outline-success" for="option5">בחירה</label>
                                             </div>
                                         </div>
@@ -155,8 +155,8 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">לא</p>
-                                                <input type="radio" class="btn-check" name="options" id="option6"
-                                                    autocomplete="off" value="0" checked>
+                                                <input type="radio" class="btn-check" name="cruise_control"
+                                                    id="option6" autocomplete="off" value="0">
                                                 <label class="btn btn-outline-danger" for="option6">בחירה</label>
                                             </div>
                                         </div>
@@ -165,13 +165,13 @@
                                 <div class="tab-pane fade" id="question4" role="tabpanel" aria-labelledby="question4-tab">
                                     <h5 class="card-title mt-3">? מקומות ישיבה</h5>
                                     <div class="d-flex justify-content-center">
-                                        <div class="card mr-3" style="width: 18rem;">
+                                        <div class="card ml-3" style="width: 18rem;">
 
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">2 מקומות ישיבה</p>
-                                                <input type="radio" class="btn-check" name="options" id="option7"
-                                                    autocomplete="off" value="0" checked>
+                                                <input type="radio" class="btn-check" name="number_of_seats"
+                                                    id="option7" autocomplete="off" value="0">
                                                 <label class="btn btn-outline-success" for="option7">בחירה</label>
                                             </div>
                                         </div>
@@ -180,8 +180,8 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">מעל 2 מקומות ישיבה ברכב</p>
-                                                <input type="radio" class="btn-check" name="options" id="option8"
-                                                    autocomplete="off" value="0" checked>
+                                                <input type="radio" class="btn-check" name="number_of_seats"
+                                                    id="option8" autocomplete="off" value="0">
                                                 <label class="btn btn-outline-danger" for="option8">בחירה</label>
                                             </div>
                                         </div>
@@ -195,18 +195,18 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text fw-bold">ספורט</p>
-                                                <input type="radio" class="btn-check" name="options" id="option9"
-                                                    autocomplete="off" value="0" checked>
+                                                <input type="radio" class="btn-check" name="type_of_car" id="option9"
+                                                    autocomplete="off" value="0">
                                                 <label class="btn btn-outline-success" for="option9">בחירה</label>
                                             </div>
                                         </div>
-                                        <div class="card mr-3" style="width: 18rem;">
+                                        <div class="card ml-3 mr-3" style="width: 18rem;">
 
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text fw-bold">משפחתי</p>
-                                                <input type="radio" class="btn-check" name="options" id="option10"
-                                                    autocomplete="off" value="1" checked>
+                                                <input type="radio" class="btn-check" name="type_of_car" id="option10"
+                                                    autocomplete="off" value="1">
                                                 <label class="btn btn-outline-danger" for="option10">בחירה</label>
                                             </div>
                                         </div>
@@ -215,8 +215,8 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text fw-bold">מנהלים</p>
-                                                <input type="radio" class="btn-check" name="options" id="option11"
-                                                    autocomplete="off" value="2" checked>
+                                                <input type="radio" class="btn-check" name="type_of_car" id="option11"
+                                                    autocomplete="off" value="2">
                                                 <label class="btn btn-outline-info" for="option11">בחירה</label>
                                             </div>
                                         </div>
