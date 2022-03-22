@@ -16,7 +16,7 @@
                           <div class="col-sm-9">
                             <h5 class="card-text text-center">{{ $car->car_name }}</h5>
                           </div>
-                          <label class="col-sm-3 col-form-label" >שם  רכב</label>
+                          <label class="col-sm-3 col-form-label font-weight-bold" >שם  רכב</label>
                         </div>
 
                       </div>
@@ -26,7 +26,7 @@
                             <div class="col-sm-9">
                               <p class="card-text text-center">{{ $car->brand }}</p>
                             </div>
-                            <label class="col-sm-3 col-form-label">שם חברת רכב</label>
+                            <label class="col-sm-3 col-form-label font-weight-bold">שם חברת רכב</label>
                           </div>
 
                         </div>
@@ -37,7 +37,7 @@
                                 <div class="col-sm-9">
                                   <p class="card-text text-center">{{ $car->liter_baggage }}</p>
                                 </div>
-                                <label class="col-sm-3 col-form-label" >ליטר בגאז</label>
+                                <label class="col-sm-3 col-form-label font-weight-bold" >ליטר בגאז</label>
                               </div>
     
                             </div>
@@ -49,7 +49,7 @@
                               <div class="col-sm-9">
                                 <p class="card-text text-center">{{ $car->four_on_four ? 'כן': 'ללא'}}</p>
                               </div>
-                              <label class="col-sm-3 col-form-label">4X4</label>
+                              <label class="col-sm-3 col-form-label font-weight-bold">4X4</label>
                             </div>
   
                           </div>
@@ -61,7 +61,7 @@
                                 <div class="col-sm-9">
                                   <p class="card-text text-center">{{ $car->cruise_control ? 'כן': 'ללא'}}</p>
                                 </div>
-                                <label class="col-sm-3 col-form-label">בקרת שיוט</label>
+                                <label class="col-sm-3 col-form-label font-weight-bold">בקרת שיוט</label>
                               </div>
     
                             </div>
@@ -74,7 +74,7 @@
                                 <div class="col-sm-9">
                                   <p class="card-text text-center">{{ $car->number_of_seats }}</p>
                                 </div>
-                                <label class="col-sm-3 col-form-label">מספר מקומות</label>
+                                <label class="col-sm-3 col-form-label font-weight-bold">מספר מקומות</label>
                               </div>
     
                             </div>
@@ -86,7 +86,7 @@
                                 <div class="col-sm-9">
                                   <p class="card-text text-center">{{ $car->type_of_car }}</p>
                                 </div>
-                                <label class="col-sm-3 col-form-label">סוג רכב</label>
+                                <label class="col-sm-3 col-form-label font-weight-bold">סוג רכב</label>
                               </div>
     
                             </div>
@@ -97,7 +97,7 @@
                                 <div class="col-sm-9">
                                   <p class="card-text text-center">{{ $car->autonomous_braking ? 'כן' : 'ללא' }}</p>
                                 </div>
-                                <label class="col-sm-3 col-form-label">מערכת בלימה אוטונומית</label>
+                                <label class="col-sm-3 col-form-label font-weight-bold">מערכת בלימה אוטונומית</label>
                               </div>
     
                             </div>
@@ -109,7 +109,7 @@
                                 <div class="col-sm-9">
                                   <p class="card-text text-center">{{ $car->car_pollution  }}</p>
                                 </div>
-                                <label class="col-sm-3 col-form-label">דרגת זיהום רכב</label>
+                                <label class="col-sm-3 col-form-label font-weight-bold">דרגת זיהום רכב</label>
                               </div>
     
                             </div>
@@ -120,7 +120,7 @@
                                 <div class="col-sm-9">
                                   <p class="card-text text-center">{{ $car->price  }}</p>
                                 </div>
-                                <label class="col-sm-3 col-form-label">מחיר</label>
+                                <label class="col-sm-3 col-form-label font-weight-bold">מחיר</label>
                               </div>
     
                             </div>
@@ -131,7 +131,7 @@
                                 <div class="col-sm-9">
                                   <p class="card-text text-center">{{ $car->reverse_camera ? 'כן': 'לא' }}</p>
                                 </div>
-                                <label class="col-sm-3 col-form-label">בעל מצלמת רוורס</label>
+                                <label class="col-sm-3 col-form-label font-weight-bold">בעל מצלמת רוורס</label>
                               </div>
     
                             </div>
@@ -142,7 +142,7 @@
                                 <div class="col-sm-9">
                                   <p class="card-text text-center">{{ $car->model_of_car }}</p>
                                 </div>
-                                <label class="col-sm-3 col-form-label">מודל רכב</label>
+                                <label class="col-sm-3 col-form-label font-weight-bold">מודל רכב</label>
                               </div>
     
                             </div>
