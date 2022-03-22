@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cars;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 class CarsController extends Controller
 {
@@ -19,7 +19,13 @@ class CarsController extends Controller
 
         return view('cars.index', compact('cars'));
     }
-
+    public function search(Request $request)
+    {
+        
+        $name=$request->get('query');
+        $cars_data= Cars::where('car_name', 'LIKE','%'. $name . '%')->get();
+        return view('cars.search',compact('cars_data'));
+    }
     /**
      * Show the form for creating a new resource.
      *

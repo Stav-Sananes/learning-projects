@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bike;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -20,7 +21,12 @@ class BikeController extends Controller
 
         return view('bikes.index', compact('bikes'));
     }
-
+    public function search(Request $request)
+    {
+        $name=$request->get('query');
+        $bike_data= Bike::where('bike_name', 'LIKE','%'. $name . '%')->get();
+        return view('bikes.search',compact('bike_data'));
+    }
     /**
      * Show the form for creating a new resource.
      *

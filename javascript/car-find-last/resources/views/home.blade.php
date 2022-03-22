@@ -15,6 +15,7 @@
 
             </div>
         </div>
+      
     @endif
     <form class="needs-validation " action="{{ route('finish') }}" method="GET" dir="rtl">
         <div class="container" style="max-width: 1460px;">
@@ -189,7 +190,7 @@
 
                                 </div>
                                 <div class="tab-pane fade" id="question3" role="tabpanel" aria-labelledby="question3-tab">
-                                    <h5 class="card-title mt-3">? רכב עם בקרת שיוט</h5>
+                                    <h5 class="card-title mt-3"> רכב עם בקרת שיוט? </h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card ml-3" style="width: 18rem;">
 
@@ -214,7 +215,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="question4" role="tabpanel" aria-labelledby="question4-tab">
-                                    <h5 class="card-title mt-3">? מקומות ישיבה</h5>
+                                    <h5 class="card-title mt-3"> מקומות ישיבה?</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card ml-3" style="width: 18rem;">
 
@@ -239,7 +240,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="question5" role="tabpanel" aria-labelledby="question5-tab">
-                                    <h5 class="card-title mt-3">? סוג מכונית </h5>
+                                    <h5 class="card-title mt-3"> סוג מכונית ?</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card mr-3" style="width: 18rem;">
 
@@ -299,7 +300,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="question7" role="tabpanel" aria-labelledby="question7-tab">
-                                    <h5 class="card-title mt-3">? דרגת זיהום אוויר ברכב</h5>
+                                    <h5 class="card-title mt-3"> דרגת זיהום אוויר ברכב?</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card mr-3" style="width: 18rem;">
 
@@ -334,7 +335,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="question8" role="tabpanel" aria-labelledby="question8-tab">
-                                    <h5 class="card-title mt-3">? מחיר</h5>
+                                    <h5 class="card-title mt-3"> מחיר?</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card  mr-3" style="width: 18rem;">
 
@@ -362,14 +363,14 @@
 
                                                 <p class="card-text">110+</p>
                                                 <input type="radio" class="btn-check" name="price" id="option19"
-                                                    autocomplete="off" value="0">
+                                                    autocomplete="off" value="2">
                                                 <label class="btn btn-outline-info" for="option19">בחירה</label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="question9" role="tabpanel" aria-labelledby="question9-tab">
-                                    <h5 class="card-title mt-3">? מצלמת רוורס</h5>
+                                    <h5 class="card-title mt-3"> מצלמת רוורס?</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card d-flex justify-content-center  mr-3" style="width: 18rem;">
 
@@ -395,7 +396,7 @@
                                 </div>
                                 <div class="tab-pane fade" id="question10" role="tabpanel"
                                     aria-labelledby="question10-tab">
-                                    <h5 class="card-title mt-3">? מודל רכב</h5>
+                                    <h5 class="card-title mt-3"> מודל רכב?</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card mr-3" style="width: 18rem;">
 
@@ -441,7 +442,11 @@
                     </div>
                     <div class="text-center mt-3">
                         <a type="button" class="btn btn-warning" href="{{ route('bikes') }}">לשאלות האופנועים</a>
+                        
+                            <a type="button" class="btn btn-danger" href="{{ url('/search') }}">לחיפוש רכבים לבד </a>
+                        
                     </div>
+                   
 
                 </div>
 

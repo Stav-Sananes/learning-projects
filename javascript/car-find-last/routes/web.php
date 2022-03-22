@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Cars;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +29,12 @@ Route::get('/bike', [App\Http\Controllers\HomeController::class, 'bike'])->name(
 Route::get('/fivequestions', [App\Http\Controllers\HomeController::class, 'fivequestions']);
 Route::get('/fifteenquestions', [App\Http\Controllers\HomeController::class, 'fifteenquestions']);
 Route::get('/finish', [App\Http\Controllers\CarsController::class, 'FindCars'])->name('finish');
-Route::get('/bikesfinish', [App\Http\Controllers\BikeController::class, 'FindBikes'])->name('bikesfinish');
+Route::get('/search',[\App\Http\Controllers\CarsController::class,'search'])->name('search');
+
 Route::resource('cars', \App\Http\Controllers\CarsController::class);
+
+Route::get('/search/bike',[\App\Http\Controllers\BikeController::class,'search'])->name('search');
+Route::get('/bikesfinish', [App\Http\Controllers\BikeController::class, 'FindBikes'])->name('bikesfinish');
 Route::resource('bikes', \App\Http\Controllers\BikeController::class);
 
 

@@ -397,6 +397,8 @@
                     </div>
                     <div class="text-center mt-3">
                         <a type="button" class="btn btn-warning" href="{{ route('home') }}">לשאלות הרכבים</a>
+                        <a type="button" class="btn btn-danger" href="{{ url('/search/bike') }}">לחיפוש אופנועים לבד </a>
+
                     </div>
 
                 </div>
