@@ -21,7 +21,18 @@ class CarsController extends Controller
     }
     public function search(Request $request)
     {
-        
+        $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
+        $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
+        $cruise_control = $request->input('cruise_control') ?  $request->input('cruise_control') : null;
+        $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
+        $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
+        $autonomous_braking = $request->input('autonomous_braking') ?  $request->input('autonomous_braking') : null;
+        $car_pollution = $request->input('car_pollution') ?  $request->input('car_pollution') : null;
+        $price = $request->input('price') ?  $request->input('price') : null;
+        $reverse_camera = $request->input('reverse_camera') ?  $request->input('reverse_camera') : null;
+        $model_of_car = $request->input('model_of_car') ?  $request->input('model_of_car') : null;
+
+
         $name=$request->get('query');
         $cars_data= Cars::where('car_name', 'LIKE','%'. $name . '%')->get();
         return view('cars.search',compact('cars_data'));
@@ -77,7 +88,11 @@ class CarsController extends Controller
             'price' => $request->input('price'),
             'model_of_car' => $request->input('model_of_car'),
             'type_of_car' => $request->input('type_of_car'),
+            'picture_1' => $request->input('picture_1'),
+            'picture_2' => $request->input('picture_2'),
+
         ]);
+        
         
         if ($request->hasFile('picture_1')) {
       
@@ -89,7 +104,7 @@ class CarsController extends Controller
             ]);
           
         }
-      
+        
         if ($request->hasFile('picture_2')) {
           
             $picture_2 = $request->file('picture_2');
@@ -202,7 +217,7 @@ class CarsController extends Controller
      {
         $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
         $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
-        $cruise_control = $request->input('cruise_control') ?  $request->input('cruise_control') : null;
+        $cruise_control = $request->input('crusie_control') ?  $request->input('crusie_control') : null;
         $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
         $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
         $autonomous_braking = $request->input('autonomous_braking') ?  $request->input('autonomous_braking') : null;
@@ -246,7 +261,7 @@ class CarsController extends Controller
             ->limit(3)
             ->get();
         return view('cars.finish')
-        ->with('cars',$findCars);
+        ->with('cars',compact('findCars'));
     }
 
 }

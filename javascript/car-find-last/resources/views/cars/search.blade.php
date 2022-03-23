@@ -2,6 +2,7 @@
 
 @section('content')
     <div style="margin:3%">
+       
         <div class="d-flex justify-content-center mb-3">
             <form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/search') }}">
                 <input class="form-control mr-sm-2" type="search" placeholder="חיפוש רכב" aria-label="Search" name="query">

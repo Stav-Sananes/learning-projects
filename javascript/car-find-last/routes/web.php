@@ -31,6 +31,7 @@ Route::get('/fifteenquestions', [App\Http\Controllers\HomeController::class, 'fi
 Route::get('/finish', [App\Http\Controllers\CarsController::class, 'FindCars'])->name('finish');
 Route::get('/search',[\App\Http\Controllers\CarsController::class,'search'])->name('search');
 
+
 Route::resource('cars', \App\Http\Controllers\CarsController::class);
 
 Route::get('/search/bike',[\App\Http\Controllers\BikeController::class,'search'])->name('search');

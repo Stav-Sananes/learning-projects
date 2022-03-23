@@ -197,7 +197,7 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">כן</p>
-                                                <input type="radio" class="btn-check" name="cruise_control"
+                                                <input type="radio" class="btn-check" name="crusie_control"
                                                     id="option5" autocomplete="off" value="1">
                                                 <label class="btn btn-outline-success" for="option5">בחירה</label>
                                             </div>
@@ -207,7 +207,7 @@
                                             <div class="card-body fw-bold">
 
                                                 <p class="card-text">לא</p>
-                                                <input type="radio" class="btn-check" name="cruise_control"
+                                                <input type="radio" class="btn-check" name="crusie_control"
                                                     id="option6" autocomplete="off" value="0">
                                                 <label class="btn btn-outline-danger" for="option6">בחירה</label>
                                             </div>
@@ -438,7 +438,7 @@
 
                     </div>
                     <div class="text-center mt-5">
-                        <button type="button" type="submit" class="btn btn-primary"> סיום ומעבר לקבלת התשובות</button>
+                        <button  type="submit" class="btn btn-primary"> סיום ומעבר לקבלת התשובות</button>
                     </div>
                     <div class="text-center mt-3">
                         <a type="button" class="btn btn-warning" href="{{ route('bikes') }}">לשאלות האופנועים</a>
