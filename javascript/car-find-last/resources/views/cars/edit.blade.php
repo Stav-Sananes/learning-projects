@@ -2,7 +2,7 @@
 @section('content')
     @if (\Auth::User()->is_admin)
         <form class="needs-validation" action="{{ route('cars.update', $car->id) }}" method="POST"
-            enctype="multipart/form-data">
+            enctype="multipart/form-data" style="margin:3%">
             {{ csrf_field() }}
             {{ method_field('PATCH') }}
             <div class="d-flex flex-row h-100 justify-content-lg-between w-100 p-1">
@@ -11,7 +11,7 @@
                 <a href="/home" class="btn btn-warning">חזרה למסך השאלות</a>
 
             </div>
-            <div class="card-body text-center">
+            <div class="card-body text-center" >
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">שם חברת הרכב?</label>
@@ -29,7 +29,7 @@
                             value="{{ $car->liter_baggage }}" name="liter_baggage" required>
                     </div>
                 </div>
-                <div class="form-row">
+                <div class="form-row" >
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">מקומות ישיבה</label>
                         <input type="text" class="form-control" id="validationCustom01"

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     @if (\Auth::User()->is_admin)
-        <form class="needs-validation" action="{{ route('bikes.update', $bike->id) }}" method="POST"
+        <form class="needs-validation" action="{{ route('bikes.update', $bike->id) }}" method="POST" style="margin:3%"
             enctype="multipart/form-data">
             {{ csrf_field() }}
             {{ method_field('PATCH') }}

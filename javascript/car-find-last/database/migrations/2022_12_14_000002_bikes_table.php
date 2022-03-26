@@ -27,7 +27,6 @@ return new class extends Migration
             $table->tinyInteger('valves_per_cylinder')->nullable();
             $table->tinyInteger('cooling_system')->nullable();
             $table->string('picture_1')->nullable();
-            $table->string('picture_2')->nullable();
             $table->rememberToken();
             $table->timestamps();
             

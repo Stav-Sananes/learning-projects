@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     @if (\Auth::User()->is_admin)
+    <div class="card"  style="margin:3%">
         <form class="needs-validation" action="{{ route('bikes.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="  card-body text-center">
@@ -124,16 +125,15 @@
                 </div>
             </div>
             <div class="text-center">
-                <input id="picture_1" type="file" name="picture_1" />
                 <label for="picture_1" class="custom-file-upload">
                     <a class="btn btn-info">תמונת אופנוע ראשונה</a>
                 </label>
+                <input id="picture_1" type="file" name="picture_1" />
+               
 
-                <input id="picture_2" type="file" name="picture_2" />
-                <label for="picture_2" class="custom-file-upload">
-                    <a class="btn btn-danger">תמונת אופנוע שנייה</a>
-                </label>
+              
             </div>
+         
             <input id="file-upload" type="file" />
             <div class="form-group text-center">
                 <div class="form-check">
@@ -153,6 +153,7 @@
                     אופנוע</a>
             </div>
         </form>
+    </div>
 
         <style>
             input[type="file"] {

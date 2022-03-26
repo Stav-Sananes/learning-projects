@@ -432,14 +432,14 @@
                           
                         </div>
                         <div class="hidden fixed top-0 right-5  px-6 py-4 sm:block" style="margin-left:-30%">
-                            <a href="{{ route('bikes') }}" type="button" class="btn btn-info btn-lg" href="#"
+                            <a href="{{ route('bikes') }}" type="button" class="btn btn-info btn-lg" 
                             role="button">מעבר לחיפוש האופנועים שלנו</a>
                         </div>
-                        <div class="text-center">
-                            <a href="{{ url('/home') }}" type="button" class="btn btn-primary btn-lg" href="#"
+                        <div class="text-center ">
+                            <a href="{{ url('/home') }}" type="button" class="btn btn-primary btn-lg mr-2" 
                                 role="button">התחלת עשר שאלות</a>
                       
-                            <a href="{{ url('/fivequestions') }}" type="button" class="btn btn-success btn-lg" href="#"
+                            <a href="{{ url('/fivequestions') }}" type="button" class="btn btn-success btn-lg" 
                                 role="button">התחלת חמש שאלות</a>
                         </div>
                     @else

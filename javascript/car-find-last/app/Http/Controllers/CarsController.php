@@ -12,11 +12,16 @@ class CarsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $cars = \App\Models\Cars::all();  
-       
-
+        if($request->get('query')){
+            $name=$request->get('query');
+            $cars= Cars::where('car_name', 'LIKE','%'. $name . '%')
+            ->get();
+            return view('cars.index',compact('cars'));
+        }
+        
         return view('cars.index', compact('cars'));
     }
     public function search(Request $request)
@@ -32,10 +37,20 @@ class CarsController extends Controller
         $reverse_camera = $request->input('reverse_camera') ?  $request->input('reverse_camera') : null;
         $model_of_car = $request->input('model_of_car') ?  $request->input('model_of_car') : null;
 
-
+        
         $name=$request->get('query');
-        $cars_data= Cars::where('car_name', 'LIKE','%'. $name . '%')->get();
+        $cars_data= Cars::where('car_name', 'LIKE','%'. $name . '%')
+        ->get();
         return view('cars.search',compact('cars_data'));
+        /* ->orWhere('four_on_four', 'LIKE','%'. $four_on_four . '%')
+        ->orWhere('cruise_control', 'LIKE','%'. $cruise_control . '%')
+        ->orWhere('number_of_seats', 'LIKE','%'. $number_of_seats . '%')
+        ->orWhere('type_of_car', 'LIKE','%'. $type_of_car . '%')
+        ->orWhere('autonomous_braking', 'LIKE','%'. $autonomous_braking . '%')
+        ->orWhere('car_pollution', 'LIKE','%'. $car_pollution . '%')
+        ->orWhere('price', 'LIKE','%'. $price . '%')
+        ->orWhere('reverse_camera', 'LIKE','%'. $reverse_camera . '%') */
+       
     }
     /**
      * Show the form for creating a new resource.
@@ -56,7 +71,6 @@ class CarsController extends Controller
      */
     public function store(Request $request, \App\Models\Cars $car)
     {
-        
         $request->validate([
             'brand' => 'required|string',
             'car_name' => 'required|string',
@@ -70,8 +84,7 @@ class CarsController extends Controller
             'autonomous_braking' => 'required|integer',
             'price' => 'required|integer',
             'model_of_car' => 'required|integer',
-            'picture_1' => 'nullable',
-            'picture_2' => 'nullable',
+            'picture_1' => 'required|nullable',
         ]);
       
        
@@ -88,8 +101,6 @@ class CarsController extends Controller
             'price' => $request->input('price'),
             'model_of_car' => $request->input('model_of_car'),
             'type_of_car' => $request->input('type_of_car'),
-            'picture_1' => $request->input('picture_1'),
-            'picture_2' => $request->input('picture_2'),
 
         ]);
         
@@ -104,16 +115,7 @@ class CarsController extends Controller
             ]);
           
         }
-        
-        if ($request->hasFile('picture_2')) {
-          
-            $picture_2 = $request->file('picture_2');
-            $filepath = 'cars/';
-            $file = Storage::disk('local')->put($filepath, $picture_2);
-            $car->update([
-                'picture_2' => $file
-            ]);
-        }    
+         
        
     
         return back();
@@ -183,16 +185,8 @@ class CarsController extends Controller
       
     }
   
-    if ($request->hasFile('picture_2')) {
+   
       
-        $picture_2 = $request->file('picture_2');
-        $filepath = 'cars/';
-        $file = Storage::disk('local')->put($filepath, $picture_2);
-        $car->update([
-            'picture_2' => $file
-        ]);
-      
-    }
    
    
           $car->update($request->all());
@@ -217,7 +211,7 @@ class CarsController extends Controller
      {
         $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
         $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
-        $cruise_control = $request->input('crusie_control') ?  $request->input('crusie_control') : null;
+        $cruise_control = $request->input('cruise_control') ?  $request->input('cruise_control') : null;
         $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
         $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
         $autonomous_braking = $request->input('autonomous_braking') ?  $request->input('autonomous_braking') : null;
@@ -261,7 +255,7 @@ class CarsController extends Controller
             ->limit(3)
             ->get();
         return view('cars.finish')
-        ->with('cars',compact('findCars'));
+        ->with('findCars');
     }
 
 }

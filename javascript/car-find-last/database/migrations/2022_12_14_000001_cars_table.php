@@ -27,7 +27,6 @@ return new class extends Migration
             $table->tinyInteger('reverse_camera')->nullable();
             $table->tinyInteger('model_of_car')->unsigned();
             $table->string('picture_1')->nullable();
-            $table->string('picture_2')->nullable();
             $table->rememberToken();
             $table->timestamps();
             

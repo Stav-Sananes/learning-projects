@@ -14,10 +14,15 @@ class BikeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $bikes = \App\Models\Bike::all();  
-       
+        if($request->get('query')){
+            $name=$request->get('query');
+            $bikes= Bike::where('bike_name', 'LIKE','%'. $name . '%')
+            ->get();
+            return view('bikes.index',compact('bikes'));
+        }
 
         return view('bikes.index', compact('bikes'));
     }
@@ -90,16 +95,7 @@ class BikeController extends Controller
             ]);
           
         }
-      
-        if ($request->hasFile('picture_2')) {
           
-            $picture_2 = $request->file('picture_2');
-            $filepath = 'bikes/';
-            $file = Storage::disk('local')->put($filepath, $picture_2);
-            $bike->update([
-                'picture_2' => $file
-            ]);
-        }    
        
     
         return back();
@@ -165,15 +161,7 @@ class BikeController extends Controller
           
         }
       
-        if ($request->hasFile('picture_2')) {
-          
-            $picture_2 = $request->file('picture_2');
-            $filepath = 'bikes/';
-            $file = Storage::disk('local')->put($filepath, $picture_2);
-            $bike->update([
-                'picture_2' => $file
-            ]);
-        }
+      
         $bike->update($request->all());
         return redirect()->route('bikes.index');
     }

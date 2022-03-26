@@ -17,7 +17,7 @@
 @endsection
 @if (\Auth::User()->is_admin)
 @section('content')
-<div class="card  mt-2">
+<div class="card  mt-2" style="margin:3%">
     <div class="card-header">
         <div class="d-flex justify-content-between">
             <h4>
@@ -26,12 +26,12 @@
             <a href="{{ route('cars.create') }}" class="btn btn-primary">הוספת רכב </a>
             <a  href="/home" class="btn btn-info">חזרה למסך השאלות</a> 
         </div>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="חיפוש רכב" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0" type="get" action="{{ route('cars.index', ['id' => 1]) }}">
+            <input class="form-control mr-sm-2" type="search" placeholder="חיפוש רכב" aria-label="Search" name="query">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חפש</button>
         </form>
     </div>
-    <div class="card-body">
+    <div class="card-body" style="margin:3%">
 
         <table class="table table-striped">
             <thead>
