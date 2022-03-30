@@ -36,22 +36,27 @@ class CarsController extends Controller
         $price = $request->input('price') ?  $request->input('price') : null;
         $reverse_camera = $request->input('reverse_camera') ?  $request->input('reverse_camera') : null;
         $model_of_car = $request->input('model_of_car') ?  $request->input('model_of_car') : null;
-
         
         $name=$request->get('query');
         $cars_data= Cars::where('car_name', 'LIKE','%'. $name . '%')
         ->get();
         return view('cars.search',compact('cars_data'));
-        /* ->orWhere('four_on_four', 'LIKE','%'. $four_on_four . '%')
-        ->orWhere('cruise_control', 'LIKE','%'. $cruise_control . '%')
+        if(!$request->get('query')){
+            $cars_data= Cars::where('four_on_four', 'LIKE','%'. $four_on_four . '%')
+        ->orWhere('crusie_control', 'LIKE','%'. $cruise_control . '%')
         ->orWhere('number_of_seats', 'LIKE','%'. $number_of_seats . '%')
         ->orWhere('type_of_car', 'LIKE','%'. $type_of_car . '%')
         ->orWhere('autonomous_braking', 'LIKE','%'. $autonomous_braking . '%')
         ->orWhere('car_pollution', 'LIKE','%'. $car_pollution . '%')
         ->orWhere('price', 'LIKE','%'. $price . '%')
-        ->orWhere('reverse_camera', 'LIKE','%'. $reverse_camera . '%') */
+        ->orWhere('reverse_camera', 'LIKE','%'. $reverse_camera . '%')
+        ->get();
+        return view('cars.search',compact('cars_data'));
+        }
+        /*  */
        
     }
+ 
     /**
      * Show the form for creating a new resource.
      *

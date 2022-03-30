@@ -33,6 +33,7 @@ Route::get('/search',[\App\Http\Controllers\CarsController::class,'search'])->na
 
 
 
+
 Route::resource('cars', \App\Http\Controllers\CarsController::class);
 
 Route::get('/search/bike',[\App\Http\Controllers\BikeController::class,'search'])->name('search');
