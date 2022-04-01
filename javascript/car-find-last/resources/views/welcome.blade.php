@@ -422,14 +422,13 @@
                 @if (Route::has('login'))
 
                     @auth
-                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-success btn-lg"
-                                href="{{ url('/home') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block ">
+                            <ul class="" aria-labelledby="dropdownMenuLink">
+                            <a id="navbarDropdown" class="nav-link btn btn-success btn-lg "
+                                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
-                          
                         </div>
                         <div class="hidden fixed top-0 right-5  px-6 py-4 sm:block" style="margin-left:-30%">
                             <a href="{{ route('bikes') }}" type="button" class="btn btn-info btn-lg" 

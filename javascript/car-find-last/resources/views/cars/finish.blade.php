@@ -1,16 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row" style="margin:3%">
-        <div class="d-flex justify-content-center mb-3">
-            <a type="button" class="btn btn-outline-info" href="{{ route('home') }}">לשאלות הרכבים</a>
-        </div>
-        @foreach ((array)$findCars as $findCar)
+    <div class="row" style="margin:2%">
+       
+        @foreach ($findCars as $findCar)
             <div class="col-sm-4">
 
                 <div class="card">
                     <div class="card-body">
-                        
+                      <div>
+                        <div class="mb-3 row">
+                          <div class="col-sm-9">
+                            <h5 class="card-text text-center">{{ $findCar->picture_1 }}</h5>
+                          </div>
+                          <label class="col-sm-3 col-form-label font-weight-bold" >תמונת רכב</label>
+                        </div>
+
+                      </div>
                       <div>
                         <div class="mb-3 row">
                           <div class="col-sm-9">
@@ -118,7 +124,7 @@
                             <div>
                               <div class="mb-3 row">
                                 <div class="col-sm-9">
-                                  <p class="card-text text-center">{{ $findCar->price  }}</p>
+                                  <p class="card-text text-center">{{ $findCar->price  }},000₪</p>
                                 </div>
                                 <label class="col-sm-3 col-form-label font-weight-bold">מחיר</label>
                               </div>
@@ -154,8 +160,11 @@
                 </div>
 
             </div>
+            
         @endforeach
-
+        <div class="d-flex justify-content-center mt-2 mb-2">
+          <a type="button" class="btn btn-outline-info" href="{{ route('home') }}">לשאלות הרכבים</a>
+      </div>
 
     </div>
 @endsection

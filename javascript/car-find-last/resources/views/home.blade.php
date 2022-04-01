@@ -318,7 +318,7 @@
 
                                                 <p class="card-text">7-12</p>
                                                 <input type="radio" class="btn-check" name="car_pollution"
-                                                    id="option15" autocomplete="off" value="1">
+                                                    id="option15" autocomplete="off" value="10">
                                                 <label class="btn btn-outline-danger" for="option15">בחירה</label>
                                             </div>
                                         </div>
@@ -328,7 +328,7 @@
 
                                                 <p class="card-text">12+</p>
                                                 <input type="radio" class="btn-check" name="car_pollution"
-                                                    id="option16" autocomplete="off" value="2">
+                                                    id="option16" autocomplete="off" value="15">
                                                 <label class="btn btn-outline-info" for="option16">בחירה</label>
                                             </div>
                                         </div>
@@ -343,7 +343,7 @@
 
                                                 <p class="card-text">עד 50</p>
                                                 <input type="radio" class="btn-check" name="price" id="option17"
-                                                    autocomplete="off" value="0">
+                                                    autocomplete="off" value="50000">
                                                 <label class="btn btn-outline-success" for="option17">בחירה</label>
                                             </div>
                                         </div>
@@ -353,7 +353,7 @@
 
                                                 <p class="card-text">עד 70</p>
                                                 <input type="radio" class="btn-check" name="price" id="option18"
-                                                    autocomplete="off" value="1">
+                                                    autocomplete="off" value="100000">
                                                 <label class="btn btn-outline-danger" for="option18">בחירה</label>
                                             </div>
                                         </div>
@@ -363,7 +363,7 @@
 
                                                 <p class="card-text">110+</p>
                                                 <input type="radio" class="btn-check" name="price" id="option19"
-                                                    autocomplete="off" value="2">
+                                                    autocomplete="off" value="150000">
                                                 <label class="btn btn-outline-info" for="option19">בחירה</label>
                                             </div>
                                         </div>

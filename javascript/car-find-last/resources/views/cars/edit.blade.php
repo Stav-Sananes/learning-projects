@@ -86,10 +86,7 @@
                         <a class="btn btn-info">תמונת רכב ראשונה</a>
                     </label>
                 
-                    <input id="picture_2" type="file" name="picture_2" />
-                    <label for="picture_2" class="custom-file-upload">
-                        <a class="btn btn-danger">תמונת רכב שנייה</a>
-                    </label>
+                   
                 </div>
                 <div class="form-group text-center">
                     <div class="form-check">

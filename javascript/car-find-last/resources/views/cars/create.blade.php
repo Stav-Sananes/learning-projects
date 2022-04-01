@@ -24,8 +24,11 @@
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom01">מקומות ישיבה</label>
-                            <input type="number" class="form-control" id="validationCustom01" name="number_of_seats"
-                                required>
+                            <select class="form-control text-center" name="number_of_seats" id="number_of_seats">
+                                <option value="2"> 2 </option>
+                                <option value="5">5</option>
+                            </select>
+                                
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom02">דרגת זיהום הרכב</label>
@@ -78,7 +81,11 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom02">מחיר</label>
-                            <input type="number" class="form-control" id="validationCustom02" name="price" required>
+                            <select class="form-control text-center" name="price" id="price">
+                                <option value="50000">50,000</option>
+                                <option value="100000">100,000</option>
+                                <option value="150000">150,000</option>
+                            </select>
                         </div>
                         <div class="form-group col-md-4 mb-3 ">
                             <label for="validationCustom02">מודל הרכב</label>

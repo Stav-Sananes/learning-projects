@@ -15,7 +15,7 @@
             </div>
         </div>
     @endif
-    <form class="needs-validation" action="{{ route('finish') }}" method="GET" dir="rtl">
+    <form class="needs-validation" action="{{ route('bikesfinish') }}" method="GET" dir="rtl">
         <div class="container" style="max-width: 1460px;">
             <div class="row justify-content-center">
                 <div class="col-md">

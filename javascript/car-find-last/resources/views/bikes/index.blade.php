@@ -1,20 +1,5 @@
 @extends('layouts.app')
-@section('script')
 
-    <script>
-        function myForm() {
-            var inputs = document.getElementsByClassName("cb"); // TagName("input");
-            var CheckAll = document.getElementById("CheckAll");
-            for (var i = 0; i < inputs.length; i++) {
-                if (CheckAll.checked == true) {
-                    inputs[i].checked = true;
-                } else {
-                    inputs[i].checked = false;
-                }
-            }
-        }
-    </script>
-@endsection
 @if (\Auth::User()->is_admin)
 @section('content')
 <div class="card  mt-2" style="margin:3%">
@@ -51,9 +36,7 @@
                         <th scope="col">שסתומים בכול צילנדר</th>    
                         <th scope="col">מערכת קירור</th>  
                     </tr>
-                    <td>
-                        <input id="CheckAll" type="checkbox" name="CheckAll" onchange="myForm()">
-                    </td>
+                   
                 </tr>
             </thead>
             <tbody>

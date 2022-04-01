@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cars;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+
 class CarsController extends Controller
 {
     /**
@@ -120,7 +121,9 @@ class CarsController extends Controller
             ]);
           
         }
-         
+        
+        
+         dd($request->all());
        
     
         return back();
@@ -189,11 +192,7 @@ class CarsController extends Controller
         ]);
       
     }
-  
-   
-      
-   
-   
+
           $car->update($request->all());
         return redirect()->route('cars.index');
     
@@ -260,7 +259,7 @@ class CarsController extends Controller
             ->limit(3)
             ->get();
         return view('cars.finish')
-        ->with('findCars');
+        ->with('findCars',$findCars);
     }
 
 }

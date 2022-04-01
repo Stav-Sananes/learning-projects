@@ -226,6 +226,6 @@ class BikeController extends Controller
        ->limit(3)
         ->get();
        return view('bikes.finish')
-       ->with('bikes',$findBikes);
+       ->with('findBikes',$findBikes);
    }
 }
