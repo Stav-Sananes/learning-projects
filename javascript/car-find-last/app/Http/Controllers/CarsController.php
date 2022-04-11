@@ -111,7 +111,7 @@ class CarsController extends Controller
         ]);
         
         
-        if ($request->hasFile('picture_1')) {
+       /*  if ($request->hasFile('picture_1')) {
       
             $picture_1 = $request->file('picture_1');
             $filepath = 'cars/';
@@ -120,12 +120,18 @@ class CarsController extends Controller
                 'picture_1' => $file
             ]);
           
-        }
+        } */
         
         
-         dd($request->all());
+         $imagePath = request('picture_1')->store('uploads','public');
+         if($imagePath){
+            \App\Models\Cars::Create([
+                'picture_1'=> $imagePath
+            ]);
+            dd($imagePath);
+         }
        
-    
+        
         return back();
     }
 
