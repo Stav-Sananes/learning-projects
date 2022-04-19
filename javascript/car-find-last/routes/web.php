@@ -44,3 +44,7 @@ Route::resource('bikes', \App\Http\Controllers\BikeController::class);
 Route::get('auth/google', [\App\Http\Controllers\Auth\GoogleLoginController::class, 'redirect'])->name('auth/google');
 Route::get('/login/google/callback', [\App\Http\Controllers\Auth\GoogleLoginController::class, 'callback']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

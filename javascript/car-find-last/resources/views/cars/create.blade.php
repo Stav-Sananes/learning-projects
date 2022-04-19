@@ -32,8 +32,23 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom02">דרגת זיהום הרכב</label>
-                            <input type="number" class="form-control" id="validationCustom02" name="car_pollution"
-                                required>
+                            <select class="form-control text-center" name="car_pollution" id="car_pollution">
+                                <option value="1">(הכי פחות מזהם)-1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">(הכי מזהם)-15</option>
+                            </select>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom02">4 On 4 </label>
@@ -72,7 +87,6 @@
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom01">סוג הרכב</label>
-
                             <select class="form-control text-center" name="type_of_car" id="type_of_car">
                                 <option value="0">מנהלים</option>
                                 <option value="1">משפחתי</option>

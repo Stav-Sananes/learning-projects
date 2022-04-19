@@ -11,7 +11,7 @@
                       <div>
                         <div class="mb-3 row">
                           <div class="col-sm-9">
-                            <h5 class="card-text text-center">{{ $findCar->picture_1 }}</h5>
+                            <img class="card-text text-center w-25" src="/storage/{{ $findCar->picture_1 }}">
                           </div>
                           <label class="col-sm-3 col-form-label font-weight-bold" >תמונת רכב</label>
                         </div>
@@ -124,7 +124,7 @@
                             <div>
                               <div class="mb-3 row">
                                 <div class="col-sm-9">
-                                  <p class="card-text text-center">{{ $findCar->price  }},000₪</p>
+                                  <p class="card-text text-center">{{ $findCar->price  }}₪</p>
                                 </div>
                                 <label class="col-sm-3 col-form-label font-weight-bold">מחיר</label>
                               </div>

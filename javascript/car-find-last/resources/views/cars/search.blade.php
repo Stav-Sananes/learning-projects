@@ -7,7 +7,8 @@
             <form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/search') }}">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש מתקדם</button>
                 <input class="form-control mr-sm-2 ml-2" type="search" placeholder="חיפוש רכב" aria-label="Search" name="four_on_four">
-                
+             
+               
             </form>
             <form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/search') }}">
                 <input class="form-control mr-sm-2" type="search" placeholder="חיפוש רכב" aria-label="Search" name="query">
@@ -38,7 +39,7 @@
                         <tr>
                             <th scope="row">{{ $car->car_name }}</th>
                             <td>{{ $car->brand }}</td>
-                            <td>{{ $car->price }},000₪</td>
+                            <td>{{ $car->price }}₪</td>
                             <td>{{ $car->liter_baggage }}</td>
                             <td>{{ $car->four_on_four ? 'כן' : 'ללא' }}</td>
                             <td>{{ $car->cruise_control ? 'כן' : 'ללא' }}</td>

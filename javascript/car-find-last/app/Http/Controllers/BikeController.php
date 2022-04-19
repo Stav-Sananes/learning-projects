@@ -65,8 +65,8 @@ class BikeController extends Controller
             'fuel_captacity' => 'required|integer',
             'engine_stroke' => 'required|integer',
             'price' => 'required|integer',
-            'picture_1' => 'nullable',
-            'picture_2' => 'nullable',
+            'picture_1' => 'required|nullable',
+            
         ]);
       
        
@@ -147,10 +147,9 @@ class BikeController extends Controller
             'engine_stroke' => 'required|integer',
             'price' => 'required|integer',
             'model_of_bike' => 'required|integer',
-            'picture_1' => 'nullable',
-            'picture_2' => 'nullable',
+            'picture_1' => 'required|nullable',
         ]);
-        if ($request->hasFile('picture_1')) {
+      /*   if ($request->hasFile('picture_1')) {
       
             $picture_1 = $request->file('picture_1');
             $filepath = 'bikes/';
@@ -159,6 +158,12 @@ class BikeController extends Controller
                 'picture_1' => $file
             ]);
           
+        } */
+        $imagePath = request('picture_1')->store('uploads','public');
+        if($imagePath){
+           \App\Models\Bike::Create([
+               'picture_1'=> $imagePath
+           ]);
         }
       
       

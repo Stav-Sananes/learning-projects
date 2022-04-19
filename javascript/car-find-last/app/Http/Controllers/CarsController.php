@@ -75,7 +75,7 @@ class CarsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, \App\Models\Cars $car)
+    public function store(Request $request)
     {
         $request->validate([
             'brand' => 'required|string',
@@ -128,9 +128,7 @@ class CarsController extends Controller
             \App\Models\Cars::Create([
                 'picture_1'=> $imagePath
             ]);
-            dd($imagePath);
          }
-       
         
         return back();
     }
@@ -184,7 +182,6 @@ class CarsController extends Controller
             'price' => 'required|integer',
             'model_of_car' => 'required|integer',
             'picture_1' => 'nullable',
-            'picture_2' => 'nullable',
         ]);
       
 
