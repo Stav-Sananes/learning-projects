@@ -5,9 +5,7 @@
        
         <div class="d-flex justify-content-center mb-3">
             <form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/search') }}">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש מתקדם</button>
-                <input class="form-control mr-sm-2 ml-2" type="search" placeholder="חיפוש רכב" aria-label="Search" name="four_on_four">
-                <search-bar></search-bar>
+                <search-bar class="mr-4 mt-4"></search-bar>
                
             </form>
             <form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/search') }}">
@@ -15,7 +13,7 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חפש</button>
                 
             </form>
-            <a type="button" class="btn btn-outline-primary ml-2" href="{{ url('/search') }}">איפוס חיפוש</a>
+            {{-- <a type="button" class="btn btn-outline-primary ml-2" href="{{ url('/search') }}">איפוס חיפוש</a> --}}
         </div>
 
         <div class="w-100 d-flex justify-content-center text-center">

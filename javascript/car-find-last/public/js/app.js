@@ -5421,11 +5421,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'BasicSelect',
+  name: "BasicSelect",
   data: function data() {
     return {
-      movie: 'godfather',
+      movie: "godfather",
       country: null,
       font: null
     };
@@ -28534,48 +28555,26 @@ var render = function () {
             _c(
               "md-field",
               [
-                _c("label", { attrs: { for: "movie" } }, [_vm._v("Movie")]),
+                _c("label", { attrs: { for: "four_on_four" } }, [
+                  _vm._v("4X4 "),
+                ]),
                 _vm._v(" "),
                 _c(
                   "md-select",
                   {
                     attrs: { name: "movie", id: "movie" },
                     model: {
-                      value: _vm.movie,
+                      value: _vm.four_on_four,
                       callback: function ($$v) {
-                        _vm.movie = $$v
+                        _vm.four_on_four = $$v
                       },
-                      expression: "movie",
+                      expression: "four_on_four",
                     },
                   },
                   [
-                    _c("md-option", { attrs: { value: "fight-club" } }, [
-                      _vm._v("Fight Club"),
-                    ]),
+                    _c("md-option", { attrs: { value: "0" } }, [_vm._v("לא")]),
                     _vm._v(" "),
-                    _c("md-option", { attrs: { value: "godfather" } }, [
-                      _vm._v("Godfather"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "godfather-ii" } }, [
-                      _vm._v("Godfather II"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "godfather-iii" } }, [
-                      _vm._v("Godfather III"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "godfellas" } }, [
-                      _vm._v("Godfellas"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "pulp-fiction" } }, [
-                      _vm._v("Pulp Fiction"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "scarface" } }, [
-                      _vm._v("Scarface"),
-                    ]),
+                    _c("md-option", { attrs: { value: "1" } }, [_vm._v("כן")]),
                   ],
                   1
                 ),
@@ -28593,128 +28592,151 @@ var render = function () {
             _c(
               "md-field",
               [
-                _c(
-                  "md-select",
-                  {
-                    attrs: {
-                      name: "country",
-                      id: "country",
-                      placeholder: "Country",
-                    },
-                    model: {
-                      value: _vm.country,
-                      callback: function ($$v) {
-                        _vm.country = $$v
-                      },
-                      expression: "country",
-                    },
-                  },
-                  [
-                    _c("md-option", { attrs: { value: "australia" } }, [
-                      _vm._v("Australia"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "brazil" } }, [
-                      _vm._v("Brazil"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "japan" } }, [
-                      _vm._v("Japan"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "united-states" } }, [
-                      _vm._v("United States"),
-                    ]),
-                  ],
-                  1
-                ),
-              ],
-              1
-            ),
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "md-layout-item" },
-          [
-            _c(
-              "md-field",
-              [
-                _c("label", { attrs: { for: "font" } }, [_vm._v("Font")]),
+                _c("label", { attrs: { for: "crusie_control" } }, [
+                  _vm._v("בקרת שיוט "),
+                ]),
                 _vm._v(" "),
                 _c(
                   "md-select",
                   {
-                    attrs: { name: "font", id: "font" },
+                    attrs: {
+                      name: "crusie_control",
+                      id: "crusie_control",
+                      placeholder: "crusie_control",
+                    },
                     model: {
-                      value: _vm.font,
+                      value: _vm.crusie_control,
                       callback: function ($$v) {
-                        _vm.font = $$v
+                        _vm.crusie_control = $$v
                       },
-                      expression: "font",
+                      expression: "crusie_control",
                     },
                   },
                   [
-                    _c("md-option", { attrs: { value: "arial" } }, [
-                      _vm._v("Arial"),
+                    _c("md-option", { attrs: { value: "0" } }, [_vm._v("לא")]),
+                    _vm._v(" "),
+                    _c("md-option", { attrs: { value: "1" } }, [_vm._v("כן")]),
+                  ],
+                  1
+                ),
+              ],
+              1
+            ),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "md-layout-item" },
+          [
+            _c(
+              "md-field",
+              [
+                _c("label", { attrs: { for: "number_of_seats" } }, [
+                  _vm._v("מקומות ישיבה"),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "md-select",
+                  {
+                    attrs: { name: "number_of_seats", id: "number_of_seats" },
+                    model: {
+                      value: _vm.number_of_seats,
+                      callback: function ($$v) {
+                        _vm.number_of_seats = $$v
+                      },
+                      expression: "number_of_seats",
+                    },
+                  },
+                  [
+                    _c("md-option", { attrs: { value: "2" } }, [_vm._v("2")]),
+                    _vm._v(" "),
+                    _c("md-option", { attrs: { value: "5" } }, [_vm._v("5")]),
+                  ],
+                  1
+                ),
+              ],
+              1
+            ),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "md-layout-item" },
+          [
+            _c(
+              "md-field",
+              [
+                _c("label", { attrs: { for: "autonomous_braking" } }, [
+                  _vm._v("מערכת בלימה אוטונמית"),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "md-select",
+                  {
+                    attrs: {
+                      name: "autonomous_braking",
+                      id: "autonomous_braking",
+                    },
+                    model: {
+                      value: _vm.autonomous_braking,
+                      callback: function ($$v) {
+                        _vm.autonomous_braking = $$v
+                      },
+                      expression: "autonomous_braking",
+                    },
+                  },
+                  [
+                    _c("md-option", { attrs: { value: "0" } }, [_vm._v("לא")]),
+                    _vm._v(" "),
+                    _c("md-option", { attrs: { value: "1" } }, [_vm._v("כן")]),
+                  ],
+                  1
+                ),
+              ],
+              1
+            ),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "md-layout-item" },
+          [
+            _c(
+              "md-field",
+              [
+                _c("label", { attrs: { for: "type_of_car" } }, [
+                  _vm._v("סוג מכונית"),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "md-select",
+                  {
+                    attrs: { name: "type_of_car", id: "type_of_car" },
+                    model: {
+                      value: _vm.type_of_car,
+                      callback: function ($$v) {
+                        _vm.type_of_car = $$v
+                      },
+                      expression: "type_of_car",
+                    },
+                  },
+                  [
+                    _c("md-option", { attrs: { value: "0" } }, [
+                      _vm._v("מנהלים"),
                     ]),
                     _vm._v(" "),
-                    _c("md-option", { attrs: { value: "calibri" } }, [
-                      _vm._v("Calibri"),
+                    _c("md-option", { attrs: { value: "1" } }, [
+                      _vm._v("משפחתי"),
                     ]),
                     _vm._v(" "),
-                    _c("md-option", { attrs: { value: "cambria" } }, [
-                      _vm._v("Cambria"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "comic-sans" } }, [
-                      _vm._v("Comic Sans"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "consolas" } }, [
-                      _vm._v("Consolas"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "courier" } }, [
-                      _vm._v("Courier"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "droid-sans" } }, [
-                      _vm._v("Droid Sans"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "georgia" } }, [
-                      _vm._v("Georgia"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "helvetica" } }, [
-                      _vm._v("Helvetica"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "impact" } }, [
-                      _vm._v("Impact"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "roboto" } }, [
-                      _vm._v("Roboto"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "segoe-ui" } }, [
-                      _vm._v("Segoe UI"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "times-new-roman" } }, [
-                      _vm._v("Times New Roman"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "ubuntu" } }, [
-                      _vm._v("Ubuntu"),
-                    ]),
-                    _vm._v(" "),
-                    _c("md-option", { attrs: { value: "verdana" } }, [
-                      _vm._v("Verdana"),
+                    _c("md-option", { attrs: { value: "2" } }, [
+                      _vm._v("ספורט"),
                     ]),
                   ],
                   1
@@ -28737,7 +28759,7 @@ var render = function () {
             },
           },
         },
-        [_vm._v("Set Pulp Fiction")]
+        [_vm._v("חיפוש")]
       ),
     ],
     1
