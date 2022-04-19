@@ -7,7 +7,7 @@
             <form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/search') }}">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש מתקדם</button>
                 <input class="form-control mr-sm-2 ml-2" type="search" placeholder="חיפוש רכב" aria-label="Search" name="four_on_four">
-             
+                <search-bar></search-bar>
                
             </form>
             <form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/search') }}">

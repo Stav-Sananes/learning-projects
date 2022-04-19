@@ -42,7 +42,7 @@
                             </div>
                             <div class="offcanvas-body text-center mt-3 fw-bolder">
                                 <p>אם במקרה והגעתם לכאן בטעות ואתם מחפשים לעבור לשאלות האופנועים לחצו כאן</p>
-                                <a type="button" class="btn btn-danger" href="{{ route('bikes') }}">לשאלות האופנועים</a>
+                                <a type="button" class="btn btn-danger" style="color: #FFFF;" href="{{ route('bikes') }}">לשאלות האופנועים</a>
                             </div>
                         </div>
                     </div>
@@ -441,9 +441,9 @@
                         <button  type="submit" class="btn btn-primary"> סיום ומעבר לקבלת התשובות</button>
                     </div>
                     <div class="text-center mt-3">
-                        <a type="button" class="btn btn-warning" href="{{ route('bikes') }}">לשאלות האופנועים</a>
+                        <a type="button" class="btn btn-warning" style="color: #FFFF;" href="{{ route('bikes') }}">לשאלות האופנועים</a>
                         
-                            <a type="button" class="btn btn-danger" href="{{ url('/search') }}">לחיפוש רכבים לבד </a>
+                            <a type="button" class="btn btn-danger" style="color: #FFFF;" href="{{ url('/search') }}">לחיפוש רכבים לבד </a>
                         
                     </div>
                    

@@ -4,10 +4,22 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+ 
+
+import Vue from 'vue'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
+import { MdButton, MdContent, MdTabs } from 'vue-material/dist/components'
+
+
+Vue.use(VueMaterial)
+Vue.use(MdButton)
+Vue.use(MdContent)
+Vue.use(MdTabs)
 require('./bootstrap');
 
 window.Vue = require('vue').default;
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -19,8 +31,7 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
+Vue.component('search-bar', require('./components/SearchBar.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
