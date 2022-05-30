@@ -3,7 +3,7 @@
     <div id="left">
         <img src="../images/hamburger.png" />
         <div class="profile">
-            <h1>Hi samuel</h1>
+            <h1>Stav</h1>
         </div>
         <div class="search">
             <input placeholder="search" />
