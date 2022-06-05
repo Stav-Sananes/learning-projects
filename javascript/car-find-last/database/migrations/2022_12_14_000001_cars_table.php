@@ -20,12 +20,12 @@ return new class extends Migration
             $table->tinyInteger('four_on_four')->nullable();
             $table->tinyInteger('crusie_control')->nullable();
             $table->integer('number_of_seats')->nullable();
-            $table->tinyInteger('type_of_car')->unsigned();
+            $table->tinyInteger('type_of_car')->nullable();
             $table->tinyInteger('autonomous_braking')->nullable();
             $table->integer('car_pollution')->nullable();
-            $table->integer('price')->unsigned();
+            $table->integer('price')->nullable();
             $table->tinyInteger('reverse_camera')->nullable();
-            $table->tinyInteger('model_of_car')->unsigned();
+            $table->tinyInteger('model_of_car')->nullable();
             $table->string('picture_1')->nullable();
             $table->rememberToken();
             $table->timestamps();

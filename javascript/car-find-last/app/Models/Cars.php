@@ -28,6 +28,7 @@ class Cars extends Model
         'picture_1',
         'picture_2',
     ];
+    protected $guarded = [];
     
     public function setAvatarAttribute($value) {
         $file = Storage::disk('local')->put('cars/', $value);

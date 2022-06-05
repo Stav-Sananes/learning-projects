@@ -30,6 +30,7 @@ Route::get('/fivequestions', [App\Http\Controllers\HomeController::class, 'fiveq
 Route::get('/fifteenquestions', [App\Http\Controllers\HomeController::class, 'fifteenquestions']);
 Route::get('/finish', [App\Http\Controllers\CarsController::class, 'FindCars'])->name('finish');
 Route::get('/search',[\App\Http\Controllers\CarsController::class,'search'])->name('search');
+Route::get('/advanced_search',[\App\Http\Controllers\CarsController::class,'advanced_search'])->name('advanced_search');
 
 
 
