@@ -13,7 +13,7 @@
         </div>
         <form class="form-inline my-2 my-lg-0" type="get" action="{{ route('bikes.index', ['id' => 1]) }}">
             <input class="form-control mr-sm-2" type="search" placeholder="חיפוש אופנוע" aria-label="Search" name="query">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חפש</button>
+            <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">חפש</button>
         </form>
     </div>
     <div class="card-body">
@@ -42,7 +42,7 @@
             <tbody>
                 @foreach ($bikes as $bike)
                     <td>
-                        <a href="{{ route('bikes.show', ['bike'=>$bike->id]) }}" class="btn btn-dark">
+                        <a href="{{ route('bikes.show', ['bike'=>$bike->id]) }}" class="btn btn-dark text-white">
                             ערוך נתוני אופנוע
                         </a>
                         <tr>
@@ -67,7 +67,7 @@
                             @csrf
                             @method('DELETE')
                             <div class="d-flex justify-content-center">
-                            <button class="btn btn-xs btn-danger " onclick="return confirm('Are you sure?')"
+                            <button class="btn btn-xs btn-danger text-white" onclick="return confirm('Are you sure?')"
                                 type="submit">מחיקה</button>
                             </div>
                         </form>

@@ -126,7 +126,7 @@
             </div>
             <div class="text-center">
                 <label for="picture_1" class="custom-file-upload">
-                    <a class="btn btn-info">תמונת אופנוע ראשונה</a>
+                    <a class="btn btn-info text-white">תמונת אופנוע ראשונה</a>
                 </label>
                 <input id="picture_1" type="file" name="picture_1" />
                
@@ -145,7 +145,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <button data-toggle="tooltip" data-placement="top" title="אישור יצירת אופנוע" class="btn btn-primary"
+                <button data-toggle="tooltip" data-placement="top" title="אישור יצירת אופנוע" class="btn btn-primary text-white"
                     type="submit">הקמת אופנוע</button>
             </div>
             <div class="text-center mt-3">
