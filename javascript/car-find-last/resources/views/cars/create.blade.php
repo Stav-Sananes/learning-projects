@@ -136,7 +136,7 @@
                         type="submit">הקמת רכב</button>
                 </div>
                 <div class="text-center mt-3">
-                    <a type="button" class="btn btn-success " href="{{ route('cars.index', ['id' => 1]) }}">מעבר לטבלת
+                    <a type="button" class="btn btn-success text-white" href="{{ route('cars.index', ['id' => 1]) }}">מעבר לטבלת
                         הרכבים</a>
                 </div>
             </form>

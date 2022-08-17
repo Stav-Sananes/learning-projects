@@ -72,9 +72,9 @@
                             <div class="row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Register') }}
+                                        {{ __('הרשם עכשיו') }}
                                     </button>
-                                    <a href="{{ route('auth/google') }}" class="btn btn-success">Google</a>
+                                    <a href="{{ route('auth/google') }}" class="btn btn-success text-white" >Google</a>
 
                                 </div>
                             </div>

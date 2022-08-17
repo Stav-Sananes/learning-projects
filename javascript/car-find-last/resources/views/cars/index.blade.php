@@ -8,8 +8,8 @@
             <h4>
                 רכבים
             </h4>
-            <a href="{{ route('cars.create') }}" class="btn btn-primary">הוספת רכב </a>
-            <a  href="/home" class="btn btn-info">חזרה למסך השאלות</a> 
+            <a href="{{ route('cars.create') }}" class="btn btn-primary text-white">הוספת רכב </a>
+            <a  href="/home" class="btn btn-info text-white">חזרה למסך השאלות</a> 
         </div>
         <form class="form-inline my-2 my-lg-0" type="get" action="{{ route('cars.index', ['id' => 1]) }}">
             <input class="form-control mr-sm-2" type="search" placeholder="חיפוש רכב" aria-label="Search" name="query">

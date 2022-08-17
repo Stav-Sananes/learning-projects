@@ -6,8 +6,8 @@
             {{ csrf_field() }}
             {{ method_field('PATCH') }}
             <div class="d-flex flex-row h-100 justify-content-lg-between w-100 p-1">
-                <a href="{{ route('cars.index') }}" class="btn btn-success">חזרה לפרטי הרכב</a>
-                <a href="{{ route('cars.create') }}" class="btn btn-primary">ליצירת רכב חדש</a>
+                <a href="{{ route('cars.index') }}" class="btn btn-success text-white">חזרה לפרטי הרכב</a>
+                <a href="{{ route('cars.create') }}" class="btn btn-primary text-white">ליצירת רכב חדש</a>
                 <a href="/home" class="btn btn-warning">חזרה למסך השאלות</a>
 
             </div>

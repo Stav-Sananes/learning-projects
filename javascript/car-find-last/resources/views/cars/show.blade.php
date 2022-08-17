@@ -10,9 +10,9 @@
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div class="container">
             <div class="d-flex flex-row h-100 justify-content-lg-between w-100 p-1">
-                <a href="{{route('cars.index')}}" class="btn btn-success">חזרה לפרטי הרכב</a>
-                <a  href="{{route('cars.create')}}" class="btn btn-primary">ליצירת רכב חדש</a> 
-               <a  href="{{route('cars.edit',['car'=>$car->id])}}" class="btn btn-warning">ערוך נתוני רכב</a> 
+                <a href="{{route('cars.index')}}" class="btn btn-success text-white">חזרה לפרטי הרכב</a>
+                <a  href="{{route('cars.create')}}" class="btn btn-primary text-white"> רכב חדש</a> 
+               <a  href="{{route('cars.edit',['car'=>$car->id])}}" class="btn btn-warning text-white">ערוך נתוני רכב</a> 
               
             </div>
             <table class="table">

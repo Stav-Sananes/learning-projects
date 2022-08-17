@@ -149,7 +149,7 @@
                     type="submit">הקמת אופנוע</button>
             </div>
             <div class="text-center mt-3">
-                <a type="button" class="btn btn-success " href="{{ route('bikes.index', ['id' => 1]) }}">מעבר לטבלת
+                <a type="button" class="btn btn-success text-white" href="{{ route('bikes.index', ['id' => 1]) }}">מעבר לטבלת
                     אופנוע</a>
             </div>
         </form>
