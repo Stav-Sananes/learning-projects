@@ -26,9 +26,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/bike', [App\Http\Controllers\HomeController::class, 'bike'])->name('bikes');
-Route::get('/fivequestions', [App\Http\Controllers\HomeController::class, 'fivequestions']);
+Route::get('/fivequestions', [App\Http\Controllers\HomeController::class, 'fivequestions'])->name('fivequestions');
 Route::get('/fifteenquestions', [App\Http\Controllers\HomeController::class, 'fifteenquestions']);
 Route::get('/finish', [App\Http\Controllers\CarsController::class, 'FindCars'])->name('finish');
+Route::get('/finish_five', [App\Http\Controllers\CarsController::class, 'FindCarsForFive'])->name('finish_five');
 Route::get('/search',[\App\Http\Controllers\CarsController::class,'search'])->name('search');
 Route::get('/advanced_search',[\App\Http\Controllers\CarsController::class,'advanced_search'])->name('advanced_search');
 
@@ -37,7 +38,7 @@ Route::get('/advanced_search',[\App\Http\Controllers\CarsController::class,'adva
 
 Route::resource('cars', \App\Http\Controllers\CarsController::class);
 
-Route::get('/search/bike',[\App\Http\Controllers\BikeController::class,'search'])->name('search');
+Route::get('/search/bike',[\App\Http\Controllers\BikeController::class,'search']);
 Route::get('/bikesfinish', [App\Http\Controllers\BikeController::class, 'FindBikes'])->name('bikesfinish');
 Route::resource('bikes', \App\Http\Controllers\BikeController::class);
 

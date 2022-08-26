@@ -453,8 +453,10 @@
                             <a href="{{ url('/home') }}" type="button" class="btn btn-primary btn-lg mr-2"
                                 role="button">התחלת עשר שאלות</a>
 
-                            <a href="{{ url('/fivequestions') }}" type="button" class="btn btn-success btn-lg"
+                            <a href="{{ route('fivequestions') }}" type="button" class="btn btn-success btn-lg mr-2"
                                 role="button">התחלת חמש שאלות</a>
+                            <a href="{{ route('search') }}" type="button" class="btn btn-warning btn-lg"
+                                role="button">חיפוש מתקדם</a>
                         </div>
                     @else
                         <a href="{{ route('login') }}" class="ml-4 text-sm btn btn-info btn-lg">לחץ כאן

@@ -13,7 +13,7 @@
 
                             <div class="row mb-3">
                                 <label for="email"
-                                    class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                                    class="col-md-4 col-form-label text-md-end">{{ __('איימיל') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
@@ -29,7 +29,7 @@
 
                             <div class="row mb-3">
                                 <label for="password"
-                                    class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                                    class="col-md-4 col-form-label text-md-end">{{ __('סיסמה') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
@@ -51,7 +51,7 @@
                                             {{ old('remember') ? 'checked' : '' }}>
 
                                         <label class="form-check-label" for="remember">
-                                            {{ __('Remember Me') }}
+                                            {{ __('זכור אותי') }}
                                         </label>
                                     </div>
                                 </div>
@@ -60,9 +60,9 @@
                             <div class="row mb-0">
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Login') }}
+                                        {{ __('התחברות') }}
                                     </button>
-                                    <a href="{{ route('auth/google') }}" class="btn btn-success text-white"> Google</a>
+                                    <a href="{{ route('auth/google') }}" class="btn btn-success text-white"> כניסה דרך גוגל</a>
                                     @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}

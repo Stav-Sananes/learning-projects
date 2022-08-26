@@ -15,14 +15,14 @@ class CarsController extends Controller
      */
     public function index(Request $request)
     {
-        $cars = \App\Models\Cars::all();  
-        if($request->get('query')){
-            $name=$request->get('query');
-            $cars= Cars::where('car_name', 'LIKE','%'. $name . '%')
-            ->get();
-            return view('cars.index',compact('cars'));
+        $cars = \App\Models\Cars::all();
+        if ($request->get('query')) {
+            $name = $request->get('query');
+            $cars = Cars::where('car_name', 'LIKE', '%' . $name . '%')
+                ->get();
+            return view('cars.index', compact('cars'));
         }
-        
+
         return view('cars.index', compact('cars'));
     }
     public function search(Request $request)
@@ -37,28 +37,27 @@ class CarsController extends Controller
         $price = $request->input('price') ?  $request->input('price') : null;
         $reverse_camera = $request->input('reverse_camera') ?  $request->input('reverse_camera') : null;
         $model_of_car = $request->input('model_of_car') ?  $request->input('model_of_car') : null;
-        
-        $name=$request->get('query');
-        $cars_data= Cars::where('car_name', 'LIKE','%'. $name . '%')
-        ->get();
-        return view('cars.search',compact('cars_data'));
-        if(!$request->get('query')){
+
+        $name = $request->get('query');
+        $cars_data = Cars::where('car_name', 'LIKE', '%' . $name . '%')
+            ->get();
+        return view('cars.search', compact('cars_data'));
+        if (!$request->get('query')) {
             $key = $request->input('q');
-            $cars_data= Cars::where('four_on_four', 'LIKE','%'. $four_on_four . '%')
-        ->orWhere('crusie_control', 'LIKE','%'. $cruise_control . '%')
-        ->orWhere('number_of_seats', 'LIKE','%'. $number_of_seats . '%')
-        ->orWhere('type_of_car', 'LIKE','%'. $type_of_car . '%')
-        ->orWhere('autonomous_braking', 'LIKE','%'. $autonomous_braking . '%')
-        ->orWhere('car_pollution', 'LIKE','%'. $car_pollution . '%')
-        ->orWhere('price', 'LIKE','%'. $price . '%')
-        ->orWhere('reverse_camera', 'LIKE','%'. $reverse_camera . "%")
-        ->orWhere('liter_baggage', 'LIKE','%'. $liter_baggage . "%")
-        ->orWhere('model_of_car', 'LIKE','%'. $model_of_car . "%")
-        ->get();
-        return view('cars.search',compact('cars_data'));
+            $cars_data = Cars::where('four_on_four', 'LIKE', '%' . $four_on_four . '%')
+                ->orWhere('crusie_control', 'LIKE', '%' . $cruise_control . '%')
+                ->orWhere('number_of_seats', 'LIKE', '%' . $number_of_seats . '%')
+                ->orWhere('type_of_car', 'LIKE', '%' . $type_of_car . '%')
+                ->orWhere('autonomous_braking', 'LIKE', '%' . $autonomous_braking . '%')
+                ->orWhere('car_pollution', 'LIKE', '%' . $car_pollution . '%')
+                ->orWhere('price', 'LIKE', '%' . $price . '%')
+                ->orWhere('reverse_camera', 'LIKE', '%' . $reverse_camera . "%")
+                ->orWhere('liter_baggage', 'LIKE', '%' . $liter_baggage . "%")
+                ->orWhere('model_of_car', 'LIKE', '%' . $model_of_car . "%")
+                ->get();
+            return view('cars.search', compact('cars_data'));
         }
         /*  */
-       
     }
     public function advanced_search(Request $request)
     {
@@ -72,25 +71,25 @@ class CarsController extends Controller
         $price = $request->input('price') ?  $request->input('price') : null;
         $reverse_camera = $request->input('reverse_camera') ?  $request->input('reverse_camera') : null;
         $model_of_car = $request->input('model_of_car') ?  $request->input('model_of_car') : null;
-        
-            $cars_data= Cars::where('four_on_four', 'LIKE','%'. $four_on_four . '%')
-        ->orWhere('crusie_control', 'LIKE','%'. $cruise_control . '%')
-        ->orWhere('number_of_seats', 'LIKE','%'. $number_of_seats . '%')
-        ->orWhere('type_of_car', 'LIKE','%'. $type_of_car . '%')
-        ->orWhere('autonomous_braking', 'LIKE','%'. $autonomous_braking . '%')
-        ->orWhere('car_pollution', 'LIKE','%'. $car_pollution . '%')
-        ->orWhere('price', 'LIKE','%'. $price . '%')
-        ->orWhere('reverse_camera', 'LIKE','%'. $reverse_camera . "%")
-        ->orWhere('liter_baggage', 'LIKE','%'. $liter_baggage . "%")
-        ->orWhere('model_of_car', 'LIKE','%'. $model_of_car . "%")
-        ->get();
+
+        $cars_data = Cars::where('four_on_four', 'LIKE', '%' . $four_on_four . '%')
+            ->orWhere('crusie_control', 'LIKE', '%' . $cruise_control . '%')
+            ->orWhere('number_of_seats', 'LIKE', '%' . $number_of_seats . '%')
+            ->orWhere('type_of_car', 'LIKE', '%' . $type_of_car . '%')
+            ->orWhere('autonomous_braking', 'LIKE', '%' . $autonomous_braking . '%')
+            ->orWhere('car_pollution', 'LIKE', '%' . $car_pollution . '%')
+            ->orWhere('price', 'LIKE', '%' . $price . '%')
+            ->orWhere('reverse_camera', 'LIKE', '%' . $reverse_camera . "%")
+            ->orWhere('liter_baggage', 'LIKE', '%' . $liter_baggage . "%")
+            ->orWhere('model_of_car', 'LIKE', '%' . $model_of_car . "%")
+            ->get();
         return response()->json($cars_data);
-        }
-        /*  */
-   
-       
-    
- 
+    }
+    /*  */
+
+
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -125,8 +124,8 @@ class CarsController extends Controller
             'model_of_car' => 'required|integer',
             'picture_1' => 'required|nullable',
         ]);
-      
-       
+
+
         \App\Models\Cars::Create([
             'car_name' => $request->input('car_name'),
             'brand' => $request->input('brand'),
@@ -142,9 +141,9 @@ class CarsController extends Controller
             'type_of_car' => $request->input('type_of_car'),
 
         ]);
-        
-        
-       /*  if ($request->hasFile('picture_1')) {
+
+
+        /*  if ($request->hasFile('picture_1')) {
       
             $picture_1 = $request->file('picture_1');
             $filepath = 'cars/';
@@ -154,15 +153,15 @@ class CarsController extends Controller
             ]);
           
         } */
-        
-        
-         $imagePath = request('picture_1')->store('uploads','public');
-         if($imagePath){
+
+
+        $imagePath = request('picture_1')->store('uploads', 'public');
+        if ($imagePath) {
             \App\Models\Cars::Create([
-                'picture_1'=> $imagePath
+                'picture_1' => $imagePath
             ]);
-         }
-        
+        }
+
         return back();
     }
 
@@ -175,7 +174,7 @@ class CarsController extends Controller
      */
     public function show($id)
     {
-        
+
         $car = \App\Models\Cars::findOrFail($id);
         return view('cars.show', compact('car'));
     }
@@ -200,7 +199,7 @@ class CarsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, \App\Models\Cars $car)
-    {    
+    {
         $request->validate([
             'brand' => 'required|string',
             'car_name' => 'required|string',
@@ -216,23 +215,21 @@ class CarsController extends Controller
             'model_of_car' => 'required|integer',
             'picture_1' => 'nullable',
         ]);
-      
 
-    if ($request->hasFile('picture_1')) {
-      
-        $picture_1 = $request->file('picture_1');
-        $filepath = 'cars/';
-        $file = Storage::disk('local')->put($filepath, $picture_1);
-        $car->update([
-            'picture_1' => $file
-        ]);
-      
-    }
 
-          $car->update($request->all());
+        if ($request->hasFile('picture_1')) {
+
+            $picture_1 = $request->file('picture_1');
+            $filepath = 'cars/';
+            $file = Storage::disk('local')->put($filepath, $picture_1);
+            $car->update([
+                'picture_1' => $file
+            ]);
+        }
+
+        $car->update($request->all());
         return redirect()->route('cars.index');
-    
-}
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -244,11 +241,10 @@ class CarsController extends Controller
     {
         $car->delete();
         return redirect()->route('cars.index')
-        ->with('success', 'car deleted successfully');
-       
+            ->with('success', 'car deleted successfully');
     }
     public function FindCars(Request $request)
-     {
+    {
         $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
         $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
         $cruise_control = $request->input('cruise_control') ?  $request->input('cruise_control') : null;
@@ -259,43 +255,73 @@ class CarsController extends Controller
         $price = $request->input('price') ?  $request->input('price') : null;
         $reverse_camera = $request->input('reverse_camera') ?  $request->input('reverse_camera') : null;
         $model_of_car = $request->input('model_of_car') ?  $request->input('model_of_car') : null;
-        
-        $findCars = \App\Models\Cars::
-        when($liter_baggage,function ($query) use ($liter_baggage){
-            return $query->where('liter_baggage', $liter_baggage);
-        })
-        ->when($four_on_four,function ($query) use ($four_on_four) {
-            return $query->where('four_on_four',  $four_on_four);
-        })
-        ->when($cruise_control,function ($query) use ($cruise_control) {
-            return $query->where('cruise_control', $cruise_control);
-        })
-        ->when($number_of_seats,function ($query) use ($number_of_seats) {
-            return $query->where('number_of_seats', $number_of_seats);
-        })
-        ->when($type_of_car,function ($query) use ($type_of_car) {
-            return $query->where('type_of_car', $type_of_car);
-        })
-        ->when($autonomous_braking,function ($query) use ($autonomous_braking) {
-            return $query->where('autonomous_braking', $autonomous_braking);
-        })
-        ->when($car_pollution,function ($query) use ($car_pollution){
-            return $query->where('car_pollution', $car_pollution);
-        })
-        ->when($price,function ($query) use ($price){
-            return $query->where('price',$price);
-        })
-        ->when($reverse_camera,function ($query) use ($reverse_camera){
-            return $query->where('reverse_camera',$reverse_camera);
-        })
-        ->when($model_of_car,function ($query) use ($model_of_car){
-            return $query->where('model_of_car' , $model_of_car);
-        })
-        ->orderBy('price','desc')
+
+        $findCars = \App\Models\Cars::when($liter_baggage, function ($query) use ($liter_baggage) {
+                return $query->where('liter_baggage', $liter_baggage);
+            })
+            ->when($four_on_four, function ($query) use ($four_on_four) {
+                return $query->where('four_on_four',  $four_on_four);
+            })
+            ->when($cruise_control, function ($query) use ($cruise_control) {
+                return $query->where('cruise_control', $cruise_control);
+            })
+            ->when($number_of_seats, function ($query) use ($number_of_seats) {
+                return $query->where('number_of_seats', $number_of_seats);
+            })
+            ->when($type_of_car, function ($query) use ($type_of_car) {
+                return $query->where('type_of_car', $type_of_car);
+            })
+            ->when($autonomous_braking, function ($query) use ($autonomous_braking) {
+                return $query->where('autonomous_braking', $autonomous_braking);
+            })
+            ->when($car_pollution, function ($query) use ($car_pollution) {
+                return $query->where('car_pollution', $car_pollution);
+            })
+            ->when($price, function ($query) use ($price) {
+                return $query->where('price', $price);
+            })
+            ->when($reverse_camera, function ($query) use ($reverse_camera) {
+                return $query->where('reverse_camera', $reverse_camera);
+            })
+            ->when($model_of_car, function ($query) use ($model_of_car) {
+                return $query->where('model_of_car', $model_of_car);
+            })
+            ->orderBy('price', 'desc')
             ->limit(3)
             ->get();
         return view('cars.finish')
-        ->with('findCars',$findCars);
+            ->with('findCars', $findCars);
     }
 
+    public function FindCarsForFive(Request $request)
+    {
+        $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
+        $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
+        $cruise_control = $request->input('cruise_control') ?  $request->input('cruise_control') : null;
+        $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
+        $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
+
+
+        $findCars = \App\Models\Cars::when($liter_baggage, function ($query) use ($liter_baggage) {
+                return $query->where('liter_baggage', $liter_baggage);
+            })
+            ->when($four_on_four, function ($query) use ($four_on_four) {
+                return $query->where('four_on_four',  $four_on_four);
+            })
+            ->when($cruise_control, function ($query) use ($cruise_control) {
+                return $query->where('cruise_control', $cruise_control);
+            })
+            ->when($number_of_seats, function ($query) use ($number_of_seats) {
+                return $query->where('number_of_seats', $number_of_seats);
+            })
+            ->when($type_of_car, function ($query) use ($type_of_car) {
+                return $query->where('type_of_car', $type_of_car);
+            })
+
+            ->orderBy('price', 'desc')
+            ->limit(3)
+            ->get();
+        return view('cars.finish_five')
+            ->with('findCars', $findCars);
+    }
 }

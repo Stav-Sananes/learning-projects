@@ -15,7 +15,7 @@
             </div>
         </div>
     @endif
-    <form class="needs-validation"  method="GET" dir="rtl">
+    <form class="needs-validation"  method="GET" dir="rtl" action="{{ route('finish_five') }}">
         <div class="container" style="max-width: 1460px;">
             <div class="row justify-content-center">
                 <div class="col-md">
@@ -258,7 +258,7 @@
 
                     </div>
                     <div class="text-center mt-5">
-                        <button type="button" type="submit" class="btn btn-primary"> סיום ומעבר לקבלת התשובות</button>
+                        <button type="submit" class="btn btn-primary"> סיום ומעבר לקבלת התשובות</button>
                     </div>
 
                 </div>
