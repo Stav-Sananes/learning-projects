@@ -455,7 +455,7 @@
 
                             <a href="{{ route('fivequestions') }}" type="button" class="btn btn-success btn-lg mr-2"
                                 role="button">התחלת חמש שאלות</a>
-                            <a href="{{ route('search') }}" type="button" class="btn btn-warning btn-lg"
+                            <a href="{{ route('search') }}" type="button" class="btn btn-warning btn-lg text-white"
                                 role="button">חיפוש מתקדם</a>
                         </div>
                     @else
