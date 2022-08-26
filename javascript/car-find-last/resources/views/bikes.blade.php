@@ -5,7 +5,7 @@
         <div class="container mb-3 text-center">
             <div class="row ">
                 <div class="col-6">
-                    <a type="button" class="btn btn-outline-primary" href="{{ route('bikes.index', ['id' => 1]) }}">מעבר לטבלת
+                    <a type="button" class="btn btn-outline-primary " href="{{ route('bikes.index', ['id' => 1]) }}">מעבר לטבלת
                         אופנועים</a>
                 </div>
                 <div class="col-6">
@@ -56,7 +56,7 @@
                                 </div>
                             @endif
 
-                            <ul class="nav nav-tabs" id="mytabs" role="tablist">
+                            <ul class="nav nav-tabs d-flex justify-content-between" id="mytabs" role="tablist">
                                 <li class="nav-item active" role="presentation">
                                     <button class="nav-link active" id="question1-tab" data-bs-toggle="tab"
                                         data-bs-target="#question1" type="button" role="tab" aria-controls="question1"

@@ -58,7 +58,7 @@
                                 </div>
                             @endif
 
-                            <ul class="nav nav-tabs" id="mytabs" role="tablist">
+                            <ul class="nav nav-tabs d-flex justify-content-between" id="mytabs" role="tablist">
                                 <li class="nav-item active" role="presentation">
                                     <button class="nav-link active" id="question1-tab" data-bs-toggle="tab"
                                         data-bs-target="#question1" type="button" role="tab" aria-controls="question1"

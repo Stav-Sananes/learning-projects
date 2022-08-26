@@ -11,6 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
     <!-- Styles -->
     <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -27,9 +34,9 @@
             background-color: transparent
         }
 
-        [hidden] {
+        /* [hidden] {
             display: none
-        }
+        } */
 
         html {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -396,19 +403,17 @@
                 color: rgba(107, 114, 128, var(--tw-text-opacity))
             }
         }
-
     </style>
 
     <style>
         body {
             font-family: 'Nunito', sans-serif;
         }
-
     </style>
 </head>
 
 <body class="antialiased">
-    
+
     <div
         class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
 
@@ -422,23 +427,33 @@
                 @if (Route::has('login'))
 
                     @auth
-                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block ">
-                            <ul class="" aria-labelledby="dropdownMenuLink">
-                            <a id="navbarDropdown" class="nav-link btn btn-success btn-lg "
-                                 role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false" v-pre>
+
+                        <div class="  fixed dropdown top-0 right-5  px-6 py-4 sm:block " style="margin-left: 50%;">
+                            <a class="btn btn-success btn-md  dropdown-toggle" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name }}
                             </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('התנתקות') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
                         </div>
-                        <div class="hidden fixed top-0 right-5  px-6 py-4 sm:block" style="margin-left:-30%">
-                            <a href="{{ route('bikes') }}" type="button" class="btn btn-info btn-lg" 
-                            role="button">מעבר לחיפוש האופנועים שלנו</a>
+                        <div class=" fixed top-0 right-5  px-6 py-4 sm:block" style="margin-left:-30%">
+                            <a href="{{ route('bikes') }}" type="button" class="btn btn-info btn-md" role="button">מעבר
+                                לחיפוש האופנועים שלנו</a>
                         </div>
                         <div class="text-center ">
-                            <a href="{{ url('/home') }}" type="button" class="btn btn-primary btn-lg mr-2" 
+                            <a href="{{ url('/home') }}" type="button" class="btn btn-primary btn-lg mr-2"
                                 role="button">התחלת עשר שאלות</a>
-                      
-                            <a href="{{ url('/fivequestions') }}" type="button" class="btn btn-success btn-lg" 
+
+                            <a href="{{ url('/fivequestions') }}" type="button" class="btn btn-success btn-lg"
                                 role="button">התחלת חמש שאלות</a>
                         </div>
                     @else
@@ -453,10 +468,10 @@
             </div>
             <footer class="text-center mt-5" style="color: white;">&copy; Copyright 2022 Stav Sananes</footer>
         </div>
-       
+
 
     </div>
-    
+
 </body>
 
 </html>
