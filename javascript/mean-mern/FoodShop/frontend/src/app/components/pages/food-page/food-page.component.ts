@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CartService } from 'src/app/services/cart.service';
-import { FoodService } from 'src/app/services/food.service';
-import { Food } from 'src/app/shared/models/Food';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+import { CartService } from "src/app/services/cart.service";
+import { FoodService } from "src/app/services/food.service";
+import { Food } from "src/app/shared/models/Food";
 
 @Component({
-  selector: 'app-food-page',
-  templateUrl: './food-page.component.html',
-  styleUrls: ['./food-page.component.css'],
+  selector: "app-food-page",
+  templateUrl: "./food-page.component.html",
+  styleUrls: ["./food-page.component.css"],
 })
 export class FoodPageComponent implements OnInit {
   food!: Food;
@@ -18,13 +18,16 @@ export class FoodPageComponent implements OnInit {
     private router: Router
   ) {
     activate.params.subscribe((params) => {
-      if (params.id) this.food = foodService.getFoodById(params.id);
+      if (params.id)
+        foodService.getFoodById(params.id).subscribe((serverFood) => {
+          this.food = serverFood;
+        });
     });
   }
 
   ngOnInit(): void {}
   addToCart() {
     this.CartService.addToCart(this.food);
-    this.router.navigateByUrl('/cart-page');
+    this.router.navigateByUrl("/cart-page");
   }
 }
