@@ -1,0 +1,5 @@
+<div class="error-list" *ngIf="errorMessage && showErrorsWhen">
+    <div *ngFor="let errorMessages of errorMessage">
+        {{errorMessages}}
+    </div>
+  </div>
