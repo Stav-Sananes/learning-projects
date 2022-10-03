@@ -10,11 +10,10 @@ module.exports = {
     ],
 
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-            },
-        },
+      fontFamily:{
+        primary:"Playfair Display",
+        body:"work Sans"
+      }
     },
 
     plugins: [require('@tailwindcss/forms')],
