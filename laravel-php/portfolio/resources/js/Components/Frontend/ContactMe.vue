@@ -23,7 +23,7 @@ function cleanForm() {
 const submit = () => {
     form.post(route("contact"), {
         preserveScroll: true,
-        onSuccess: () => cleanForm(),
+        onSuccess: () => cleanForm(),ך
     });
 };
 </script>
