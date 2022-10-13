@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SkillController;
 use Illuminate\Foundation\Application;
@@ -25,13 +26,14 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+Route::post('/contact', ContactController::class)->name('contact');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
-    Route::resource('/skills',SkillController::class);
-    Route::resource('/projects',ProjectController::class);
+    Route::resource('/skills', SkillController::class);
+    Route::resource('/projects', ProjectController::class);
 });
 
 require __DIR__ . '/auth.php';
