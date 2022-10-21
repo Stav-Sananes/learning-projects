@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div style="margin:3%">
+    <div style="margin:3%">
+        <search-bar-bike class="mr-4 mt-4" style="direction:rtl" search="{{ route('searchBike') }}"></search-bar-bike>
+    </div>
+    {{-- <div style="margin:3%">
     <div class="d-flex justify-content-center mb-3">
         <form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/search/bike') }}">
             <input class="form-control mr-sm-2" type="search" placeholder="חיפוש אופנוע" aria-label="Search" name="query">
@@ -10,7 +13,7 @@
         <a type="button" class="btn btn-outline-primary ml-2" href="{{ url('/search/bike') }}">איפוס חיפוש</a>
     </div>
 
-    <div class="w-100 d-flex justify-content-center text-center">
+    <div class="w-100 d-flex justify-content-center text-center" style="direction: rtl">
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -57,5 +60,5 @@
     <div class="d-flex justify-content-center">
         <a type="button" class="btn btn-outline-info" href="{{ route('bikes') }}">לשאלות האופנועים</a>
     </div>
-</div>
+</div> --}}
 @endsection

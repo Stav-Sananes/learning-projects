@@ -70,8 +70,8 @@
                     </md-select>
                 </md-field>
             </div>
-            <div class="w-100 d-flex justify-content-center text-center">
-                <table class="table table-bordered" v-if="this.set_table == 1">
+            <div class="w-100 d-flex justify-content-center text-center" >
+                <table class="table table-bordered"  v-if="this.set_table == 1">
                     <thead>
                         <tr>
                             <th scope="col">שם רכב</th>

@@ -16,21 +16,47 @@ class BikeController extends Controller
      */
     public function index(Request $request)
     {
-        $bikes = \App\Models\Bike::all();  
-        if($request->get('query')){
-            $name=$request->get('query');
-            $bikes= Bike::where('bike_name', 'LIKE','%'. $name . '%')
-            ->get();
-            return view('bikes.index',compact('bikes'));
+        $bikes = \App\Models\Bike::all();
+        if ($request->get('query')) {
+            $name = $request->get('query');
+            $bikes = Bike::where('bike_name', 'LIKE', '%' . $name . '%')
+                ->get();
+            return view('bikes.index', compact('bikes'));
         }
 
         return view('bikes.index', compact('bikes'));
     }
     public function search(Request $request)
     {
-        $name=$request->get('query');
-        $bike_data= Bike::where('bike_name', 'LIKE','%'. $name . '%')->get();
-        return view('bikes.search',compact('bike_data'));
+
+        $brand = $request->input('brand') ?  $request->input('brand') : null;
+        $model_of_bike = $request->input('model_of_bike') ?  $request->input('model_of_bike') : null;
+        $engine_type = $request->input('engine_type') ?  $request->input('engine_type') : null;
+        $cylinders = $request->input('cylinders') ?  $request->input('cylinders') : null;
+        $starter = $request->input('starter') ?  $request->input('starter') : null;
+        $transmission_type = $request->input('transmission_type') ?  $request->input('transmission_type') : null;
+        $fuel_captacity = $request->input('fuel_captacity') ?  $request->input('fuel_captacity') : null;
+        $price = $request->input('price') ?  $request->input('price') : null;
+        $engine_stroke = $request->input('engine_stroke') ?  $request->input('engine_stroke') : null;
+        $cooling_system = $request->input('cooling_system') ?  $request->input('cooling_system') : null;
+
+        $name = $request->get('query');
+        $bike_data = Bike::where('bike_name', 'LIKE', '%' . $name . '%')->get();
+        return view('bikes.search', compact('bike_data'));
+        if (!$request->get('query')) {
+            $key = $request->input('q');
+            $bike_data = Bike::where('brand', 'LIKE', '%' . $brand . '%')
+                ->orWhere('model_of_bike', 'LIKE', '%' . $model_of_bike . '%')
+                ->orWhere('engine_type', 'LIKE', '%' . $engine_type . '%')
+                ->orWhere('cylinders', 'LIKE', '%' . $cylinders . '%')
+                ->orWhere('starter', 'LIKE', '%' . $starter . '%')
+                ->orWhere('transmission_type', 'LIKE', '%' . $transmission_type . '%')
+                ->orWhere('price', 'LIKE', '%' . $price . '%')
+                ->orWhere('fuel_captacity', 'LIKE', '%' . $fuel_captacity . "%")
+                ->orWhere('engine_stroke', 'LIKE', '%' . $engine_stroke . "%")
+                ->get();
+            return view('bikes.search', compact('bike_data'));
+        }
     }
     /**
      * Show the form for creating a new resource.
@@ -51,7 +77,7 @@ class BikeController extends Controller
      */
     public function store(Request $request, \App\Models\Bike $bike)
     {
-        
+
         $request->validate([
             'brand' => 'required|string',
             'bike_name' => 'required|string',
@@ -66,10 +92,10 @@ class BikeController extends Controller
             'engine_stroke' => 'required|integer',
             'price' => 'required|integer',
             'picture_1' => 'required|nullable',
-            
+
         ]);
-      
-       
+
+
         \App\Models\Bike::Create([
             'brand' => $request->input('brand'),
             'bike_name' => $request->input('bike_name'),
@@ -84,20 +110,19 @@ class BikeController extends Controller
             'engine_stroke' => $request->input('engine_stroke'),
             'model_of_bike' => $request->input('model_of_bike'),
         ]);
-        
+
         if ($request->hasFile('picture_1')) {
-      
+
             $picture_1 = $request->file('picture_1');
             $filepath = 'bikes/';
             $file = Storage::disk('local')->put($filepath, $picture_1);
             $bike->update([
                 'picture_1' => $file
             ]);
-          
         }
-          
-       
-    
+
+
+
         return back();
     }
 
@@ -149,7 +174,7 @@ class BikeController extends Controller
             'model_of_bike' => 'required|integer',
             'picture_1' => 'required|nullable',
         ]);
-      /*   if ($request->hasFile('picture_1')) {
+        /*   if ($request->hasFile('picture_1')) {
       
             $picture_1 = $request->file('picture_1');
             $filepath = 'bikes/';
@@ -159,14 +184,14 @@ class BikeController extends Controller
             ]);
           
         } */
-        $imagePath = request('picture_1')->store('uploads','public');
-        if($imagePath){
-           \App\Models\Bike::Create([
-               'picture_1'=> $imagePath
-           ]);
+        $imagePath = request('picture_1')->store('uploads', 'public');
+        if ($imagePath) {
+            \App\Models\Bike::Create([
+                'picture_1' => $imagePath
+            ]);
         }
-      
-      
+
+
         $bike->update($request->all());
         return redirect()->route('bikes.index');
     }
@@ -181,56 +206,55 @@ class BikeController extends Controller
     {
         $bike->delete();
         return redirect()->route('bikes.index')
-        ->with('success', 'car deleted successfully');
+            ->with('success', 'car deleted successfully');
     }
     public function FindBikes(Request $request)
     {
-       $brand = $request->input('brand') ?  $request->input('brand') : null;
-       $model_of_bike = $request->input('model_of_bike') ?  $request->input('model_of_bike') : null;
-       $engine_type = $request->input('engine_type') ?  $request->input('engine_type') : null;
-       $cylinders = $request->input('cylinders') ?  $request->input('cylinders') : null;
-       $starter = $request->input('starter') ?  $request->input('starter') : null;
-       $transmission_type = $request->input('transmission_type') ?  $request->input('transmission_type') : null;
-       $fuel_captacity = $request->input('fuel_captacity') ?  $request->input('fuel_captacity') : null;
-       $price = $request->input('price') ?  $request->input('price') : null;
-       $engine_stroke = $request->input('engine_stroke') ?  $request->input('engine_stroke') : null;
-       $cooling_system = $request->input('cooling_system') ?  $request->input('cooling_system') : null;
-       
-       $findBikes = \App\Models\Bike::
-       when($brand,function ($query) use ($brand){
-           return $query->where('brand', $brand);
-       })
-       ->when($model_of_bike,function ($query) use ($model_of_bike) {
-           return $query->where('model_of_bike',  $model_of_bike);
-       })
-       ->when($engine_type,function ($query) use ($engine_type) {
-           return $query->where('engine_type', $engine_type);
-       })
-       ->when($cylinders,function ($query) use ($cylinders) {
-           return $query->where('cylinders', $cylinders);
-       })
-       ->when($starter,function ($query) use ($starter) {
-           return $query->where('starter', $starter);
-       })
-       ->when($transmission_type,function ($query) use ($transmission_type) {
-           return $query->where('transmission_type', $transmission_type);
-       })
-       ->when($fuel_captacity,function ($query) use ($fuel_captacity){
-           return $query->where('fuel_captacity', $fuel_captacity);
-       })
-       ->when($price,function ($query) use ($price){
-           return $query->where('price',$price);
-       })
-       ->when($engine_stroke,function ($query) use ($engine_stroke){
-           return $query->where('engine_stroke',$engine_stroke);
-       })
-       ->when($cooling_system,function ($query) use ($cooling_system){
-           return $query->where('cooling_system' , $cooling_system);
-       })
-       ->orderBy('price','desc')
-       ->limit(3)
-        ->get();
-       return view('bikes.finish')
-       ->with('findBikes',$findBikes);
-   }
+        $brand = $request->input('brand') ?  $request->input('brand') : null;
+        $model_of_bike = $request->input('model_of_bike') ?  $request->input('model_of_bike') : null;
+        $engine_type = $request->input('engine_type') ?  $request->input('engine_type') : null;
+        $cylinders = $request->input('cylinders') ?  $request->input('cylinders') : null;
+        $starter = $request->input('starter') ?  $request->input('starter') : null;
+        $transmission_type = $request->input('transmission_type') ?  $request->input('transmission_type') : null;
+        $fuel_captacity = $request->input('fuel_captacity') ?  $request->input('fuel_captacity') : null;
+        $price = $request->input('price') ?  $request->input('price') : null;
+        $engine_stroke = $request->input('engine_stroke') ?  $request->input('engine_stroke') : null;
+        $cooling_system = $request->input('cooling_system') ?  $request->input('cooling_system') : null;
+
+        $findBikes = \App\Models\Bike::when($brand, function ($query) use ($brand) {
+                return $query->where('brand', $brand);
+            })
+            ->when($model_of_bike, function ($query) use ($model_of_bike) {
+                return $query->where('model_of_bike',  $model_of_bike);
+            })
+            ->when($engine_type, function ($query) use ($engine_type) {
+                return $query->where('engine_type', $engine_type);
+            })
+            ->when($cylinders, function ($query) use ($cylinders) {
+                return $query->where('cylinders', $cylinders);
+            })
+            ->when($starter, function ($query) use ($starter) {
+                return $query->where('starter', $starter);
+            })
+            ->when($transmission_type, function ($query) use ($transmission_type) {
+                return $query->where('transmission_type', $transmission_type);
+            })
+            ->when($fuel_captacity, function ($query) use ($fuel_captacity) {
+                return $query->where('fuel_captacity', $fuel_captacity);
+            })
+            ->when($price, function ($query) use ($price) {
+                return $query->where('price', $price);
+            })
+            ->when($engine_stroke, function ($query) use ($engine_stroke) {
+                return $query->where('engine_stroke', $engine_stroke);
+            })
+            ->when($cooling_system, function ($query) use ($cooling_system) {
+                return $query->where('cooling_system', $cooling_system);
+            })
+            ->orderBy('price', 'desc')
+            ->limit(3)
+            ->get();
+        return view('bikes.finish')
+            ->with('findBikes', $findBikes);
+    }
 }

@@ -3,11 +3,26 @@
         <div class="md-layout md-gutter">
             <div class="md-layout-item">
                 <md-field>
-                    <label for="four_on_four">4X4 </label>
+                    <label for="fuel_captacity">קיבולת דלק</label>
                     <md-select
-                        v-model="four_on_four"
-                        name="four_on_four"
-                        id="four_on_four"
+                        v-model="fuel_captacity"
+                        name="fuel_captacity"
+                        id="fuel_captacity"
+                    >
+                        <md-option value="0">לא משנה לי </md-option>
+                        <md-option value="1">כמה שיותר</md-option>
+                    </md-select>
+                </md-field>
+            </div>
+
+            <div class="md-layout-item">
+                <md-field>
+                    <label for="starter">סטרטר מותאם אישית</label>
+                    <md-select
+                        v-model="starter"
+                        name="starter"
+                        id="starter"
+                        placeholder="סטרטר מותאם אישית"
                     >
                         <md-option value="0">לא</md-option>
                         <md-option value="1">כן</md-option>
@@ -17,56 +32,63 @@
 
             <div class="md-layout-item">
                 <md-field>
-                    <label for="crusie_control">בקרת שיוט </label>
+                    <label for="model_of_bike">סוג אופנוע</label>
                     <md-select
-                        v-model="crusie_control"
-                        name="crusie_control"
-                        id="crusie_control"
-                        placeholder="בקרת שיוט"
+                        v-model="model_of_bike"
+                        name="model_of_bike"
+                        id="model_of_bike"
                     >
-                        <md-option value="0">לא</md-option>
-                        <md-option value="1">כן</md-option>
-                    </md-select>
-                </md-field>
-            </div>
-
-            <div class="md-layout-item">
-                <md-field>
-                    <label for="number_of_seats">מקומות ישיבה</label>
-                    <md-select
-                        v-model="number_of_seats"
-                        name="number_of_seats"
-                        id="number_of_seats"
-                    >
-                        <md-option value="2">2</md-option>
-                        <md-option value="5">5</md-option>
+                        <md-option value="Sport">ספורט</md-option>
+                        <md-option value="Cruiser">קרוזר</md-option>
+                        <md-option value="Touring">טיולים</md-option>
+                        <md-option value="Off-Road">שטח</md-option>
+                        <md-option value="Scooter">טוסטוס</md-option>
+                        <md-option value="Track">מירוצים</md-option>
+                        <md-option value="Standard">רגיל</md-option>
+                        <md-option value="Electric">חשמלי</md-option>
+                        <md-option value="Sport-Touring">ספורט טיולי</md-option>
+                        <md-option value="On-Off-Road">On-Off-Road</md-option>
+                        <md-option value="Youth">צעירים</md-option>
+                        <md-option value="Touring-Scooter">טוסטוס טיולי</md-option>
                     </md-select>
                 </md-field>
             </div>
             <div class="md-layout-item">
                 <md-field>
-                    <label for="autonomous_braking">מערכת בלימה אוטונמית</label>
+                    <label for="price">מחיר</label>
                     <md-select
-                        v-model="autonomous_braking"
-                        name="autonomous_braking"
-                        id="autonomous_braking"
+                        v-model="price"
+                        name="price"
+                        id="price"
                     >
-                        <md-option value="0">לא</md-option>
-                        <md-option value="1">כן</md-option>
+                        <md-option value="0">עד 10</md-option>
+                        <md-option value="1">עד 30</md-option>
+                        <md-option value="2">30+</md-option>
                     </md-select>
                 </md-field>
             </div>
             <div class="md-layout-item mt">
                 <md-field>
-                    <label for="type_of_car">סוג מכונית</label>
+                    <label for="engine_type">סוג מנוע</label>
                     <md-select
-                        v-model="type_of_car"
-                        name="type_of_car"
-                        id="type_of_car"
+                        v-model="engine_type"
+                        name="engine_type"
+                        id="engine_type"
                     >
-                        <md-option value="0">מנהלים</md-option>
-                        <md-option value="1">משפחתי</md-option>
-                        <md-option value="2">ספורט</md-option>
+                        <md-option value="Single Cylinder"
+                            >בעל צילנדר אחד</md-option
+                        >
+                        <md-option value="Inline Triple and Four">
+                            מנוע מוטבע עם שלוש וארבע</md-option
+                        >
+                        <md-option value="V Engines">V Engines</md-option>
+                        <md-option value="V Twin">V Twin</md-option>
+                        <md-option value="V Four">V Four</md-option>
+                        <md-option value="Flat Engines"
+                            >מנועים שטוחים</md-option
+                        >
+                        <md-option value="Flat 2">שטוחים עם 2</md-option>
+                        <md-option value="Flat 4">שטוח עם 4</md-option>
                     </md-select>
                 </md-field>
             </div>
@@ -74,39 +96,36 @@
                 <table class="table table-bordered" v-if="this.set_table == 1">
                     <thead>
                         <tr>
-                            <th scope="col">שם רכב</th>
-                            <th scope="col">חברת הרכב</th>
+                            <th scope="col">שם אופנוע</th>
+                            <th scope="col">חברת האופנוע</th>
+                            <th scope="col">סטרטר מותאם אישית</th>
+                            <th scope="col">צילנדרים</th>
+                            <th scope="col">מערכת קירור</th>
+                            <th scope="col">דרגת זיהום אוויר באופנוע</th>
                             <th scope="col">מחיר</th>
-                            <th scope="col">ליטר בגאז</th>
-                            <th scope="col">4X4</th>
-                            <th scope="col">בעל בקרת שיוט</th>
-                            <th scope="col">סוג מכונית</th>
-                            <th scope="col">מקומות ישיבה</th>
-
-                            <th scope="col">מערכת בלימה אוטונומית</th>
-                            <th scope="col">דרגת זיהום ברכב</th>
+                            <th scope="col">קיבולת דלק</th>
+                            <th scope="col">מערכת קירור</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="car in cars" :key="car.id">
-                            <th scope="row">{{ car.car_name }}</th>
-                            <td>{{ car.brand }}</td>
-                            <td>{{ car.price }}₪</td>
-                            <td>{{ car.liter_baggage }}</td>
-                            <td>{{ car.four_on_four ? "כן" : "ללא" }}</td>
-                            <td>{{ car.cruise_control ? "כן" : "ללא" }}</td>
+                        <tr v-for="bike in bikes" :key="bike.id">
+                            <th scope="row">{{ bike.bike_name }}</th>
+                            <td>{{ bike.brand }}</td>
+                            <td>{{ bike.price }}₪</td>
+                            <td>{{ bike.model_of_bike }}</td>
+                            <td>{{ bike.cylinders  }}</td>
+                            <td>{{ bike.engine_type  }}</td>
                             <td>
                                 {{
-                                    car.type_of_car
+                                    bike.transmission_type
                                         ? "ספורט"
                                         : "מנהלים או משפחתי"
                                 }}
                             </td>
-                            <td>{{ car.number_of_seats }}</td>
+                            <td>{{ bike.fuel_captacity }}</td>
                             <td>
-                                {{ car.autonomous_braking ? "כן" : "ללא" }}
+                                {{ bike.cooling_system  }}
                             </td>
-                            <td>{{ car.car_pollution }}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -124,36 +143,36 @@
 export default {
     data() {
         return {
-            type_of_car: null,
-            number_of_seats: null,
-            crusie_control: null,
-            four_on_four: null,
-            autonomous_braking: null,
+            brand: null,
+            model_of_bike: null,
+            engine_type: null,
+            cylinders: null,
+            starter: null,
             car_pollution: null,
-            model_of_car: null,
+            transmission_type: null,
             price: null,
-            reverse_camera: null,
-            liter_baggage: null,
-            cars: [],
-            set_table:0,
+            fuel_captacity: null,
+            engine_stroke: null,
+            cooling_system: null,
+            bikes: [],
+            set_table: 0,
         };
     },
     methods: {
-        fetchingAllCars() {
+        fetchingAllBikes() {
             axios
-                .get("/advanced_search")
-                .then((response) => (this.cars = response.data));
+                .get("/search")
+                .then((response) => (this.bikes = response.data));
         },
         getResults() {
             axios
-                .get("/advanced_search", { params: { keyword: this.keyword } })
-                .then((res) =>{
-                    (this.cars = res.data)
-                    this.set_table=1
-                    })
+                .get("/search", { params: { keyword: this.keyword } })
+                .then((res) => {
+                    this.bikes = res.data;
+                    this.set_table = 1;
+                })
 
                 .catch((error) => {});
-
         },
     },
     created() {

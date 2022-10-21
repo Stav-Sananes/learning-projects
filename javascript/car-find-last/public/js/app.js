@@ -5664,40 +5664,59 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      type_of_car: null,
-      number_of_seats: null,
-      crusie_control: null,
-      four_on_four: null,
-      autonomous_braking: null,
+      brand: null,
+      model_of_bike: null,
+      engine_type: null,
+      cylinders: null,
+      starter: null,
       car_pollution: null,
-      model_of_car: null,
+      transmission_type: null,
       price: null,
-      reverse_camera: null,
-      liter_baggage: null,
-      cars: [],
+      fuel_captacity: null,
+      engine_stroke: null,
+      cooling_system: null,
+      bikes: [],
       set_table: 0
     };
   },
   methods: {
-    fetchingAllCars: function fetchingAllCars() {
+    fetchingAllBikes: function fetchingAllBikes() {
       var _this = this;
 
-      axios.get("/advanced_search").then(function (response) {
-        return _this.cars = response.data;
+      axios.get("/search").then(function (response) {
+        return _this.bikes = response.data;
       });
     },
     getResults: function getResults() {
       var _this2 = this;
 
-      axios.get("/advanced_search", {
+      axios.get("/search", {
         params: {
           keyword: this.keyword
         }
       }).then(function (res) {
-        _this2.cars = res.data;
+        _this2.bikes = res.data;
         _this2.set_table = 1;
       })["catch"](function (error) {});
     }
@@ -29415,24 +29434,30 @@ var render = function () {
           _c(
             "md-field",
             [
-              _c("label", { attrs: { for: "four_on_four" } }, [_vm._v("4X4 ")]),
+              _c("label", { attrs: { for: "fuel_captacity" } }, [
+                _vm._v("קיבולת דלק"),
+              ]),
               _vm._v(" "),
               _c(
                 "md-select",
                 {
-                  attrs: { name: "four_on_four", id: "four_on_four" },
+                  attrs: { name: "fuel_captacity", id: "fuel_captacity" },
                   model: {
-                    value: _vm.four_on_four,
+                    value: _vm.fuel_captacity,
                     callback: function ($$v) {
-                      _vm.four_on_four = $$v
+                      _vm.fuel_captacity = $$v
                     },
-                    expression: "four_on_four",
+                    expression: "fuel_captacity",
                   },
                 },
                 [
-                  _c("md-option", { attrs: { value: "0" } }, [_vm._v("לא")]),
+                  _c("md-option", { attrs: { value: "0" } }, [
+                    _vm._v("לא משנה לי "),
+                  ]),
                   _vm._v(" "),
-                  _c("md-option", { attrs: { value: "1" } }, [_vm._v("כן")]),
+                  _c("md-option", { attrs: { value: "1" } }, [
+                    _vm._v("כמה שיותר"),
+                  ]),
                 ],
                 1
               ),
@@ -29450,24 +29475,24 @@ var render = function () {
           _c(
             "md-field",
             [
-              _c("label", { attrs: { for: "crusie_control" } }, [
-                _vm._v("בקרת שיוט "),
+              _c("label", { attrs: { for: "starter" } }, [
+                _vm._v("סטרטר מותאם אישית"),
               ]),
               _vm._v(" "),
               _c(
                 "md-select",
                 {
                   attrs: {
-                    name: "crusie_control",
-                    id: "crusie_control",
-                    placeholder: "בקרת שיוט",
+                    name: "starter",
+                    id: "starter",
+                    placeholder: "סטרטר מותאם אישית",
                   },
                   model: {
-                    value: _vm.crusie_control,
+                    value: _vm.starter,
                     callback: function ($$v) {
-                      _vm.crusie_control = $$v
+                      _vm.starter = $$v
                     },
-                    expression: "crusie_control",
+                    expression: "starter",
                   },
                 },
                 [
@@ -29491,26 +29516,70 @@ var render = function () {
           _c(
             "md-field",
             [
-              _c("label", { attrs: { for: "number_of_seats" } }, [
-                _vm._v("מקומות ישיבה"),
+              _c("label", { attrs: { for: "model_of_bike" } }, [
+                _vm._v("סוג אופנוע"),
               ]),
               _vm._v(" "),
               _c(
                 "md-select",
                 {
-                  attrs: { name: "number_of_seats", id: "number_of_seats" },
+                  attrs: { name: "model_of_bike", id: "model_of_bike" },
                   model: {
-                    value: _vm.number_of_seats,
+                    value: _vm.model_of_bike,
                     callback: function ($$v) {
-                      _vm.number_of_seats = $$v
+                      _vm.model_of_bike = $$v
                     },
-                    expression: "number_of_seats",
+                    expression: "model_of_bike",
                   },
                 },
                 [
-                  _c("md-option", { attrs: { value: "2" } }, [_vm._v("2")]),
+                  _c("md-option", { attrs: { value: "Sport" } }, [
+                    _vm._v("ספורט"),
+                  ]),
                   _vm._v(" "),
-                  _c("md-option", { attrs: { value: "5" } }, [_vm._v("5")]),
+                  _c("md-option", { attrs: { value: "Cruiser" } }, [
+                    _vm._v("קרוזר"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Touring" } }, [
+                    _vm._v("טיולים"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Off-Road" } }, [
+                    _vm._v("שטח"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Scooter" } }, [
+                    _vm._v("טוסטוס"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Track" } }, [
+                    _vm._v("מירוצים"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Standard" } }, [
+                    _vm._v("רגיל"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Electric" } }, [
+                    _vm._v("חשמלי"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Sport-Touring" } }, [
+                    _vm._v("ספורט טיולי"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "On-Off-Road" } }, [
+                    _vm._v("On-Off-Road"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Youth" } }, [
+                    _vm._v("צעירים"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Touring-Scooter" } }, [
+                    _vm._v("טוסטוס טיולי"),
+                  ]),
                 ],
                 1
               ),
@@ -29568,32 +29637,60 @@ var render = function () {
           _c(
             "md-field",
             [
-              _c("label", { attrs: { for: "type_of_car" } }, [
-                _vm._v("סוג מכונית"),
+              _c("label", { attrs: { for: "engine_type" } }, [
+                _vm._v("סוג מנוע"),
               ]),
               _vm._v(" "),
               _c(
                 "md-select",
                 {
-                  attrs: { name: "type_of_car", id: "type_of_car" },
+                  attrs: { name: "engine_type", id: "engine_type" },
                   model: {
-                    value: _vm.type_of_car,
+                    value: _vm.engine_type,
                     callback: function ($$v) {
-                      _vm.type_of_car = $$v
+                      _vm.engine_type = $$v
                     },
-                    expression: "type_of_car",
+                    expression: "engine_type",
                   },
                 },
                 [
-                  _c("md-option", { attrs: { value: "0" } }, [
-                    _vm._v("מנהלים"),
+                  _c("md-option", { attrs: { value: "Single Cylinder" } }, [
+                    _vm._v("בעל צילנדר אחד"),
                   ]),
                   _vm._v(" "),
-                  _c("md-option", { attrs: { value: "1" } }, [
-                    _vm._v("משפחתי"),
+                  _c(
+                    "md-option",
+                    { attrs: { value: "Inline Triple and Four" } },
+                    [
+                      _vm._v(
+                        "\n                        מנוע מוטבע עם שלוש וארבע"
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "V Engines" } }, [
+                    _vm._v("V Engines"),
                   ]),
                   _vm._v(" "),
-                  _c("md-option", { attrs: { value: "2" } }, [_vm._v("ספורט")]),
+                  _c("md-option", { attrs: { value: "V Twin" } }, [
+                    _vm._v("V Twin"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "V Four" } }, [
+                    _vm._v("V Four"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Flat Engines" } }, [
+                    _vm._v("מנועים שטוחים"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Flat 2" } }, [
+                    _vm._v("שטוחים עם 2"),
+                  ]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "Flat 4" } }, [
+                    _vm._v("שטוח עם 4"),
+                  ]),
                 ],
                 1
               ),
@@ -29614,47 +29711,43 @@ var render = function () {
                 _vm._v(" "),
                 _c(
                   "tbody",
-                  _vm._l(_vm.cars, function (car) {
-                    return _c("tr", { key: car.id }, [
+                  _vm._l(_vm.bikes, function (bike) {
+                    return _c("tr", { key: bike.id }, [
                       _c("th", { attrs: { scope: "row" } }, [
-                        _vm._v(_vm._s(car.car_name)),
+                        _vm._v(_vm._s(bike.bike_name)),
                       ]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(car.brand))]),
+                      _c("td", [_vm._v(_vm._s(bike.brand))]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(car.price) + "₪")]),
+                      _c("td", [_vm._v(_vm._s(bike.price) + "₪")]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(car.liter_baggage))]),
+                      _c("td", [_vm._v(_vm._s(bike.model_of_bike))]),
                       _vm._v(" "),
-                      _c("td", [
-                        _vm._v(_vm._s(car.four_on_four ? "כן" : "ללא")),
-                      ]),
+                      _c("td", [_vm._v(_vm._s(bike.cylinders))]),
                       _vm._v(" "),
-                      _c("td", [
-                        _vm._v(_vm._s(car.cruise_control ? "כן" : "ללא")),
-                      ]),
+                      _c("td", [_vm._v(_vm._s(bike.engine_type))]),
                       _vm._v(" "),
                       _c("td", [
                         _vm._v(
                           "\n                            " +
                             _vm._s(
-                              car.type_of_car ? "ספורט" : "מנהלים או משפחתי"
+                              bike.transmission_type
+                                ? "ספורט"
+                                : "מנהלים או משפחתי"
                             ) +
                             "\n                        "
                         ),
                       ]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(car.number_of_seats))]),
+                      _c("td", [_vm._v(_vm._s(bike.fuel_captacity))]),
                       _vm._v(" "),
                       _c("td", [
                         _vm._v(
                           "\n                            " +
-                            _vm._s(car.autonomous_braking ? "כן" : "ללא") +
+                            _vm._s(bike.cooling_system) +
                             "\n                        "
                         ),
                       ]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(car.car_pollution))]),
                     ])
                   }),
                   0
@@ -29689,27 +29782,25 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("שם רכב")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("שם אופנוע")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("חברת הרכב")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("חברת האופנוע")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("סטרטר מותאם אישית")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("צילנדרים")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("מערכת קירור")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("דרגת זיהום אוויר באופנוע"),
+        ]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("מחיר")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("ליטר בגאז")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("קיבולת דלק")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("4X4")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("בעל בקרת שיוט")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("סוג מכונית")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("מקומות ישיבה")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [
-          _vm._v("מערכת בלימה אוטונומית"),
-        ]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("דרגת זיהום ברכב")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("מערכת קירור")]),
       ]),
     ])
   },

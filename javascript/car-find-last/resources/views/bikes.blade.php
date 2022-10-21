@@ -397,7 +397,7 @@
                     </div>
                     <div class="text-center mt-3">
                         <a type="button" class="btn btn-warning"  style="color: #FFFF;" href="{{ route('home') }}">לשאלות הרכבים</a>
-                        <a type="button" class="btn btn-danger"  style="color: #FFFF;" href="{{ url('/search/bike') }}">לחיפוש אופנועים לבד </a>
+                        <a type="button" class="btn btn-danger"  style="color: #FFFF;" href="{{ route('searchBike') }}">לחיפוש אופנועים לבד </a>
 
                     </div>
 
