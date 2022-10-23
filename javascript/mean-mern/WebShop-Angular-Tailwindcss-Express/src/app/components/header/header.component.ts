@@ -26,6 +26,6 @@ export class HeaderComponent {
     return this.cartService.getTotal(items);
   }
   onClearCart() {
-    return this.cartService.ClearCart();
+    return this.cartService.clearCart();
   }
 }
