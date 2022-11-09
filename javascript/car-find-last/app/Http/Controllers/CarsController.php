@@ -29,7 +29,7 @@ class CarsController extends Controller
     {
         $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
         $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
-        $cruise_control = $request->input('cruise_control') ?  $request->input('cruise_control') : null;
+        $crusie_control = $request->input('crusie_control') ?  $request->input('crusie_control') : null;
         $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
         $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
         $autonomous_braking = $request->input('autonomous_braking') ?  $request->input('autonomous_braking') : null;
@@ -45,7 +45,7 @@ class CarsController extends Controller
         if (!$request->get('query')) {
             $key = $request->input('q');
             $cars_data = Cars::where('four_on_four', 'LIKE', '%' . $four_on_four . '%')
-                ->orWhere('crusie_control', 'LIKE', '%' . $cruise_control . '%')
+                ->orWhere('crusie_control', 'LIKE', '%' . $crusie_control . '%')
                 ->orWhere('number_of_seats', 'LIKE', '%' . $number_of_seats . '%')
                 ->orWhere('type_of_car', 'LIKE', '%' . $type_of_car . '%')
                 ->orWhere('autonomous_braking', 'LIKE', '%' . $autonomous_braking . '%')
@@ -63,7 +63,7 @@ class CarsController extends Controller
     {
         $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
         $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
-        $cruise_control = $request->input('cruise_control') ?  $request->input('cruise_control') : null;
+        $crusie_control = $request->input('crusie_control') ?  $request->input('crusie_control') : null;
         $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
         $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
         $autonomous_braking = $request->input('autonomous_braking') ?  $request->input('autonomous_braking') : null;
@@ -73,7 +73,7 @@ class CarsController extends Controller
         $model_of_car = $request->input('model_of_car') ?  $request->input('model_of_car') : null;
 
         $cars_data = Cars::where('four_on_four', 'LIKE', '%' . $four_on_four . '%')
-            ->orWhere('crusie_control', 'LIKE', '%' . $cruise_control . '%')
+            ->orWhere('crusie_control', 'LIKE', '%' . $crusie_control . '%')
             ->orWhere('number_of_seats', 'LIKE', '%' . $number_of_seats . '%')
             ->orWhere('type_of_car', 'LIKE', '%' . $type_of_car . '%')
             ->orWhere('autonomous_braking', 'LIKE', '%' . $autonomous_braking . '%')
@@ -247,7 +247,7 @@ class CarsController extends Controller
     {
         $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
         $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
-        $cruise_control = $request->input('cruise_control') ?  $request->input('cruise_control') : null;
+        $crusie_control = $request->input('crusie_control') ?  $request->input('crusie_control') : null;
         $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
         $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
         $autonomous_braking = $request->input('autonomous_braking') ?  $request->input('autonomous_braking') : null;
@@ -262,8 +262,8 @@ class CarsController extends Controller
             ->when($four_on_four, function ($query) use ($four_on_four) {
                 return $query->where('four_on_four',  $four_on_four);
             })
-            ->when($cruise_control, function ($query) use ($cruise_control) {
-                return $query->where('cruise_control', $cruise_control);
+            ->when($crusie_control, function ($query) use ($crusie_control) {
+                return $query->where('crusie_control', $crusie_control);
             })
             ->when($number_of_seats, function ($query) use ($number_of_seats) {
                 return $query->where('number_of_seats', $number_of_seats);
@@ -297,7 +297,7 @@ class CarsController extends Controller
     {
         $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
         $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
-        $cruise_control = $request->input('cruise_control') ?  $request->input('cruise_control') : null;
+        $crusie_control = $request->input('crusie_control') ?  $request->input('crusie_control') : null;
         $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
         $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
 
@@ -308,8 +308,8 @@ class CarsController extends Controller
             ->when($four_on_four, function ($query) use ($four_on_four) {
                 return $query->where('four_on_four',  $four_on_four);
             })
-            ->when($cruise_control, function ($query) use ($cruise_control) {
-                return $query->where('cruise_control', $cruise_control);
+            ->when($crusie_control, function ($query) use ($crusie_control) {
+                return $query->where('crusie_control', $crusie_control);
             })
             ->when($number_of_seats, function ($query) use ($number_of_seats) {
                 return $query->where('number_of_seats', $number_of_seats);

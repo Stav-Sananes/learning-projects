@@ -94,7 +94,7 @@
                             <td>{{ car.price }}₪</td>
                             <td>{{ car.liter_baggage }}</td>
                             <td>{{ car.four_on_four ? "כן" : "ללא" }}</td>
-                            <td>{{ car.cruise_control ? "כן" : "ללא" }}</td>
+                            <td>{{ car.crusie_control ? "כן" : "ללא" }}</td>
                             <td>
                                 {{
                                     car.type_of_car

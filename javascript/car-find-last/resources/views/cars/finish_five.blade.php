@@ -65,7 +65,7 @@
                             <div>
                               <div class="mb-3 row">
                                 <div class="col-sm-9">
-                                  <p class="card-text text-center">{{ $findCar->cruise_control ? 'כן': 'ללא'}}</p>
+                                  <p class="card-text text-center">{{ $findCar->crusie_control ? 'כן': 'ללא'}}</p>
                                 </div>
                                 <label class="col-sm-3 col-form-label font-weight-bold">בקרת שיוט</label>
                               </div>
