@@ -5,13 +5,13 @@
 <div class="card  mt-2" style="margin:3%">
     <div class="card-header">
         <div class="d-flex justify-content-between">
+            <a href="{{ route('bikes.create') }}" class="btn btn-primary text-white">הוספת אופנוע </a>
             <h4>
-                רכבים
+                אופנועים
             </h4>
-            <a href="{{ route('bikes.create') }}" class="btn btn-primary">הוספת אופנוע </a>
-            <a  href="{{ route('bikes') }}" class="btn btn-info">חזרה למסך השאלות</a> 
+            <a  href="{{ route('bikes') }}" class="btn btn-info text-white">חזרה למסך השאלות</a> 
         </div>
-        <form class="form-inline my-2 my-lg-0" type="get" action="{{ route('bikes.index', ['id' => 1]) }}">
+        <form class="form-inline my-2 my-lg-0 justify-content-center" type="get" action="{{ route('bikes.index', ['id' => 1]) }}">
             <input class="form-control mr-sm-2" type="search" placeholder="חיפוש אופנוע" aria-label="Search" name="query">
             <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">חפש</button>
         </form>

@@ -9,7 +9,7 @@
                         אופנועים</a>
                 </div>
                 <div class="col-6">
-                    <a type="button" class="btn btn-outline-success" href="{{ route('bikes.create') }}">להוספת אופנוע</a>
+                    <a type="button" class="btn btn-outline-success text-success" href="{{ route('bikes.create') }}">להוספת אופנוע</a>
                 </div>
 
             </div>

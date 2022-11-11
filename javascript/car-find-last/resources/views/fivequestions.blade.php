@@ -40,7 +40,7 @@
                             </div>
                             <div class="offcanvas-body text-center mt-3 fw-bolder">
                                 <p>אם במקרה והגעתם לכאן בטעות ואתם מחפשים לעבור לשאלות האופנועים לחצו כאן</p>
-                                <a type="button" class="btn btn-danger" href="{{ route('bikes') }}">לשאלות האופנועים</a>
+                                <a type="button" class="btn btn-danger text-white" href="{{ route('bikes') }}">לשאלות האופנועים</a>
                             </div>
                         </div>
                     </div>

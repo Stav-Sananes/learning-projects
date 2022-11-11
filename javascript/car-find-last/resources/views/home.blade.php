@@ -5,7 +5,7 @@
         <div class="container mb-3 text-center">
             <div class="row ">
                 <div class="col-6">
-                    <a type="button" class="btn btn-outline-primary" href="{{ route('cars.index', ['id' => 1]) }}">מעבר
+                    <a type="button" class="btn btn-outline-primary" href="{{ route('cars.index') }}">מעבר
                         לטבלת
                         הרכבים</a>
                 </div>
@@ -166,10 +166,10 @@
 
                                             <div class="card-body">
 
-                                                <p class="card-text fw-bold">כן</p>
+                                                <p class="card-text fw-bold">לא</p>
 
                                                 <input type="radio" class="btn-check" name="four_on_four" id="option3"
-                                                    autocomplete="off" value="1">
+                                                    autocomplete="off" value="0">
                                                 <label class="btn btn-outline-success" for="option3">בחירה</label>
 
                                             </div>
@@ -179,9 +179,9 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">לא</p>
+                                                <p class="card-text">כן</p>
                                                 <input type="radio" class="btn-check" name="four_on_four" id="option4"
-                                                    autocomplete="off" value="0">
+                                                    autocomplete="off" value="1">
                                                 <label class="btn btn-outline-danger" for="option4">בחירה</label>
                                             </div>
                                         </div>
@@ -196,9 +196,9 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">כן</p>
+                                                <p class="card-text">לא</p>
                                                 <input type="radio" class="btn-check" name="crusie_control"
-                                                    id="option5" autocomplete="off" value="1">
+                                                    id="option5" autocomplete="off" value="0">
                                                 <label class="btn btn-outline-success" for="option5">בחירה</label>
                                             </div>
                                         </div>
@@ -206,9 +206,9 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">לא</p>
+                                                <p class="card-text">כן</p>
                                                 <input type="radio" class="btn-check" name="crusie_control"
-                                                    id="option6" autocomplete="off" value="0">
+                                                    id="option6" autocomplete="off" value="1">
                                                 <label class="btn btn-outline-danger" for="option6">בחירה</label>
                                             </div>
                                         </div>
@@ -376,7 +376,7 @@
 
                                             <div class="card-body  fw-bold">
 
-                                                <p class="card-text ">כן</p>
+                                                <p class="card-text ">לא</p>
                                                 <input type="radio" class="btn-check" name="reverse_camera"
                                                     id="option20" autocomplete="off" value="0">
                                                 <label class="btn btn-outline-success" for="option20">בחירה</label>
@@ -386,7 +386,7 @@
 
                                             <div class="card-body  fw-bold">
 
-                                                <p class="card-text">לא</p>
+                                                <p class="card-text">כן</p>
                                                 <input type="radio" class="btn-check" name="reverse_camera"
                                                     id="option21" autocomplete="off" value="1">
                                                 <label class="btn btn-outline-danger" for="option21">בחירה</label>

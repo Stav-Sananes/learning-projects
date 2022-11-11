@@ -5,23 +5,27 @@
         <div class="card  mt-2" style="margin:3%">
             <div class="card-header">
                 <div class="d-flex justify-content-between">
+                    <a href="{{ route('cars.create') }}" class="btn btn-primary text-white">הוספת רכב </a>
                     <h4>
                         רכבים
                     </h4>
-                    <a href="{{ route('cars.create') }}" class="btn btn-primary text-white">הוספת רכב </a>
                     <a href="/home" class="btn btn-info text-white">חזרה למסך השאלות</a>
                 </div>
-                <form class="form-inline my-2 my-lg-0" type="get" action="{{ route('cars.index', ['id' => 1]) }}">
-                    <input class="form-control mr-sm-2" type="search" placeholder="חיפוש רכב" aria-label="Search"
-                        name="query">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חפש</button>
-                </form>
+                <div class="mt-4 mr-2">
+
+                    <form class="form-inline my-lg-2  justify-content-center " type="get"
+                        action="{{ route('cars.index', ['id' => 1]) }}">
+                        <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">חפש</button>
+                        <input class="form-control mr-sm-2 text-center ml-2" type="search" placeholder="חיפוש רכב"
+                            aria-label="Search" name="query">
+                    </form>
+                </div>
             </div>
-            <div class="card-body" style="margin:3%">
+            <div class="card-body" style="margin:3%;direction:rtl">
 
                 <table class="table table-striped">
-                    <thead>
-                        <tr>
+                    <thead class="text-center">
+
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">שם חברת הרכב</th>
@@ -36,39 +40,43 @@
                             <th scope="col">סוג רכב</th>
                             <th scope="col">מחיר</th>
                             <th scope="col">מודל המכונית</th>
+                            <th scope="col">מחיקה</th>
+                            <th scope="col">עריכה</th>
                         </tr>
 
-                        </tr>
+
                     </thead>
-                    <tbody>
+                    <tbody class="text-center">
                         @foreach ($cars as $car)
-                            <td>
-                                <a href="{{ route('cars.show', ['car' => $car->id]) }}" class="btn btn-dark">
-                                    ערוך נתוני רכב
-                                </a>
-                                <tr>
-                                    <th scope="row">{{ $car->id }}</th>
-                                    <td>{{ $car->brand }}</td>
-                                    <td>{{ $car->car_name }}</td>
-                                    <td>{{ $car->liter_baggage }}</td>
-                                    <td>{{ $car->number_of_seats }}</td>
+                           
 
-                                    <td>{{ $car->car_pollution }}</td>
-                                    <td>{{ $car->four_on_four }}</td>
-                                    <td>{{ $car->crusie_control }}</td>
-                                    <td>{{ $car->reverse_camera }}</td>
-                                    <td>{{ $car->autonomous_braking }}</td>
-                                    <td>{{ $car->type_of_car }}</td>
-                                    <td>{{ $car->price }}</td>
-                                    @if ($car->model_of_car == 0)
-                                        <td>{{ $car->model_of_car ? 'לא חשמלית' : 'לא חשמלית' }}</td>
-                                    @elseif ($car->model_of_car == 1 ? 'חשמלית' : 'חשמלית')
-                                        <td>{{ $car->model_of_car }}</td>
-                                    @elseif ($car->model_of_car == 2 ? 'היברדית' : 'היברדית')
-                                        <td>{{ $car->model_of_car }}</td>
-                                    @endif
-                                </tr>
+                            <td>{{ $car->id }}</td>
+                            <td>{{ $car->brand }}</td>
+                            <td>{{ $car->car_name }}</td>
+                            <td>{{ $car->liter_baggage }}</td>
+                            <td>{{ $car->number_of_seats }}</td>
+                            <td>{{ $car->car_pollution }}</td>
+                            <td>{{ $car->four_on_four == 0 ? 'לא' : 'כן' }}</td>
+                            <td>{{ $car->crusie_control == 0 ? 'לא' : 'כן' }}</td>
+                            <td>{{ $car->reverse_camera == 0 ? 'לא' : 'כן' }}</td>
+                            <td>{{ $car->autonomous_braking ? 'לא' : 'כן' }}</td>
+                            @if ($car->type_of_car == 0)
+                                <td>ספורט</td>
+                            @elseif ($car->type_of_car == 1)
+                                <td>משפחתי</td>
+                            @elseif ($car->type_of_car == 2)
+                                <td>מנהלים</td>
+                            @endif
+                            <td> ₪ {{ number_format($car->price,2,'.',',')  }} </td>
+                            @if ($car->model_of_car == 0)
+                                <td>לא חשמלית</td>
+                            @elseif ($car->model_of_car == 1)
+                                <td>חשמלית</td>
+                            @elseif ($car->model_of_car == 2)
+                                <td>היברדית</td>
+                            @endif
 
+                        
                             <td>
                                 <form action="{{ route('cars.destroy', $car) }}" method="POST">
                                     @csrf
@@ -78,6 +86,11 @@
                                             type="submit">מחיקה</button>
                                     </div>
                                 </form>
+                            </td>
+                            <td>
+                                <a href="{{ route('cars.show', ['car' => $car->id]) }}" class="btn btn-dark text-white">
+                                    ערוך נתוני רכב
+                                </a>
                             </td>
 
                             </tr>

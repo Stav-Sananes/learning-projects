@@ -124,7 +124,7 @@
                             <div>
                               <div class="mb-3 row">
                                 <div class="col-sm-9">
-                                  <p class="card-text text-center">{{ $findCar->price  }}₪</p>
+                                  <p class="card-text text-center">₪ {{  number_format($findCar->price,2,'.',',')  }}</p>
                                 </div>
                                 <label class="col-sm-3 col-form-label font-weight-bold">מחיר</label>
                               </div>

@@ -12,7 +12,7 @@
 
             </div>
             <div class="card-body text-center" >
-                <div class="form-row">
+                <div class="form-row ">
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">שם חברת הרכב?</label>
                         <input type="text" class="form-control" id="validationCustom01" value="{{ $car->brand }}"
