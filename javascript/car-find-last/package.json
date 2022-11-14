@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "vue": "^2.6.14",
-        "vue-material": "^1.0.0-beta-15"
+        "vue-material": "^1.0.0-beta-15",
+        "vue2-filters": "^0.14.0"
     }
 }
