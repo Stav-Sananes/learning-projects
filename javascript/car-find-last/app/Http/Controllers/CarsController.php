@@ -235,6 +235,7 @@ class CarsController extends Controller
     }
     public function FindCars(Request $request)
     {
+        dd($request->all());
         $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
         $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
         $crusie_control = $request->input('crusie_control') ?  $request->input('crusie_control') : null;
@@ -270,22 +271,11 @@ class CarsController extends Controller
         $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
         $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
 
-
-        $findCars = \App\Models\Cars::when($liter_baggage, function ($query) use ($liter_baggage) {
-            return $query->where('liter_baggage', $liter_baggage);
-        })
-            ->when($four_on_four, function ($query) use ($four_on_four) {
-                return $query->where('four_on_four',  $four_on_four);
-            })
-            ->when($crusie_control, function ($query) use ($crusie_control) {
-                return $query->where('crusie_control', $crusie_control);
-            })
-            ->when($number_of_seats, function ($query) use ($number_of_seats) {
-                return $query->where('number_of_seats', $number_of_seats);
-            })
-            ->when($type_of_car, function ($query) use ($type_of_car) {
-                return $query->where('type_of_car', $type_of_car);
-            })
+        $findCars = Cars::where('liter_baggage', 'LIKE', '%' . $liter_baggage . '%')
+            ->where('four_on_four', 'LIKE', '%' . $four_on_four . '%')
+            ->where('crusie_control', 'LIKE', '%' . $crusie_control . '%')
+            ->where('number_of_seats', 'LIKE', '%' . $number_of_seats . '%')
+            ->where('type_of_car', 'LIKE', '%' . $type_of_car . '%')
 
             ->orderBy('price', 'desc')
             ->limit(3)
