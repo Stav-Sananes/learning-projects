@@ -46,14 +46,14 @@ class BikeController extends Controller
         if (!$request->get('query')) {
             $key = $request->input('q');
             $bike_data = Bike::where('brand', 'LIKE', '%' . $brand . '%')
-                ->orWhere('model_of_bike', 'LIKE', '%' . $model_of_bike . '%')
-                ->orWhere('engine_type', 'LIKE', '%' . $engine_type . '%')
-                ->orWhere('cylinders', 'LIKE', '%' . $cylinders . '%')
-                ->orWhere('starter', 'LIKE', '%' . $starter . '%')
-                ->orWhere('transmission_type', 'LIKE', '%' . $transmission_type . '%')
-                ->orWhere('price', 'LIKE', '%' . $price . '%')
-                ->orWhere('fuel_captacity', 'LIKE', '%' . $fuel_captacity . "%")
-                ->orWhere('engine_stroke', 'LIKE', '%' . $engine_stroke . "%")
+                ->where('model_of_bike', 'LIKE', '%' . $model_of_bike . '%')
+                ->where('engine_type', 'LIKE', '%' . $engine_type . '%')
+                ->where('cylinders', 'LIKE', '%' . $cylinders . '%')
+                ->where('starter', 'LIKE', '%' . $starter . '%')
+                ->where('transmission_type', 'LIKE', '%' . $transmission_type . '%')
+                ->where('price', 'LIKE', '%' . $price . '%')
+                ->where('fuel_captacity', 'LIKE', '%' . $fuel_captacity . "%")
+                ->where('engine_stroke', 'LIKE', '%' . $engine_stroke . "%")
                 ->get();
             return view('bikes.search', compact('bike_data'));
         }
@@ -221,36 +221,16 @@ class BikeController extends Controller
         $engine_stroke = $request->input('engine_stroke') ?  $request->input('engine_stroke') : null;
         $cooling_system = $request->input('cooling_system') ?  $request->input('cooling_system') : null;
 
-        $findBikes = \App\Models\Bike::when($brand, function ($query) use ($brand) {
-                return $query->where('brand', $brand);
-            })
-            ->when($model_of_bike, function ($query) use ($model_of_bike) {
-                return $query->where('model_of_bike',  $model_of_bike);
-            })
-            ->when($engine_type, function ($query) use ($engine_type) {
-                return $query->where('engine_type', $engine_type);
-            })
-            ->when($cylinders, function ($query) use ($cylinders) {
-                return $query->where('cylinders', $cylinders);
-            })
-            ->when($starter, function ($query) use ($starter) {
-                return $query->where('starter', $starter);
-            })
-            ->when($transmission_type, function ($query) use ($transmission_type) {
-                return $query->where('transmission_type', $transmission_type);
-            })
-            ->when($fuel_captacity, function ($query) use ($fuel_captacity) {
-                return $query->where('fuel_captacity', $fuel_captacity);
-            })
-            ->when($price, function ($query) use ($price) {
-                return $query->where('price', $price);
-            })
-            ->when($engine_stroke, function ($query) use ($engine_stroke) {
-                return $query->where('engine_stroke', $engine_stroke);
-            })
-            ->when($cooling_system, function ($query) use ($cooling_system) {
-                return $query->where('cooling_system', $cooling_system);
-            })
+        $findBikes = Bike::where('brand', 'LIKE', '%' . $brand . '%')
+            ->where('model_of_bike', 'LIKE', '%' . $model_of_bike . '%')
+            ->where('engine_type', 'LIKE', '%' . $engine_type . '%')
+            ->where('cylinders', 'LIKE', '%' . $cylinders . '%')
+            ->where('starter', 'LIKE', '%' . $starter . '%')
+            ->where('transmission_type', 'LIKE', '%' . $transmission_type . '%')
+            ->where('price', 'LIKE', '%' . $price . '%')
+            ->where('fuel_captacity', 'LIKE', '%' . $fuel_captacity . "%")
+            ->where('engine_stroke', 'LIKE', '%' . $engine_stroke . "%")
+            ->where('cooling_system', 'LIKE', '%' . $cooling_system . "%")
             ->orderBy('price', 'desc')
             ->limit(3)
             ->get();

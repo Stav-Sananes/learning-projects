@@ -5560,6 +5560,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var vue2_filters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue2-filters */ "./node_modules/vue2-filters/dist/vue2-filters.js");
+/* harmony import */ var vue2_filters__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue2_filters__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -5701,6 +5703,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+Vue.use((vue2_filters__WEBPACK_IMPORTED_MODULE_0___default()));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5720,28 +5739,27 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    fetchingAllBikes: function fetchingAllBikes() {
-      var _this = this;
-
-      axios.get("/search").then(function (response) {
-        return _this.bikes = response.data;
-      });
-    },
     getResults: function getResults() {
-      var _this2 = this;
+      var _this = this;
 
       axios.get("/search", {
         params: {
-          keyword: this.keyword
+          fuel_captacity: this.fuel_captacity,
+          starter: this.starter,
+          model_of_bike: this.model_of_bike,
+          price: this.price,
+          engine_type: this.engine_type
         }
       }).then(function (res) {
-        _this2.bikes = res.data;
-        _this2.set_table = 1;
-      })["catch"](function (error) {});
+        _this.bikes = res.data;
+        _this.set_table = 1;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    setHomeScreen: function setHomeScreen() {
+      window.location = "/";
     }
-  },
-  created: function created() {
-    this.fetchingAllCars();
   }
 });
 
@@ -29501,6 +29519,37 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
+    this.set_table == 1
+      ? _c(
+          "div",
+          { staticClass: "md-layout md-alignment-top-center" },
+          [
+            _c(
+              "md-button",
+              {
+                staticClass: "md-primary md-raised",
+                on: { click: _vm.getResults },
+              },
+              [_vm._v("חיפוש מחדש")]
+            ),
+            _vm._v(" "),
+            _c(
+              "md-button",
+              {
+                staticClass: "md-accent md-raised",
+                on: {
+                  click: function ($event) {
+                    return _vm.setHomeScreen()
+                  },
+                },
+              },
+              [_vm._v("חזרה למסך הבית")]
+            ),
+          ],
+          1
+        )
+      : _vm._e(),
+    _vm._v(" "),
     _c("div", { staticClass: "md-layout md-gutter" }, [
       _c(
         "div",
@@ -29791,7 +29840,9 @@ var render = function () {
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(bike.brand))]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(bike.price) + "₪")]),
+                      _c("td", [
+                        _vm._v(_vm._s(_vm._f("currency")(bike.price, "₪"))),
+                      ]),
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(bike.model_of_bike))]),
                       _vm._v(" "),
@@ -29829,21 +29880,36 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "md-layout md-alignment-top-center" },
-        [
-          _c(
-            "md-button",
-            {
-              staticClass: "md-primary md-raised",
-              on: { click: _vm.getResults },
-            },
-            [_vm._v("חיפוש")]
-          ),
-        ],
-        1
-      ),
+      this.set_table == 0
+        ? _c(
+            "div",
+            { staticClass: "md-layout md-alignment-top-center" },
+            [
+              _c(
+                "md-button",
+                {
+                  staticClass: "md-primary md-raised",
+                  on: { click: _vm.getResults },
+                },
+                [_vm._v("חיפוש")]
+              ),
+              _vm._v(" "),
+              _c(
+                "md-button",
+                {
+                  staticClass: "md-accent md-raised",
+                  on: {
+                    click: function ($event) {
+                      return _vm.setHomeScreen()
+                    },
+                  },
+                },
+                [_vm._v("חזרה למסך הבית")]
+              ),
+            ],
+            1
+          )
+        : _vm._e(),
     ]),
   ])
 }

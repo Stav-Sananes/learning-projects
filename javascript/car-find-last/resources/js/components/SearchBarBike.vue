@@ -1,5 +1,16 @@
 <template>
     <div>
+        <div
+            class="md-layout md-alignment-top-center"
+            v-if="this.set_table == 1"
+        >
+            <md-button class="md-primary md-raised" @click="getResults"
+                >חיפוש מחדש</md-button
+            >
+            <md-button class="md-accent md-raised" @click="setHomeScreen()"
+                >חזרה למסך הבית</md-button
+            >
+        </div>
         <div class="md-layout md-gutter">
             <div class="md-layout-item">
                 <md-field>
@@ -49,18 +60,16 @@
                         <md-option value="Sport-Touring">ספורט טיולי</md-option>
                         <md-option value="On-Off-Road">On-Off-Road</md-option>
                         <md-option value="Youth">צעירים</md-option>
-                        <md-option value="Touring-Scooter">טוסטוס טיולי</md-option>
+                        <md-option value="Touring-Scooter"
+                            >טוסטוס טיולי</md-option
+                        >
                     </md-select>
                 </md-field>
             </div>
             <div class="md-layout-item">
                 <md-field>
                     <label for="price">מחיר</label>
-                    <md-select
-                        v-model="price"
-                        name="price"
-                        id="price"
-                    >
+                    <md-select v-model="price" name="price" id="price">
                         <md-option value="0">עד 10</md-option>
                         <md-option value="1">עד 30</md-option>
                         <md-option value="2">30+</md-option>
@@ -111,10 +120,10 @@
                         <tr v-for="bike in bikes" :key="bike.id">
                             <th scope="row">{{ bike.bike_name }}</th>
                             <td>{{ bike.brand }}</td>
-                            <td>{{ bike.price }}₪</td>
+                            <td>{{ bike.price | currency("₪") }}</td>
                             <td>{{ bike.model_of_bike }}</td>
-                            <td>{{ bike.cylinders  }}</td>
-                            <td>{{ bike.engine_type  }}</td>
+                            <td>{{ bike.cylinders }}</td>
+                            <td>{{ bike.engine_type }}</td>
                             <td>
                                 {{
                                     bike.transmission_type
@@ -124,15 +133,21 @@
                             </td>
                             <td>{{ bike.fuel_captacity }}</td>
                             <td>
-                                {{ bike.cooling_system  }}
+                                {{ bike.cooling_system }}
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="md-layout md-alignment-top-center">
+            <div
+                class="md-layout md-alignment-top-center"
+                v-if="this.set_table == 0"
+            >
                 <md-button class="md-primary md-raised" @click="getResults"
                     >חיפוש</md-button
+                >
+                <md-button class="md-accent md-raised" @click="setHomeScreen()"
+                    >חזרה למסך הבית</md-button
                 >
             </div>
         </div>
@@ -140,6 +155,8 @@
 </template>
 
 <script>
+import Vue2Filters from "vue2-filters";
+Vue.use(Vue2Filters);
 export default {
     data() {
         return {
@@ -159,24 +176,29 @@ export default {
         };
     },
     methods: {
-        fetchingAllBikes() {
-            axios
-                .get("/search")
-                .then((response) => (this.bikes = response.data));
-        },
         getResults() {
             axios
-                .get("/search", { params: { keyword: this.keyword } })
+                .get("/search", {
+                    params: {
+                        fuel_captacity: this.fuel_captacity,
+                        starter: this.starter,
+                        model_of_bike: this.model_of_bike,
+                        price: this.price,
+                        engine_type: this.engine_type,
+                    },
+                })
                 .then((res) => {
                     this.bikes = res.data;
                     this.set_table = 1;
                 })
 
-                .catch((error) => {});
+                .catch((error) => {
+                    console.log(error);
+                });
         },
-    },
-    created() {
-        this.fetchingAllCars();
+        setHomeScreen() {
+            window.location = "/";
+        },
     },
 };
 </script>
