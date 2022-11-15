@@ -235,7 +235,6 @@ class CarsController extends Controller
     }
     public function FindCars(Request $request)
     {
-        dd($request->all());
         $liter_baggage = $request->input('liter_baggage') ?  $request->input('liter_baggage') : null;
         $four_on_four = $request->input('four_on_four') ?  $request->input('four_on_four') : null;
         $crusie_control = $request->input('crusie_control') ?  $request->input('crusie_control') : null;
