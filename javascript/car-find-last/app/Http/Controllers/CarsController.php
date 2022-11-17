@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cars;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class CarsController extends Controller
 {
@@ -115,7 +116,7 @@ class CarsController extends Controller
         } */
 
 
-        $imagePath = request('picture_1')->store('uploads', 'public');
+        $imagePath = request('picture_1')->store('cars', 'public');
         if ($imagePath) {
             \App\Models\Cars::Create([
                 'picture_1' => $imagePath
@@ -176,17 +177,15 @@ class CarsController extends Controller
             'picture_1' => 'nullable',
         ]);
 
+        // $imagePath = (request('picture_1')->store('cars', 'public'));
+        // $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
 
-        if ($request->hasFile('picture_1')) {
-
-            $picture_1 = $request->file('picture_1');
-            $filepath = 'cars/';
-            $file = Storage::disk('local')->put($filepath, $picture_1);
-            $car->update([
-                'picture_1' => $file
-            ]);
-        }
-
+        $request->file('picture_1')->move(
+            public_path("storage\cars/"),
+            $request->file('picture_1')->getClientOriginalName()
+        );
+        $car->picture_1 = 'storage/cars/' . $request->file('picture_1')->getClientOriginalName();
+        // $image->save();
         $car->update($request->all());
         return redirect()->route('cars.index');
     }

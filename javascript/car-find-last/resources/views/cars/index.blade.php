@@ -13,7 +13,7 @@
                 </div>
                 <div class="mt-4 mr-2">
 
-                    <form class="form-inline my-lg-2  justify-content-center " type="get"
+                    <form class="form-inline my-lg-2  justify-content-center" type="get" style="margin-right: 75px"
                         action="{{ route('cars.index', ['id' => 1]) }}">
                         <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">חפש</button>
                         <input class="form-control mr-sm-2 text-center ml-2" type="search" placeholder="חיפוש רכב"

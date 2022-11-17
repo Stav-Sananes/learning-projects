@@ -11,7 +11,7 @@
                 <a href="/home" class="btn btn-warning">חזרה למסך השאלות</a>
 
             </div>
-            <div class="card-body text-center" >
+            <div class="card-body text-center">
                 <div class="form-row ">
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">שם חברת הרכב?</label>
@@ -25,11 +25,11 @@
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom02">ליטר בגאז</label>
-                        <input type="text" class="form-control" id="validationCustom02"
-                            value="{{ $car->liter_baggage }}" name="liter_baggage" required>
+                        <input type="text" class="form-control" id="validationCustom02" value="{{ $car->liter_baggage }}"
+                            name="liter_baggage" required>
                     </div>
                 </div>
-                <div class="form-row" >
+                <div class="form-row">
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">מקומות ישיבה</label>
                         <input type="text" class="form-control" id="validationCustom01"
@@ -37,13 +37,13 @@
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom02">דרגת זיהום הרכב</label>
-                        <input type="text" class="form-control" id="validationCustom02"
-                            value="{{ $car->car_pollution }}" name="car_pollution" required>
+                        <input type="text" class="form-control" id="validationCustom02" value="{{ $car->car_pollution }}"
+                            name="car_pollution" required>
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom02">4 On 4 ?</label>
-                        <input type="text" class="form-control" id="validationCustom02"
-                            value="{{ $car->four_on_four }}" name="four_on_four" required>
+                        <input type="text" class="form-control" id="validationCustom02" value="{{ $car->four_on_four }}"
+                            name="four_on_four" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -76,17 +76,17 @@
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom02">מודל הרכב</label>
-                        <input type="text" class="form-control" id="validationCustom02"
-                            value="{{ $car->model_of_car }}" name="model_of_car" required>
+                        <input type="text" class="form-control" id="validationCustom02" value="{{ $car->model_of_car }}"
+                            name="model_of_car" required>
                     </div>
                 </div>
                 <div class="text-center">
-                    <input id="picture_1" type="file" name="picture_1" />
                     <label for="picture_1" class="custom-file-upload">
-                        <a class="btn btn-info">תמונת רכב ראשונה</a>
+                        <input id="picture_1" type="file" name="picture_1" />
+
                     </label>
-                
-                   
+
+
                 </div>
                 <div class="form-group text-center">
                     <div class="form-check">
@@ -108,7 +108,6 @@
             input[type="file"] {
                 display: none;
             }
-
         </style>
     @endsection
 @else

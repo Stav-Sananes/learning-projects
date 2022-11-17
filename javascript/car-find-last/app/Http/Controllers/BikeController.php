@@ -206,7 +206,7 @@ class BikeController extends Controller
     {
         $bike->delete();
         return redirect()->route('bikes.index')
-            ->with('success', 'car deleted successfully');
+            ->with('success', 'Bike deleted successfully');
     }
     public function FindBikes(Request $request)
     {

@@ -299,14 +299,14 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="question7" role="tabpanel" aria-labelledby="question7-tab">
-                                    <h5 class="card-title mt-3">? דרגת זיהום אוויר באופנוע</h5>
+                                    <h5 class="card-title mt-3">סוג הפצה</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card mr-3" style="width: 18rem;">
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">משנה</p>
-                                                <input type="radio" class="btn-check" name="car_pollution"
+                                                <p class="card-text">Automatic Transmission</p>
+                                                <input type="radio" class="btn-check" name="transmission_type"
                                                     id="option14" autocomplete="off" value="0">
                                                 <label class="btn btn-outline-success" for="option14">בחירה</label>
                                             </div>
@@ -315,10 +315,30 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">לא משנה</p>
-                                                <input type="radio" class="btn-check" name="car_pollution"
-                                                    id="option15" autocomplete="off" value="1">
-                                                <label class="btn btn-outline-danger" for="option15">בחירה</label>
+                                                <p class="card-text">Manual Transmission</p>
+                                                <input type="radio" class="btn-check" name="transmission_type"
+                                                    id="option22" autocomplete="off" value="1">
+                                                <label class="btn btn-outline-primary" for="option22">בחירה</label>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-3" style="width: 18rem;">
+
+                                            <div class="card-body fw-bold">
+
+                                                <p class="card-text">Automated Manual Transmission</p>
+                                                <input type="radio" class="btn-check" name="transmission_type"
+                                                    id="option23" autocomplete="off" value="2">
+                                                <label class="btn btn-outline-info" for="option23">בחירה</label>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-3" style="width: 18rem;">
+
+                                            <div class="card-body fw-bold">
+
+                                                <p class="card-text">Continuously Variable Transmission</p>
+                                                <input type="radio" class="btn-check" name="transmission_type"
+                                                    id="option24" autocomplete="off" value="3">
+                                                <label class="btn btn-outline-danger" for="option24">בחירה</label>
                                             </div>
                                         </div>
 
@@ -360,14 +380,14 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="question9" role="tabpanel" aria-labelledby="question9-tab">
-                                    <h5 class="card-title mt-3">קיבולת דלק</h5>
+                                    <h5 class="card-title mt-3">חשיבות שסתומים בצלינדר?</h5>
                                     <div class="d-flex justify-content-center">
                                         <div class="card d-flex justify-content-center  mr-3" style="width: 18rem;">
 
                                             <div class="card-body  fw-bold">
 
                                                 <p class="card-text ">לא משנה לי</p>
-                                                <input type="radio" class="btn-check" name="fuel_captacity"
+                                                <input type="radio" class="btn-check" name="valves_per_cylinder"
                                                     id="option20" autocomplete="off" value="0">
                                                 <label class="btn btn-outline-success" for="option20">בחירה</label>
                                             </div>
@@ -376,9 +396,16 @@
 
                                             <div class="card-body  fw-bold">
 
-                                                <p class="card-text">כמה שיותר</p>
-                                                <input type="radio" class="btn-check" name="fuel_captacity"
+                                                <p class="card-text">2</p>
+                                                <input type="radio" class="btn-check" name="valves_per_cylinder"
                                                     id="option21" autocomplete="off" value="1">
+                                                <label class="btn btn-outline-danger" for="option21">בחירה</label>
+                                            </div>
+                                            <div class="card-body  fw-bold">
+
+                                                <p class="card-text">2+</p>
+                                                <input type="radio" class="btn-check" name="valves_per_cylinder"
+                                                    id="option21" autocomplete="off" value="2">
                                                 <label class="btn btn-outline-danger" for="option21">בחירה</label>
                                             </div>
                                         </div>

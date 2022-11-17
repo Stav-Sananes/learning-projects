@@ -446,8 +446,8 @@
                             </div>
                         </div>
                         <div class=" fixed top-0 right-5  px-6 py-4 sm:block" style="margin-left:-30%">
-                            <a href="{{ route('bikes') }}" type="button" class="btn btn-info btn-md" role="button">מעבר
-                                לחיפוש האופנועים שלנו</a>
+                            <a href="{{ route('bikes') }}" type="button" class="btn btn-info btn-md" role="button">חיפוש אופנועים
+                            </a>
                         </div>
                         <div class="text-center ">
                             <a href="{{ url('/home') }}" type="button" class="btn btn-primary btn-lg mr-2"

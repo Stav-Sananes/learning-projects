@@ -20,8 +20,21 @@
                         name="fuel_captacity"
                         id="fuel_captacity"
                     >
-                        <md-option value="0">לא משנה לי </md-option>
-                        <md-option value="1">כמה שיותר</md-option>
+                        <md-option value="1">1</md-option>
+                        <md-option value="2">2</md-option>
+                        <md-option value="3">3</md-option>
+                        <md-option value="4">4</md-option>
+                        <md-option value="5">5</md-option>
+                        <md-option value="6">6</md-option>
+                        <md-option value="7">7</md-option>
+                        <md-option value="8">8</md-option>
+                        <md-option value="9">9</md-option>
+                        <md-option value="10">10</md-option>
+                        <md-option value="11">11</md-option>
+                        <md-option value="12">12</md-option>
+                        <md-option value="13">13</md-option>
+                        <md-option value="14">14</md-option>
+                        <md-option value="15">15</md-option>
                     </md-select>
                 </md-field>
             </div>
@@ -69,11 +82,7 @@
             <div class="md-layout-item">
                 <md-field>
                     <label for="price">מחיר</label>
-                    <md-select v-model="price" name="price" id="price">
-                        <md-option value="0">עד 10</md-option>
-                        <md-option value="1">עד 30</md-option>
-                        <md-option value="2">30+</md-option>
-                    </md-select>
+                    <md-input v-model="price" :value="price" placeholder="הכנס מחיר"></md-input>
                 </md-field>
             </div>
             <div class="md-layout-item mt">
