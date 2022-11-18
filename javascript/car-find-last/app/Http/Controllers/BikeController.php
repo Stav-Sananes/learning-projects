@@ -216,7 +216,7 @@ class BikeController extends Controller
             ->where('cylinders', 'LIKE', '%' . $cylinders . '%')
             ->where('starter', 'LIKE', '%' . $starter . '%')
             ->where('transmission_type', 'LIKE', '%' . $transmission_type . '%')
-            ->where('price', 'LIKE', '%' . $price . '%')
+            ->where('price', '<=', $price)
             ->where('fuel_captacity', 'LIKE', '%' . $fuel_captacity . "%")
             ->where('engine_stroke', 'LIKE', '%' . $engine_stroke . "%")
             ->where('cooling_system', 'LIKE', '%' . $cooling_system . "%")

@@ -223,7 +223,7 @@
 
                                                 <p class="card-text">2 מקומות ישיבה</p>
                                                 <input type="radio" class="btn-check" name="number_of_seats"
-                                                    id="option7" autocomplete="off" value="0">
+                                                    id="option7" autocomplete="off" value="2">
                                                 <label class="btn btn-outline-success" for="option7">בחירה</label>
                                             </div>
                                         </div>
@@ -231,9 +231,9 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">מעל 2 מקומות ישיבה ברכב</p>
+                                                <p class="card-text">5 מקומות ישיבה</p>
                                                 <input type="radio" class="btn-check" name="number_of_seats"
-                                                    id="option8" autocomplete="off" value="0">
+                                                    id="option8" autocomplete="off" value="5">
                                                 <label class="btn btn-outline-danger" for="option8">בחירה</label>
                                             </div>
                                         </div>
@@ -353,7 +353,7 @@
 
                                                 <p class="card-text">עד 70</p>
                                                 <input type="radio" class="btn-check" name="price" id="option18"
-                                                    autocomplete="off" value="100000">
+                                                    autocomplete="off" value="70000">
                                                 <label class="btn btn-outline-danger" for="option18">בחירה</label>
                                             </div>
                                         </div>
@@ -361,9 +361,9 @@
 
                                             <div class="card-body fw-bold">
 
-                                                <p class="card-text">110+</p>
+                                                <p class="card-text">עד 100</p>
                                                 <input type="radio" class="btn-check" name="price" id="option19"
-                                                    autocomplete="off" value="150000">
+                                                    autocomplete="off" value="100000">
                                                 <label class="btn btn-outline-info" for="option19">בחירה</label>
                                             </div>
                                         </div>

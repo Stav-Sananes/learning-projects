@@ -220,7 +220,7 @@ class CarsController extends Controller
             ->where('type_of_car', 'LIKE', '%' . $type_of_car . '%')
             ->where('autonomous_braking', 'LIKE', '%' . $autonomous_braking . '%')
             ->where('car_pollution', 'LIKE', '%' . $car_pollution . '%')
-            ->where('price', 'LIKE', '%' . $price . '%')
+            ->where('price', '<=', $price)
             ->where('reverse_camera', 'LIKE', '%' . $reverse_camera . "%")
             ->where('liter_baggage', 'LIKE', '%' . $liter_baggage . "%")
             ->where('model_of_car', 'LIKE', '%' . $model_of_car . "%")
