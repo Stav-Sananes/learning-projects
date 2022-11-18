@@ -2,7 +2,7 @@
 @section('content')
     @if (\Auth::User()->is_admin)
         <ul class="nav nav-tabs d-flex justify-content-center mb-5" id="myTab" role="tablist">
-          
+
             <li class="nav-item" role="presentation">
                 <a href="{{ route('bikes.index') }}" id="index-tab" data-toggle="tab" href="#index" role="tab"
                     aria-controls="index" class="nav-link active">חזרה לפרטי האופנוע</a>
@@ -76,6 +76,10 @@
 
                         </tbody>
                     </table>
+                </div>
+                <div>
+                    <img class="card-text text-center w-25"
+                        src="/storage/{{ $bike->picture_1 ? $bike->picture_1 : null }}" />
                 </div>
             </div>
 

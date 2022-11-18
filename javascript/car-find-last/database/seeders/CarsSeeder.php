@@ -19,7 +19,7 @@ class CarsSeeder extends Seeder
 
         $models1 = array(
             array(
-                'brand' => 'ACURA', 'car_name' => 'ACURA', 'liter_baggage' => rand(150, 500),
+                'brand' => 'ACURA', 'car_name' => 'ACURA', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -31,7 +31,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Alfa Romeo', 'car_name' => 'ALFA', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Alfa Romeo', 'car_name' => 'ALFA', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -43,7 +43,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'AMC', 'car_name' => 'AMC', 'liter_baggage' => rand(150, 500),
+                'brand' => 'AMC', 'car_name' => 'AMC', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -55,7 +55,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Aston Martin', 'car_name' => 'ASTON', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Aston Martin', 'car_name' => 'ASTON', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -67,7 +67,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Audi', 'car_name' => 'AUDI', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Audi', 'car_name' => 'AUDI', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -79,7 +79,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Avanti', 'car_name' => 'AVANTI', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Avanti', 'car_name' => 'AVANTI', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -91,7 +91,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Bentley', 'car_name' => 'BENTL', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Bentley', 'car_name' => 'BENTL', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -103,7 +103,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'BMW', 'car_name' => 'BMW', 'liter_baggage' => rand(150, 500),
+                'brand' => 'BMW', 'car_name' => 'BMW', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -115,7 +115,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Buick', 'car_name' => 'BUICK', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Buick', 'car_name' => 'BUICK', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -127,7 +127,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Cadillac', 'car_name' => 'CAD', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Cadillac', 'car_name' => 'CAD', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -139,7 +139,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Chevrolet', 'car_name' => 'CHEV', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Chevrolet', 'car_name' => 'CHEV', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -151,7 +151,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Chrysler', 'car_name' => 'CHRY', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Chrysler', 'car_name' => 'CHRY', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -163,7 +163,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Daewoo', 'car_name' => 'DAEW', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Daewoo', 'car_name' => 'DAEW', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -175,7 +175,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Daihatsu', 'car_name' => 'DAIHAT', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Daihatsu', 'car_name' => 'DAIHAT', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -187,7 +187,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Datsun', 'car_name' => 'DATSUN', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Datsun', 'car_name' => 'DATSUN', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -199,7 +199,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'DeLorean', 'car_name' => 'DELOREAN', 'liter_baggage' => rand(150, 500),
+                'brand' => 'DeLorean', 'car_name' => 'DELOREAN', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -211,7 +211,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Dodge', 'car_name' => 'DODGE', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Dodge', 'car_name' => 'DODGE', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -223,7 +223,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Eagle', 'car_name' => 'EAGLE', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Eagle', 'car_name' => 'EAGLE', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -235,7 +235,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Ferrari', 'car_name' => 'FER', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Ferrari', 'car_name' => 'FER', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -247,7 +247,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'FIAT', 'car_name' => 'FIAT', 'liter_baggage' => rand(150, 500),
+                'brand' => 'FIAT', 'car_name' => 'FIAT', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -259,7 +259,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Fisker', 'car_name' => 'FISK', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Fisker', 'car_name' => 'FISK', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -271,7 +271,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Ford', 'car_name' => 'FORD', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Ford', 'car_name' => 'FORD', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -283,7 +283,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Freightliner', 'car_name' => 'FREIGHT', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Freightliner', 'car_name' => 'FREIGHT', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -295,7 +295,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Geo', 'car_name' => 'GEO', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Geo', 'car_name' => 'GEO', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -307,7 +307,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'GMC', 'car_name' => 'GMC', 'liter_baggage' => rand(150, 500),
+                'brand' => 'GMC', 'car_name' => 'GMC', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -319,7 +319,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Honda', 'car_name' => 'HONDA', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Honda', 'car_name' => 'HONDA', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -331,7 +331,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'HUMMER', 'car_name' => 'AMGEN', 'liter_baggage' => rand(150, 500),
+                'brand' => 'HUMMER', 'car_name' => 'AMGEN', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -343,7 +343,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Hyundai', 'car_name' => 'HYUND', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Hyundai', 'car_name' => 'HYUND', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -355,7 +355,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Infiniti', 'car_name' => 'INFIN', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Infiniti', 'car_name' => 'INFIN', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -367,7 +367,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Isuzu', 'car_name' => 'ISU', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Isuzu', 'car_name' => 'ISU', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -379,7 +379,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Jaguar', 'car_name' => 'JAG', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Jaguar', 'car_name' => 'JAG', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -391,7 +391,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Jeep', 'car_name' => 'JEEP', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Jeep', 'car_name' => 'JEEP', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -403,7 +403,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Kia', 'car_name' => 'KIA', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Kia', 'car_name' => 'KIA', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -415,7 +415,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Lamborghini', 'car_name' => 'LAM', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Lamborghini', 'car_name' => 'LAM', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -427,7 +427,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Lancia', 'car_name' => 'LAN', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Lancia', 'car_name' => 'LAN', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -439,7 +439,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Land Rover', 'car_name' => 'ROV', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Land Rover', 'car_name' => 'ROV', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -451,7 +451,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Lexus', 'car_name' => 'LEXUS', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Lexus', 'car_name' => 'LEXUS', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -463,7 +463,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Lincoln', 'car_name' => 'LINC', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Lincoln', 'car_name' => 'LINC', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -475,7 +475,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Lotus', 'car_name' => 'LOTUS', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Lotus', 'car_name' => 'LOTUS', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -487,7 +487,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Maserati', 'car_name' => 'MAS', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Maserati', 'car_name' => 'MAS', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -499,7 +499,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Maybach', 'car_name' => 'MAYBACH', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Maybach', 'car_name' => 'MAYBACH', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -511,7 +511,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Mazda', 'car_name' => 'MAZDA', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Mazda', 'car_name' => 'MAZDA', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -523,7 +523,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'McLaren', 'car_name' => 'MCLAREN', 'liter_baggage' => rand(150, 500),
+                'brand' => 'McLaren', 'car_name' => 'MCLAREN', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -535,7 +535,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Mercedes-Benz', 'car_name' => 'MB', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Mercedes-Benz', 'car_name' => 'MB', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -547,7 +547,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Mercury', 'car_name' => 'MERC', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Mercury', 'car_name' => 'MERC', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -559,7 +559,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Merkur', 'car_name' => 'MERKUR', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Merkur', 'car_name' => 'MERKUR', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -571,7 +571,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'MINI', 'car_name' => 'MINI', 'liter_baggage' => rand(150, 500),
+                'brand' => 'MINI', 'car_name' => 'MINI', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -583,7 +583,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Mitsubishi', 'car_name' => 'MIT', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Mitsubishi', 'car_name' => 'MIT', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -595,7 +595,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Nissan', 'car_name' => 'NISSAN', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Nissan', 'car_name' => 'NISSAN', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -607,7 +607,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Oldsmobile', 'car_name' => 'OLDS', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Oldsmobile', 'car_name' => 'OLDS', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -619,7 +619,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Peugeot', 'car_name' => 'PEUG', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Peugeot', 'car_name' => 'PEUG', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -631,7 +631,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Plymouth', 'car_name' => 'PLYM', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Plymouth', 'car_name' => 'PLYM', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -643,7 +643,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Pontiac', 'car_name' => 'PONT', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Pontiac', 'car_name' => 'PONT', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -655,7 +655,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Porsche', 'car_name' => 'POR', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Porsche', 'car_name' => 'POR', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -667,7 +667,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'RAM', 'car_name' => 'RAM', 'liter_baggage' => rand(150, 500),
+                'brand' => 'RAM', 'car_name' => 'RAM', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -679,7 +679,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Renault', 'car_name' => 'REN', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Renault', 'car_name' => 'REN', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -691,7 +691,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Rolls-Royce', 'car_name' => 'RR', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Rolls-Royce', 'car_name' => 'RR', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -703,7 +703,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Saab', 'car_name' => 'SAAB', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Saab', 'car_name' => 'SAAB', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -715,7 +715,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Saturn', 'car_name' => 'SATURN', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Saturn', 'car_name' => 'SATURN', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -727,7 +727,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Scion', 'car_name' => 'SCION', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Scion', 'car_name' => 'SCION', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -739,7 +739,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'smart', 'car_name' => 'SMART', 'liter_baggage' => rand(150, 500),
+                'brand' => 'smart', 'car_name' => 'SMART', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -751,7 +751,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'SRT', 'car_name' => 'SRT', 'liter_baggage' => rand(150, 500),
+                'brand' => 'SRT', 'car_name' => 'SRT', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -763,7 +763,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Sterling', 'car_name' => 'STERL', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Sterling', 'car_name' => 'STERL', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -775,7 +775,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Subaru', 'car_name' => 'SUB', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Subaru', 'car_name' => 'SUB', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -787,7 +787,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Suzuki', 'car_name' => 'SUZUKI', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Suzuki', 'car_name' => 'SUZUKI', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -799,7 +799,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Tesla', 'car_name' => 'TESLA', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Tesla', 'car_name' => 'TESLA', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -811,7 +811,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Toyota', 'car_name' => 'TOYOTA', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Toyota', 'car_name' => 'TOYOTA', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -823,7 +823,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Triumph', 'car_name' => 'TRI', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Triumph', 'car_name' => 'TRI', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -835,7 +835,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Volkswagen', 'car_name' => 'VOLKS', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Volkswagen', 'car_name' => 'VOLKS', 'liter_baggage' => 3,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -847,7 +847,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Volvo', 'car_name' => 'VOLVO', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Volvo', 'car_name' => 'VOLVO', 'liter_baggage' => 1,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),
@@ -859,7 +859,7 @@ class CarsSeeder extends Seeder
                 'model_of_car' => rand(0, 2),
             ),
             array(
-                'brand' => 'Yugo', 'car_name' => 'YUGO', 'liter_baggage' => rand(150, 500),
+                'brand' => 'Yugo', 'car_name' => 'YUGO', 'liter_baggage' => 2,
                 'four_on_four' => rand(0, 1),
                 'car_pollution' => rand(0, 15),
                 'crusie_control' => rand(0, 1),

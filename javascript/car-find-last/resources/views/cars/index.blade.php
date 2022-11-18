@@ -48,12 +48,17 @@
                     </thead>
                     <tbody class="text-center">
                         @foreach ($cars as $car)
-                           
-
                             <td>{{ $car->id }}</td>
                             <td>{{ $car->brand }}</td>
                             <td>{{ $car->car_name }}</td>
                             <td>{{ $car->liter_baggage }}</td>
+                            @if ($car->liter_baggage == 1)
+                                <td>150</td>
+                            @elseif ($car->liter_baggage == 2)
+                                <td>350</td>
+                            @elseif ($car->liter_baggage == 3)
+                                <td>500</td>
+                            @endif
                             <td>{{ $car->number_of_seats }}</td>
                             <td>{{ $car->car_pollution }}</td>
                             <td>{{ $car->four_on_four == 0 ? 'לא' : 'כן' }}</td>
@@ -67,7 +72,7 @@
                             @elseif ($car->type_of_car == 2)
                                 <td>מנהלים</td>
                             @endif
-                            <td> ₪ {{ number_format($car->price,2,'.',',')  }} </td>
+                            <td> ₪ {{ number_format($car->price, 2, '.', ',') }} </td>
                             @if ($car->model_of_car == 0)
                                 <td>לא חשמלית</td>
                             @elseif ($car->model_of_car == 1)
@@ -76,7 +81,7 @@
                                 <td>היברדית</td>
                             @endif
 
-                        
+
                             <td>
                                 <form action="{{ route('cars.destroy', $car) }}" method="POST">
                                     @csrf

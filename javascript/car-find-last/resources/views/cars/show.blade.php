@@ -3,20 +3,21 @@
     @if (\Auth::User()->is_admin)
         <ul class="nav nav-tabs d-flex justify-content-center mb-5" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                    aria-selected="true">מידע כללי</a>
+                <a href="{{ route('cars.index') }}" class="nav-link active">חזרה לפרטי הרכב</a>
             </li>
+            <li class="nav-item" role="presentation">
+                <a href="{{ route('cars.create') }}" class="nav-link active"> רכב חדש</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a href="{{ route('cars.edit', ['car' => $car->id]) }}" class="nav-link active">ערוך
+                    נתוני
+                    רכב</a>
+            </li>
+
         </ul>
-        <div class="tab-content" id="myTabContent">
+        <div class="tab-content" id="myTabContent" style="padding: 5%;">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="container">
-                    <div class="d-flex flex-row h-100 justify-content-lg-between w-100 p-1">
-                        <a href="{{ route('cars.index') }}" class="btn btn-success text-white">חזרה לפרטי הרכב</a>
-                        <a href="{{ route('cars.create') }}" class="btn btn-primary text-white"> רכב חדש</a>
-                        <a href="{{ route('cars.edit', ['car' => $car->id]) }}" class="btn btn-warning text-white">ערוך
-                            נתוני
-                            רכב</a>
-
                     </div>
                     <table class="table" style="direction: rtl;">
                         <thead class="thead-light">
@@ -42,7 +43,13 @@
                                 <th scope="row">{{ $car->id }}</th>
                                 <td>{{ $car->brand }}</td>
                                 <td>{{ $car->car_name }}</td>
-                                <td>{{ $car->liter_baggage }}</td>
+                                @if ($car->liter_baggage == 1)
+                                    <td>150</td>
+                                @elseif ($car->liter_baggage == 2)
+                                    <td>350</td>
+                                @elseif ($car->liter_baggage == 3)
+                                    <td>500</td>
+                                @endif
                                 <td>{{ $car->number_of_seats }}</td>
                                 <td>{{ $car->car_pollution }}</td>
                                 <td>{{ $car->four_on_four == 0 ? 'לא' : 'כן' }}</td>
@@ -56,7 +63,7 @@
                                 @elseif ($car->type_of_car == 2)
                                     <td>מנהלים</td>
                                 @endif
-                                <td>₪ {{ number_format($car->price,2,'.',',')   }} </td>
+                                <td>₪ {{ number_format($car->price, 2, '.', ',') }} </td>
                                 @if ($car->model_of_car == 0)
                                     <td>לא חשמלית</td>
                                 @elseif ($car->model_of_car == 1)
