@@ -6,9 +6,9 @@
             {{ csrf_field() }}
             {{ method_field('PATCH') }}
             <div class="d-flex flex-row h-100 justify-content-lg-between w-100 p-1">
-                <a href="{{ route('bikes.index') }}" class="btn btn-success text-white">חזרה לפרטי הרכב</a>
-                <a href="{{ route('bikes.create') }}" class="btn btn-primary text-white">ליצירת רכב חדש</a>
-                <a href="/home" class="btn btn-warning">חזרה למסך השאלות</a>
+                <a href="{{ route('bikes.index') }}" class="btn btn-success text-white">חזרה לפרטי האופנוע</a>
+                <a href="{{ route('bikes.create') }}" class="btn btn-primary text-white">ליצירת אופנוע חדש</a>
+                <a href="/bike" class="btn btn-warning text-white">חזרה למסך השאלות</a>
 
             </div>
             <div class="card-body text-center">
@@ -82,14 +82,6 @@
                 </div>
                 <div class="text-center">
                     <input id="picture_1" type="file" name="picture_1" />
-                    <label for="picture_1" class="custom-file-upload">
-                        <a class="btn btn-info">תמונת רכב ראשונה</a>
-                    </label>
-                
-                    <input id="picture_2" type="file" name="picture_2" />
-                    <label for="picture_2" class="custom-file-upload">
-                        <a class="btn btn-danger">תמונת רכב שנייה</a>
-                    </label>
                 </div>
                 <div class="form-group text-center">
                     <div class="form-check">
@@ -98,7 +90,7 @@
                             אנא אשרו עריכת רכב קיים במערכת
                         </label>
                         <div class="invalid-feedback">
-                            אנא אשרו עריכת רכב
+                            אנא אשרו עריכת אופנוע
                         </div>
                     </div>
                 </div>

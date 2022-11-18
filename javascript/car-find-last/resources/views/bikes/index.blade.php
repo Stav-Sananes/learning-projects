@@ -24,7 +24,6 @@
                 <table class="table table-striped text-center" style="direction:rtl ">
                     <thead>
                         <tr>
-                        <tr>
                             <th scope="col">#</th>
                             <th scope="col">שם חברת האופנוע</th>
                             <th scope="col">שם האופנוע</th>
@@ -42,7 +41,6 @@
                             <th scope="col">עריכה</th>
                         </tr>
 
-                        </tr>
                     </thead>
                     <tbody>
                         @foreach ($bikes as $bike)

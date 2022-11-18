@@ -82,7 +82,12 @@
             <div class="md-layout-item">
                 <md-field>
                     <label for="price">מחיר</label>
-                    <md-input v-model="price" :value="price" placeholder="הכנס מחיר"></md-input>
+                    <md-input
+                        v-model="price"
+                        :value="price"
+                        placeholder="הכנס מחיר"
+                        style="text-align: center"
+                    ></md-input>
                 </md-field>
             </div>
             <div class="md-layout-item mt">
@@ -116,11 +121,11 @@
                         <tr>
                             <th scope="col">שם אופנוע</th>
                             <th scope="col">חברת האופנוע</th>
-                            <th scope="col">סטרטר מותאם אישית</th>
-                            <th scope="col">צילנדרים</th>
-                            <th scope="col">מערכת קירור</th>
-                            <th scope="col">דרגת זיהום אוויר באופנוע</th>
                             <th scope="col">מחיר</th>
+                            <th scope="col">סוג אופנוע</th>
+                            <th scope="col">צילנדרים</th>
+                            <th scope="col">סוג מנוע</th>
+                            <th scope="col">סוג הפצה באופנוע</th>
                             <th scope="col">קיבולת דלק</th>
                             <th scope="col">מערכת קירור</th>
                         </tr>
@@ -133,16 +138,27 @@
                             <td>{{ bike.model_of_bike }}</td>
                             <td>{{ bike.cylinders }}</td>
                             <td>{{ bike.engine_type }}</td>
-                            <td>
-                                {{
-                                    bike.transmission_type
-                                        ? "ספורט"
-                                        : "מנהלים או משפחתי"
-                                }}
+
+                            <td v-if="bike.transmission_type == 0">
+                                Automatic Transmission
+                            </td>
+                            <td v-if="bike.transmission_type == 1">
+                                Manual Transmission
+                            </td>
+                            <td v-if="bike.transmission_type == 2">
+                                Automated Manual Transmission
+                            </td>
+                            <td v-if="bike.transmission_type == 3">
+                                Continuously Variable Transmission
                             </td>
                             <td>{{ bike.fuel_captacity }}</td>
-                            <td>
-                                {{ bike.cooling_system }}
+
+                            <td v-if="bike.cooling_system == 0">נוזלית</td>
+                            <td v-if="bike.cooling_system == 1">
+                                מערכת קירור אוויר ושמן
+                            </td>
+                            <td v-if="bike.cooling_system == 2">
+                                מערכת קירור אוויר
                             </td>
                         </tr>
                     </tbody>
@@ -187,7 +203,7 @@ export default {
     methods: {
         getResults() {
             axios
-                .get("/search", {
+                .get("/advanced_search_bike", {
                     params: {
                         fuel_captacity: this.fuel_captacity,
                         starter: this.starter,

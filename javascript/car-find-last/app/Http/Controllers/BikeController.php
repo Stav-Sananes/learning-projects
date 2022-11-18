@@ -28,35 +28,24 @@ class BikeController extends Controller
     }
     public function search(Request $request)
     {
-
-        $brand = $request->input('brand') ?  $request->input('brand') : null;
-        $model_of_bike = $request->input('model_of_bike') ?  $request->input('model_of_bike') : null;
-        $engine_type = $request->input('engine_type') ?  $request->input('engine_type') : null;
-        $cylinders = $request->input('cylinders') ?  $request->input('cylinders') : null;
-        $starter = $request->input('starter') ?  $request->input('starter') : null;
-        $transmission_type = $request->input('transmission_type') ?  $request->input('transmission_type') : null;
-        $fuel_captacity = $request->input('fuel_captacity') ?  $request->input('fuel_captacity') : null;
-        $price = $request->input('price') ?  $request->input('price') : null;
-        $engine_stroke = $request->input('engine_stroke') ?  $request->input('engine_stroke') : null;
-        $cooling_system = $request->input('cooling_system') ?  $request->input('cooling_system') : null;
-
         $name = $request->get('query');
         $bike_data = Bike::where('bike_name', 'LIKE', '%' . $name . '%')->get();
         return view('bikes.search', compact('bike_data'));
-        if (!$request->get('query')) {
-            $key = $request->input('q');
-            $bike_data = Bike::where('brand', 'LIKE', '%' . $brand . '%')
-                ->where('model_of_bike', 'LIKE', '%' . $model_of_bike . '%')
-                ->where('engine_type', 'LIKE', '%' . $engine_type . '%')
-                ->where('cylinders', 'LIKE', '%' . $cylinders . '%')
-                ->where('starter', 'LIKE', '%' . $starter . '%')
-                ->where('transmission_type', 'LIKE', '%' . $transmission_type . '%')
-                ->where('price', 'LIKE', '%' . $price . '%')
-                ->where('fuel_captacity', 'LIKE', '%' . $fuel_captacity . "%")
-                ->where('engine_stroke', 'LIKE', '%' . $engine_stroke . "%")
-                ->get();
-            return view('bikes.search', compact('bike_data'));
-        }
+    }
+    public function advanced_search_bike(Request $request)
+    {
+        $model_of_bike = $request->input('model_of_bike') ?  $request->input('model_of_bike') : null;
+        $engine_type = $request->input('engine_type') ?  $request->input('engine_type') : null;
+        $starter = $request->input('starter') ?  $request->input('starter') : null;
+        $fuel_captacity = $request->input('fuel_captacity') ?  $request->input('fuel_captacity') : null;
+        $price = $request->input('price') ?  $request->input('price') : null;
+        $bike_data = Bike::where('model_of_bike', 'LIKE', '%' . $model_of_bike . '%')
+            ->where('engine_type', 'LIKE', '%' . $engine_type . '%')
+            ->where('starter', 'LIKE', '%' . $starter . '%')
+            ->where('price', '>=', '%' . $price . '%')
+            ->where('fuel_captacity', 'LIKE', '%' . $fuel_captacity . "%")
+            ->get();
+        return response()->json($bike_data);
     }
     /**
      * Show the form for creating a new resource.

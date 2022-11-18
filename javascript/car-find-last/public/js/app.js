@@ -5718,6 +5718,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 Vue.use((vue2_filters__WEBPACK_IMPORTED_MODULE_0___default()));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -5742,7 +5767,7 @@ Vue.use((vue2_filters__WEBPACK_IMPORTED_MODULE_0___default()));
     getResults: function getResults() {
       var _this = this;
 
-      axios.get("/search", {
+      axios.get("/advanced_search_bike", {
         params: {
           fuel_captacity: this.fuel_captacity,
           starter: this.starter,
@@ -29575,13 +29600,35 @@ var render = function () {
                   },
                 },
                 [
-                  _c("md-option", { attrs: { value: "0" } }, [
-                    _vm._v("לא משנה לי "),
-                  ]),
+                  _c("md-option", { attrs: { value: "1" } }, [_vm._v("1")]),
                   _vm._v(" "),
-                  _c("md-option", { attrs: { value: "1" } }, [
-                    _vm._v("כמה שיותר"),
-                  ]),
+                  _c("md-option", { attrs: { value: "2" } }, [_vm._v("2")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "3" } }, [_vm._v("3")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "4" } }, [_vm._v("4")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "5" } }, [_vm._v("5")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "6" } }, [_vm._v("6")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "7" } }, [_vm._v("7")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "8" } }, [_vm._v("8")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "9" } }, [_vm._v("9")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "10" } }, [_vm._v("10")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "11" } }, [_vm._v("11")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "12" } }, [_vm._v("12")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "13" } }, [_vm._v("13")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "14" } }, [_vm._v("14")]),
+                  _vm._v(" "),
+                  _c("md-option", { attrs: { value: "15" } }, [_vm._v("15")]),
                 ],
                 1
               ),
@@ -29723,27 +29770,17 @@ var render = function () {
             [
               _c("label", { attrs: { for: "price" } }, [_vm._v("מחיר")]),
               _vm._v(" "),
-              _c(
-                "md-select",
-                {
-                  attrs: { name: "price", id: "price" },
-                  model: {
-                    value: _vm.price,
-                    callback: function ($$v) {
-                      _vm.price = $$v
-                    },
-                    expression: "price",
+              _c("md-input", {
+                staticStyle: { "text-align": "center" },
+                attrs: { value: _vm.price, placeholder: "הכנס מחיר" },
+                model: {
+                  value: _vm.price,
+                  callback: function ($$v) {
+                    _vm.price = $$v
                   },
+                  expression: "price",
                 },
-                [
-                  _c("md-option", { attrs: { value: "0" } }, [_vm._v("עד 10")]),
-                  _vm._v(" "),
-                  _c("md-option", { attrs: { value: "1" } }, [_vm._v("עד 30")]),
-                  _vm._v(" "),
-                  _c("md-option", { attrs: { value: "2" } }, [_vm._v("30+")]),
-                ],
-                1
-              ),
+              }),
             ],
             1
           ),
@@ -29850,27 +29887,59 @@ var render = function () {
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(bike.engine_type))]),
                       _vm._v(" "),
-                      _c("td", [
-                        _vm._v(
-                          "\n                            " +
-                            _vm._s(
-                              bike.transmission_type
-                                ? "ספורט"
-                                : "מנהלים או משפחתי"
-                            ) +
-                            "\n                        "
-                        ),
-                      ]),
+                      bike.transmission_type == 0
+                        ? _c("td", [
+                            _vm._v(
+                              "\n                            Automatic Transmission\n                        "
+                            ),
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      bike.transmission_type == 1
+                        ? _c("td", [
+                            _vm._v(
+                              "\n                            Manual Transmission\n                        "
+                            ),
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      bike.transmission_type == 2
+                        ? _c("td", [
+                            _vm._v(
+                              "\n                            Automated Manual Transmission\n                        "
+                            ),
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      bike.transmission_type == 3
+                        ? _c("td", [
+                            _vm._v(
+                              "\n                            Continuously Variable Transmission\n                        "
+                            ),
+                          ])
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(bike.fuel_captacity))]),
                       _vm._v(" "),
-                      _c("td", [
-                        _vm._v(
-                          "\n                            " +
-                            _vm._s(bike.cooling_system) +
-                            "\n                        "
-                        ),
-                      ]),
+                      bike.cooling_system == 0
+                        ? _c("td", [_vm._v("נוזלית")])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      bike.cooling_system == 1
+                        ? _c("td", [
+                            _vm._v(
+                              "\n                            מערכת קירור אוויר ושמן\n                        "
+                            ),
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      bike.cooling_system == 2
+                        ? _c("td", [
+                            _vm._v(
+                              "\n                            מערכת קירור אוויר\n                        "
+                            ),
+                          ])
+                        : _vm._e(),
                     ])
                   }),
                   0
@@ -29924,17 +29993,15 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("חברת האופנוע")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("סטרטר מותאם אישית")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("מחיר")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("סוג אופנוע")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("צילנדרים")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("מערכת קירור")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("סוג מנוע")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [
-          _vm._v("דרגת זיהום אוויר באופנוע"),
-        ]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("מחיר")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("סוג הפצה באופנוע")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("קיבולת דלק")]),
         _vm._v(" "),

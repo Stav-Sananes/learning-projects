@@ -35,6 +35,8 @@ Route::get('/advanced_search',[\App\Http\Controllers\CarsController::class,'adva
 Route::resource('cars', \App\Http\Controllers\CarsController::class);
 //Bike
 Route::get('/search/bike',[\App\Http\Controllers\BikeController::class,'search'])->name('searchBike');
+Route::get('/advanced_search_bike',[\App\Http\Controllers\BikeController::class,'advanced_search_bike']);
+
 Route::get('/bikesfinish', [App\Http\Controllers\BikeController::class, 'FindBikes'])->name('bikesfinish');
 Route::resource('bikes', \App\Http\Controllers\BikeController::class);
 

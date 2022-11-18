@@ -238,13 +238,11 @@ class CarsController extends Controller
         $crusie_control = $request->input('crusie_control') ?  $request->input('crusie_control') : null;
         $number_of_seats = $request->input('number_of_seats') ?  $request->input('number_of_seats') : null;
         $type_of_car = $request->input('type_of_car') ?  $request->input('type_of_car') : null;
-
         $findCars = Cars::where('liter_baggage', 'LIKE', '%' . $liter_baggage . '%')
             ->where('four_on_four', 'LIKE', '%' . $four_on_four . '%')
             ->where('crusie_control', 'LIKE', '%' . $crusie_control . '%')
             ->where('number_of_seats', 'LIKE', '%' . $number_of_seats . '%')
             ->where('type_of_car', 'LIKE', '%' . $type_of_car . '%')
-
             ->orderBy('price', 'desc')
             ->limit(3)
             ->get();
