@@ -6,6 +6,7 @@ use App\Models\Bike;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class BikeController extends Controller
 {
@@ -173,14 +174,11 @@ class BikeController extends Controller
             ]);
           
         } */
-        $imagePath = request('picture_1')->store('uploads', 'public');
-        if ($imagePath) {
-            \App\Models\Bike::Create([
-                'picture_1' => $imagePath
-            ]);
-        }
+        $imagePath = (request('picture_1')->store('bikes', 'public'));
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
 
-
+        $image->save();
+        $request->picture_1 = $image;
         $bike->update($request->all());
         return redirect()->route('bikes.index');
     }

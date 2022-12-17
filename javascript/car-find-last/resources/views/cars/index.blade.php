@@ -51,7 +51,6 @@
                             <td>{{ $car->id }}</td>
                             <td>{{ $car->brand }}</td>
                             <td>{{ $car->car_name }}</td>
-                            <td>{{ $car->liter_baggage }}</td>
                             @if ($car->liter_baggage == 1)
                                 <td>150</td>
                             @elseif ($car->liter_baggage == 2)

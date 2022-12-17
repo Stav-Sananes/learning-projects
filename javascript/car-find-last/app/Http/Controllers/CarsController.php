@@ -177,15 +177,11 @@ class CarsController extends Controller
             'picture_1' => 'nullable',
         ]);
 
-        // $imagePath = (request('picture_1')->store('cars', 'public'));
-        // $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
+        $imagePath = (request('picture_1')->store('cars', 'public'));
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
 
-        $request->file('picture_1')->move(
-            public_path("storage\cars/"),
-            $request->file('picture_1')->getClientOriginalName()
-        );
-        $car->picture_1 = 'storage/cars/' . $request->file('picture_1')->getClientOriginalName();
-        // $image->save();
+        $image->save();
+        $request->picture_1 = $image;
         $car->update($request->all());
         return redirect()->route('cars.index');
     }

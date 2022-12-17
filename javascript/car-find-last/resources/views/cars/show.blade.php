@@ -76,9 +76,9 @@
                         </tbody>
                     </table>
                 </div>
-                <div>
-                    <img class="card-text text-center w-25"
-                        src="/storage/{{ $car->picture_1 ? $car->picture_1 : null }}" />
+                <div class="text-center">
+                    <img class="card-text text-center w-25 "
+                        src="{{asset("storage/cars/iThLv2TyaW5Msrbg55HavhkT3nX6tQ9GGVfTz2eV.jpg")}}" style="width:20%" />
                 </div>
             </div>
 

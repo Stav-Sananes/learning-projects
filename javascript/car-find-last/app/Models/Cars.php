@@ -26,14 +26,13 @@ class Cars extends Model
         'price',
         'model_of_car',
         'picture_1',
-        'picture_2',
     ];
     protected $guarded = [];
     
-    public function setAvatarAttribute($value) {
-        $file = Storage::disk('local')->put('cars/', $value);
-        $this->attributes['picture_1'] = $file;
-    }
+    // public function setAvatarAttribute($value) {
+    //     $file = Storage::disk('local')->put('cars/', $value);
+    //     $this->attributes['picture_1'] = $file;
+    // }
     /* public function responseAvatar() {
         ob_get_clean();
         return $this->avatar && Storage::disk('local')->exists($this->avatar) ? Storage::disk('local')->response($this->avatar) : abort(404);
