@@ -15,11 +15,13 @@ class CommunityPostResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id, 
+            'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
             'username' => $this->user->username,
             'slug' => $this->slug,
+            'votes' => $this->votes,
+            'postVotes' => $this->whenLoaded('postVotes')
         ];
     }
 }
