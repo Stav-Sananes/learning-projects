@@ -11,7 +11,7 @@
                 <a href="/home" class="btn btn-warning">חזרה למסך השאלות</a>
 
             </div>
-            <div class="card-body text-center">
+            <div class="card-body text-center" style="direction: rtl">
                 <div class="form-row ">
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">שם חברת הרכב?</label>
@@ -91,7 +91,7 @@
                 <div class="form-group text-center">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
+                        <label class="form-check-label mr-4" for="invalidCheck">
                             אנא אשרו עריכת רכב קיים במערכת
                         </label>
                         <div class="invalid-feedback">

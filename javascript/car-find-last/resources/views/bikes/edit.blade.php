@@ -11,7 +11,7 @@
                 <a href="/bike" class="btn btn-warning text-white">חזרה למסך השאלות</a>
 
             </div>
-            <div class="card-body text-center">
+            <div class="card-body text-center" style="direction: rtl">
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">שם חברת האופנוע?</label>

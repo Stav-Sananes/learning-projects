@@ -8,7 +8,7 @@
                     <div class="card-header text-center">{{ __('הרשמה') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" class="" action="{{ route('register') }}" style="direction:rtl">
                             @csrf
 
                             <div class="row mb-3">
@@ -69,7 +69,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-0">
+                            <div class="row mb-0 justify-content-center " style="margin-right:230px">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('הרשם עכשיו') }}
