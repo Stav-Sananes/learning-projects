@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use App\Enum\TableLocation;
+use App\Enum\TableStatus;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Table extends Model
+{
+    use HasFactory;
+    protected $fillable = ['name','guest_number','status','location'];
+
+    protected $casts = [
+        'status'=> TableStatus::class,
+        'location' => TableLocationn::class,
+    ]
+    public function reservations(){
+        return $this->hasMany(Reservation::class);
+    }
+}
