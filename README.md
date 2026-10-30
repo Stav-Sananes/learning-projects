@@ -16,11 +16,12 @@ Projects I built while learning, from 2022 to 2026. Each folder used to be its o
 | [scientific-calculator](cpp/scientific-calculator) | Scientific calculator |
 | [student-database](cpp/student-database) | Student database management system |
 
-## Laravel / PHP (2022)
+## Laravel / PHP (2022-2023)
 
 | Project | What it is |
 |---|---|
 | [admin-panel](laravel-php/admin-panel) | Admin panel |
+| [car-find-last](laravel-php/car-find-last) | Car-finding app with Laravel (2023) |
 | [crm](laravel-php/crm) | CRM with Laravel + Vue |
 | [employee-management](laravel-php/employee-management) | Employee management |
 | [hospital-management](laravel-php/hospital-management) | Hospital management system |
@@ -36,7 +37,6 @@ Projects I built while learning, from 2022 to 2026. Each folder used to be its o
 
 | Project | What it is |
 |---|---|
-| [car-find-last](javascript/car-find-last) | Car-finding app with Laravel and JavaScript (2023) |
 | [java-react-movie-app](javascript/java-react-movie-app) | Movie app: Java Spring Boot + MongoDB API, React client (2023) |
 | [mean-mern](javascript/mean-mern) | MongoDB + Express + Angular/React + Node: Booking, FoodShop and an Angular WebShop |
 | [nodejs](javascript/nodejs) | Node.js exercises: Express APIs, JWT auth, chat app, weather app, store |
