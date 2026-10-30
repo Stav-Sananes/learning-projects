@@ -1,12 +1,13 @@
 # Learning Projects
 
-Projects I built while learning, from 2022 to 2025. Each folder used to be its own repository; they are collected here with their full commit history. My current work is pinned on [my profile](https://github.com/Stav-Sananes).
+Projects I built while learning, from 2022 to 2026. Each folder used to be its own repository; they are collected here with their full commit history. My current work is pinned on [my profile](https://github.com/Stav-Sananes).
 
-## C++ (2024)
+## C++ (2024-2026)
 
 | Project | What it is |
 |---|---|
 | [casino-number-guessing](cpp/casino-number-guessing) | Casino number-guessing game |
+| [codecrafters-shell](cpp/codecrafters-shell) | POSIX shell, CodeCrafters "Build Your Own Shell" challenge (2026) |
 | [inventory-system](cpp/inventory-system) | Inventory system using MySQL Connector/C++ |
 | [login-registration](cpp/login-registration) | Login and registration with OpenSSL password hashing |
 | [payroll-system](cpp/payroll-system) | Payroll system |
