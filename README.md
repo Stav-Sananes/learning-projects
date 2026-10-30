@@ -49,6 +49,12 @@ Projects I built while learning, from 2022 to 2026. Each folder used to be its o
 |---|---|
 | [url-shortener](python/url-shortener) | URL shortener with FastAPI and SQLAlchemy |
 
+## PowerShell (2026)
+
+| Project | What it is |
+|---|---|
+| [cs16-deathmatch-server](powershell/cs16-deathmatch-server) | One-script installer for a Counter-Strike 1.6 deathmatch server on Windows (HLDS, Metamod, AMX Mod X, bots) |
+
 ## Notes
 
 - `node_modules` folders were removed from the history when the repositories were merged.
