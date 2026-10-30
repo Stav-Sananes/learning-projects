@@ -1,0 +1,28 @@
+<div class="mb-3">
+  <label for="articletitle" class="form-label">Article Title </label>
+  <input type="text" class="form-control" #articleTitle />
+</div>
+
+<div class="mb-3">
+  <label for="articlebody" class="form-label">Article Body</label>
+  <textarea type="text" #articleBody class="form-control" rows="3"></textarea>
+</div>
+<div class="mb-3">
+  <label for="articleauthor" class="form-label">Article Author </label>
+  <input
+    type="email"
+    class="form-control"
+    #articleAuthor
+    id="exampleFormControlInput1"
+  />
+</div>
+
+<div>
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="add(articleTitle.value, articleBody.value, articleAuthor.value); articleTitle.value='';articleAuthor.value='';articleAuthor.value=''"
+  >
+    Add
+  </button>
+</div>

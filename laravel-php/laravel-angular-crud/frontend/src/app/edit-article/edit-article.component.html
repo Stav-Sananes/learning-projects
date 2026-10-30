@@ -1,0 +1,40 @@
+<div class="mb-3">
+  <label for="articletitle" class="form-label">Article Title </label>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="article.title"
+    #articleTitle
+  />
+</div>
+
+<div class="mb-3">
+  <label for="articlebody" class="form-label">Article Body</label>
+  <textarea
+    type="text"
+    [(ngModel)]="article.body"
+    #articleBody
+    class="form-control"
+    rows="3"
+  ></textarea>
+</div>
+<div class="mb-3">
+  <label for="articleauthor" class="form-label">Article Author </label>
+  <input
+    type="email"
+    class="form-control"
+    #articleAuthor
+    id="exampleFormControlInput1"
+    [(ngModel)]="article.author"
+  />
+</div>
+
+<div>
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="update(articleTitle.value, articleBody.value, articleAuthor.value)"
+  >
+    Update
+  </button>
+</div>
