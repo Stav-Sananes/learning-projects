@@ -29,11 +29,16 @@ Projects I built while learning, from 2022 to 2026. Each folder used to be its o
 | [reddit-clone](laravel-php/reddit-clone) | Reddit-style forum with Laravel + Vue |
 | [restaurant](laravel-php/restaurant) | Restaurant site |
 | [todo-list](laravel-php/todo-list) | To-do list with Laravel + Vue |
+| [portfolio](laravel-php/portfolio) | Portfolio site with Laravel + Vue |
+| [shopping-cart](laravel-php/shopping-cart) | Shopping cart with Laravel + Vue |
 
-## JavaScript / TypeScript (2022)
+## JavaScript / TypeScript (2022-2023)
 
 | Project | What it is |
 |---|---|
+| [car-find-last](javascript/car-find-last) | Car-finding app with Laravel and JavaScript (2023) |
+| [java-react-movie-app](javascript/java-react-movie-app) | Movie app: Java Spring Boot + MongoDB API, React client (2023) |
+| [mean-mern](javascript/mean-mern) | MongoDB + Express + Angular/React + Node: Booking, FoodShop and an Angular WebShop |
 | [nodejs](javascript/nodejs) | Node.js exercises: Express APIs, JWT auth, chat app, weather app, store |
 | [react](javascript/react) | React app (Create React App + Tailwind) |
 | [typescript](javascript/typescript) | TypeScript exercises: drag and drop, maps, sorting, a small framework, Express, React + Redux |
@@ -47,4 +52,4 @@ Projects I built while learning, from 2022 to 2026. Each folder used to be its o
 ## Notes
 
 - `node_modules` folders were removed from the history when the repositories were merged.
-- API keys committed in 2022 (Google Maps, Mapbox, Dark Sky) were replaced with `REDACTED_*` placeholders throughout the history.
+- API keys committed in 2022 (Google Maps, Mapbox, Dark Sky) and a MongoDB password were replaced with `REDACTED_*` placeholders throughout the history, and committed `.env` files were removed.
