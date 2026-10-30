@@ -46,4 +46,4 @@ Projects I built while learning, from 2022 to 2025. Each folder used to be its o
 ## Notes
 
 - `node_modules` folders were removed from the history when the repositories were merged.
-- Google Maps API keys that were committed in 2022 were replaced with `REDACTED_GOOGLE_API_KEY`.
+- API keys committed in 2022 (Google Maps, Mapbox, Dark Sky) were replaced with `REDACTED_*` placeholders throughout the history.
